@@ -1,0 +1,12 @@
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Services\bin\Debug\net5.0\HikikomoriWEB.Services.deps.json
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Services\bin\Debug\net5.0\HikikomoriWEB.Services.dll
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Services\bin\Debug\net5.0\ref\HikikomoriWEB.Services.dll
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Services\bin\Debug\net5.0\HikikomoriWEB.Services.pdb
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Services\obj\Debug\net5.0\HikikomoriWEB.Services.csproj.AssemblyReference.cache
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Services\obj\Debug\net5.0\HikikomoriWEB.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Services\obj\Debug\net5.0\HikikomoriWEB.Services.AssemblyInfoInputs.cache
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Services\obj\Debug\net5.0\HikikomoriWEB.Services.AssemblyInfo.cs
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Services\obj\Debug\net5.0\HikikomoriWEB.Services.csproj.CoreCompileInputs.cache
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Services\obj\Debug\net5.0\HikikomoriWEB.Services.dll
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Services\obj\Debug\net5.0\ref\HikikomoriWEB.Services.dll
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Services\obj\Debug\net5.0\HikikomoriWEB.Services.pdb

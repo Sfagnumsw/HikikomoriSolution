@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HikikomoriWEB", "HikikomoriWEB.csproj", "{0D545EE0-4DA8-45D1-8A6A-8776186DB26F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{E1A95DE8-A7A6-4D1D-A687-962397125BA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HikikomriWEB.DAL", "..\HikikomriWEB.DAL\HikikomriWEB.DAL.csproj", "{1700430B-8012-4612-AA8A-F55E08086004}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{49ABEA8E-23E9-4969-BA8C-63C36549791E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HikikomoriWEB.Domain", "..\HikikomoriWEB.Domain\HikikomoriWEB.Domain.csproj", "{7CAC1BE6-6E0F-4ABD-B4FF-4E627F1F2E99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{FAB3D5E2-CA53-4EB6-9B26-01FE691F0F4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HikikomoriWEB.Services", "..\HikikomoriWEB.Services\HikikomoriWEB.Services.csproj", "{86CA25BC-1B2C-4EA8-9844-5E56FEA001CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D545EE0-4DA8-45D1-8A6A-8776186DB26F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D545EE0-4DA8-45D1-8A6A-8776186DB26F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D545EE0-4DA8-45D1-8A6A-8776186DB26F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D545EE0-4DA8-45D1-8A6A-8776186DB26F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1700430B-8012-4612-AA8A-F55E08086004}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1700430B-8012-4612-AA8A-F55E08086004}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1700430B-8012-4612-AA8A-F55E08086004}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1700430B-8012-4612-AA8A-F55E08086004}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CAC1BE6-6E0F-4ABD-B4FF-4E627F1F2E99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CAC1BE6-6E0F-4ABD-B4FF-4E627F1F2E99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CAC1BE6-6E0F-4ABD-B4FF-4E627F1F2E99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CAC1BE6-6E0F-4ABD-B4FF-4E627F1F2E99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86CA25BC-1B2C-4EA8-9844-5E56FEA001CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86CA25BC-1B2C-4EA8-9844-5E56FEA001CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86CA25BC-1B2C-4EA8-9844-5E56FEA001CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86CA25BC-1B2C-4EA8-9844-5E56FEA001CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1700430B-8012-4612-AA8A-F55E08086004} = {E1A95DE8-A7A6-4D1D-A687-962397125BA4}
+		{7CAC1BE6-6E0F-4ABD-B4FF-4E627F1F2E99} = {49ABEA8E-23E9-4969-BA8C-63C36549791E}
+		{86CA25BC-1B2C-4EA8-9844-5E56FEA001CF} = {FAB3D5E2-CA53-4EB6-9B26-01FE691F0F4C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9E07D1A1-AABE-4722-892F-D43BA76D3F72}
+	EndGlobalSection
+EndGlobal
