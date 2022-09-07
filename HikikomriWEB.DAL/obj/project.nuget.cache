@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "b5zJ3Pvb7iP1sHMAwptugOgWOQJDonV+1/PUgL/0DYVslsXGy+a6zxcHOdsEs7zMrtB7fIcd3Ec55iboF18CSA==",
+  "dgSpecHash": "gKJARqgFpW1WRY/hlYG5Zu4qIXtWXhHDdkWUXrjI3CfzXZU+kjqjBecY8tTZhvD8xXA4uUWvrxY0njq0FiYlVg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sfagnum\\Documents\\обучение\\Программирование\\C#\\ASP.NET Core\\eaxDeskTop\\HikomoriASP\\HikikomriWEB.DAL\\HikikomriWEB.DAL.csproj",
+  "projectFilePath": "C:\\Users\\Sfagnum\\Documents\\обучение\\Программирование\\C#\\ASP.NET Core\\eaxDeskTop\\HikomoriASP\\HikikomriWEB.DAL\\HikikomoriWEB.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sfagnum\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Sfagnum\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

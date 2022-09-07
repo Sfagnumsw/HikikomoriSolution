@@ -37,7 +37,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HikikomriWEB.DAL\HikikomriWEB.DAL.csproj" />
+    <ProjectReference Include="..\HikikomoriWEB.DAL\HikikomoriWEB.DAL.csproj" />
+    <ProjectReference Include="..\HikikomoriWEB.Services\HikikomoriWEB.Services.csproj" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>

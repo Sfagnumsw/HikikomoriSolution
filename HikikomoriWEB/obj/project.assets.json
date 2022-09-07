@@ -2293,6 +2293,20 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "HikikomoriWEB.DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "HikikomoriWEB.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.16"
+        },
+        "compile": {
+          "bin/placeholder/HikikomoriWEB.DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HikikomoriWEB.DAL.dll": {}
+        }
+      },
       "HikikomoriWEB.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -2303,19 +2317,19 @@
           "bin/placeholder/HikikomoriWEB.Domain.dll": {}
         }
       },
-      "HikikomriWEB.DAL/1.0.0": {
+      "HikikomoriWEB.Services/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "HikikomoriWEB.DAL": "1.0.0",
           "HikikomoriWEB.Domain": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "5.0.16",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.16"
+          "Microsoft.EntityFrameworkCore": "5.0.16"
         },
         "compile": {
-          "bin/placeholder/HikikomriWEB.DAL.dll": {}
+          "bin/placeholder/HikikomoriWEB.Services.dll": {}
         },
         "runtime": {
-          "bin/placeholder/HikikomriWEB.DAL.dll": {}
+          "bin/placeholder/HikikomoriWEB.Services.dll": {}
         }
       }
     }
@@ -7797,20 +7811,26 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "HikikomoriWEB.DAL/1.0.0": {
+      "type": "project",
+      "path": "../HikikomoriWEB.DAL/HikikomoriWEB.DAL.csproj",
+      "msbuildProject": "../HikikomoriWEB.DAL/HikikomoriWEB.DAL.csproj"
+    },
     "HikikomoriWEB.Domain/1.0.0": {
       "type": "project",
       "path": "../HikikomoriWEB.Domain/HikikomoriWEB.Domain.csproj",
       "msbuildProject": "../HikikomoriWEB.Domain/HikikomoriWEB.Domain.csproj"
     },
-    "HikikomriWEB.DAL/1.0.0": {
+    "HikikomoriWEB.Services/1.0.0": {
       "type": "project",
-      "path": "../HikikomriWEB.DAL/HikikomriWEB.DAL.csproj",
-      "msbuildProject": "../HikikomriWEB.DAL/HikikomriWEB.DAL.csproj"
+      "path": "../HikikomoriWEB.Services/HikikomoriWEB.Services.csproj",
+      "msbuildProject": "../HikikomoriWEB.Services/HikikomoriWEB.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "HikikomriWEB.DAL >= 1.0.0",
+      "HikikomoriWEB.DAL >= 1.0.0",
+      "HikikomoriWEB.Services >= 1.0.0",
       "Microsoft.AspNet.Identity.EntityFramework >= 2.2.3",
       "Microsoft.AspNet.Mvc >= 5.2.8",
       "Microsoft.AspNetCore.StaticFiles >= 2.2.0",
@@ -7855,8 +7875,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Sfagnum\\Documents\\обучение\\Программирование\\C#\\ASP.NET Core\\eaxDeskTop\\HikomoriASP\\HikikomriWEB.DAL\\HikikomriWEB.DAL.csproj": {
-              "projectPath": "C:\\Users\\Sfagnum\\Documents\\обучение\\Программирование\\C#\\ASP.NET Core\\eaxDeskTop\\HikomoriASP\\HikikomriWEB.DAL\\HikikomriWEB.DAL.csproj"
+            "C:\\Users\\Sfagnum\\Documents\\обучение\\Программирование\\C#\\ASP.NET Core\\eaxDeskTop\\HikomoriASP\\HikikomoriWEB.DAL\\HikikomoriWEB.DAL.csproj": {
+              "projectPath": "C:\\Users\\Sfagnum\\Documents\\обучение\\Программирование\\C#\\ASP.NET Core\\eaxDeskTop\\HikomoriASP\\HikikomoriWEB.DAL\\HikikomoriWEB.DAL.csproj"
+            },
+            "C:\\Users\\Sfagnum\\Documents\\обучение\\Программирование\\C#\\ASP.NET Core\\eaxDeskTop\\HikomoriASP\\HikikomoriWEB.Services\\HikikomoriWEB.Services.csproj": {
+              "projectPath": "C:\\Users\\Sfagnum\\Documents\\обучение\\Программирование\\C#\\ASP.NET Core\\eaxDeskTop\\HikomoriASP\\HikikomoriWEB.Services\\HikikomoriWEB.Services.csproj"
             }
           }
         }

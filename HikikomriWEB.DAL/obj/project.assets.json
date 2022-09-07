@@ -5783,9 +5783,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sfagnum\\Documents\\обучение\\Программирование\\C#\\ASP.NET Core\\eaxDeskTop\\HikomoriASP\\HikikomriWEB.DAL\\HikikomriWEB.DAL.csproj",
-      "projectName": "HikikomriWEB.DAL",
-      "projectPath": "C:\\Users\\Sfagnum\\Documents\\обучение\\Программирование\\C#\\ASP.NET Core\\eaxDeskTop\\HikomoriASP\\HikikomriWEB.DAL\\HikikomriWEB.DAL.csproj",
+      "projectUniqueName": "C:\\Users\\Sfagnum\\Documents\\обучение\\Программирование\\C#\\ASP.NET Core\\eaxDeskTop\\HikomoriASP\\HikikomriWEB.DAL\\HikikomoriWEB.DAL.csproj",
+      "projectName": "HikikomoriWEB.DAL",
+      "projectPath": "C:\\Users\\Sfagnum\\Documents\\обучение\\Программирование\\C#\\ASP.NET Core\\eaxDeskTop\\HikomoriASP\\HikikomriWEB.DAL\\HikikomoriWEB.DAL.csproj",
       "packagesPath": "C:\\Users\\Sfagnum\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Sfagnum\\Documents\\обучение\\Программирование\\C#\\ASP.NET Core\\eaxDeskTop\\HikomoriASP\\HikikomriWEB.DAL\\obj\\",
       "projectStyle": "PackageReference",

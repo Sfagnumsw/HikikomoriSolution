@@ -501,6 +501,6 @@ C:\Users\Sfagnum\Documents\обучение\Программирование\C#\
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\HikikomoriWEB.pdb
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\HikikomoriWEB.genruntimeconfig.cache
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\HikikomoriWEB.Domain.dll
-C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\HikikomriWEB.DAL.dll
-C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\HikikomriWEB.DAL.pdb
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\HikikomoriWEB.Domain.pdb
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\HikikomoriWEB.DAL.dll
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\HikikomoriWEB.DAL.pdb

@@ -5,7 +5,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
-using HikikomriWEB.DAL.Context;
+using HikikomoriWEB.DAL.Context;
+using HikikomoriWEB.Services.Interfaces;
+using HikikomoriWEB.Domain.Entity;
+using HikikomoriWEB.Services.RepositoryServices;
 
 namespace HikikomoriWEB
 {
@@ -19,7 +22,7 @@ namespace HikikomoriWEB
 
             //services.AddMvc(options => options.EnableEndpointRouting = false); //другой способ маршрутизации через configure(отключаем эндпоинт)
 
-            //services.AddTransient<>(); //подключение функционала
+            services.AddScoped<IBaseContentServices<RateContent>, RateContentService>(); //подключение функционала
 
             services.AddDbContext<HikDbContext>(i => i.UseSqlServer(Config.ConnectionString, b => b.MigrationsAssembly("HikikomoriWEB"))); //подключение контекста БД
             services.AddControllersWithViews().SetCompatibilityVersion(CompatibilityVersion.Version_3_0).AddSessionStateTempDataProvider(); //подключение поддержки MVC и совместимость версий asp.net core 3 , а так же сервисы для контроллеров и предствалений
