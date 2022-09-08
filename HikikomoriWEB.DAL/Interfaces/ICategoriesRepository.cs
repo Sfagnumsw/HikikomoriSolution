@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace HikikomoriWEB.DAL.Interfaces
 {
-    interface ICategoriesRepository
+    public interface ICategoriesRepository
     {
         Task<IEnumerable<Categories>> AllCategories();
         Task<Categories> GetOnId(int Categoryid);

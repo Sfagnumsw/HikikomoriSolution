@@ -23,6 +23,8 @@ namespace HikikomoriWEB
             //services.AddMvc(options => options.EnableEndpointRouting = false); //другой способ маршрутизации через configure(отключаем эндпоинт)
 
             services.AddScoped<IBaseContentServices<RateContent>, RateContentService>(); //подключение функционала
+            services.AddScoped<IBaseContentServices<RememberContent>, RememberContentService>();
+            services.AddScoped<ICategoriesService, CategoriesService>();
 
             services.AddDbContext<HikDbContext>(i => i.UseSqlServer(Config.ConnectionString, b => b.MigrationsAssembly("HikikomoriWEB"))); //подключение контекста БД
             services.AddControllersWithViews().SetCompatibilityVersion(CompatibilityVersion.Version_3_0).AddSessionStateTempDataProvider(); //подключение поддержки MVC и совместимость версий asp.net core 3 , а так же сервисы для контроллеров и предствалений

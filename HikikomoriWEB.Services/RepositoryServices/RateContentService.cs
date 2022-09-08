@@ -24,16 +24,16 @@ namespace HikikomoriWEB.Services.RepositoryServices
             try
             {
                 var response = new ResponseRepository<IEnumerable<RateContent>>();
-                var ListContent = await _repository.AllContent();
+                var ContentList = await _repository.AllContent();
 
-                if(ListContent.Any() != true)
+                if(ContentList.Any() != true)
                 {
-                    response.Description = "RateContent.Method [AllContent] : Список пуст";
+                    response.Description = "RateContent.Method [AllContent] : Список оцененного контента пуст";
                     response.StatusCode = StatusCode.NotFound;
                     return response;
                 }
 
-                response.Data = ListContent;
+                response.Data = ContentList;
                 response.StatusCode = StatusCode.OK;
                 return response;
             }
@@ -75,15 +75,15 @@ namespace HikikomoriWEB.Services.RepositoryServices
             try
             {
                 var response = new ResponseRepository<IEnumerable<RateContent>>();
-                var ContentItem = await _repository.GetOnCategoryId(CategoryId);
+                var ContentList = await _repository.GetOnCategoryId(CategoryId);
 
-                if(ContentItem.Any() != true)
+                if(ContentList.Any() != true)
                 {
                     response.Description = "RateContent.Method [GetOnCategoryId] : Элементы таблицы этой категории не найдены";
                     response.StatusCode = StatusCode.NotFound;
                 }
 
-                response.Data = ContentItem;
+                response.Data = ContentList;
                 response.StatusCode = StatusCode.OK;
                 return response;
             }
@@ -107,7 +107,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
 
                 if(ContentItem == null)
                 {
-                    response.Description = "RateContent.Method [GetOnId] : Элемент с таким ID не найден";
+                    response.Description = "RateContent.Method [GetOnId] : Элемент таблицы с таким ID не найден";
                     response.StatusCode = StatusCode.NotFound;
                     return response;
                 }
