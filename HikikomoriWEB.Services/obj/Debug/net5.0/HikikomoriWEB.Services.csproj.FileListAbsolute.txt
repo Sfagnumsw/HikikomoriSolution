@@ -9,3 +9,12 @@ C:\Users\Sfagnum\Documents\обучение\Программирование\C#\
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Services\obj\Debug\net5.0\HikikomoriWEB.Services.dll
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Services\obj\Debug\net5.0\ref\HikikomoriWEB.Services.dll
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Services\obj\Debug\net5.0\HikikomoriWEB.Services.pdb
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Services\bin\Debug\net5.0\HikikomoriWEB.Services.runtimeconfig.json
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Services\bin\Debug\net5.0\HikikomoriWEB.Services.runtimeconfig.dev.json
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Services\bin\Debug\net5.0\HikikomoriWEB.DAL.dll
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Services\bin\Debug\net5.0\HikikomoriWEB.Domain.dll
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Services\bin\Debug\net5.0\HikikomoriWEB.DAL.pdb
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Services\bin\Debug\net5.0\HikikomoriWEB.Domain.pdb
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Services\obj\Debug\net5.0\HikikomoriWEB.Services.csproj.AssemblyReference.cache
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Services\obj\Debug\net5.0\HikikomoriWEB.Services.csproj.CopyComplete
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Services\obj\Debug\net5.0\HikikomoriWEB.Services.genruntimeconfig.cache

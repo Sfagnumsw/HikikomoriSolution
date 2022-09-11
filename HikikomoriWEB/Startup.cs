@@ -6,6 +6,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using HikikomoriWEB.DAL.Context;
+using HikikomoriWEB.DAL.Interfaces;
+using HikikomoriWEB.DAL.EFRepositories;
 using HikikomoriWEB.Services.Interfaces;
 using HikikomoriWEB.Domain.Entity;
 using HikikomoriWEB.Services.RepositoryServices;
@@ -23,8 +25,10 @@ namespace HikikomoriWEB
             //services.AddMvc(options => options.EnableEndpointRouting = false); //другой способ маршрутизации через configure(отключаем эндпоинт)
 
             services.AddScoped<IBaseContentServices<RateContent>, RateContentService>(); //подключение функционала
+            services.AddScoped<IBaseContentRepository<RateContent>, RateContentRepository>();
             services.AddScoped<IBaseContentServices<RememberContent>, RememberContentService>();
-            services.AddScoped<ICategoriesService, CategoriesService>();
+            services.AddScoped<IBaseContentRepository<RememberContent>, RememberContentRepository>();
+
 
             services.AddDbContext<HikDbContext>(i => i.UseSqlServer(Config.ConnectionString, b => b.MigrationsAssembly("HikikomoriWEB"))); //подключение контекста БД
             services.AddControllersWithViews().SetCompatibilityVersion(CompatibilityVersion.Version_3_0).AddSessionStateTempDataProvider(); //подключение поддержки MVC и совместимость версий asp.net core 3 , а так же сервисы для контроллеров и предствалений
@@ -39,7 +43,7 @@ namespace HikikomoriWEB
             app.UseStaticFiles(); //поддержка статичных файлов (css,js...)
             app.UseRouting(); //система маршрутизации (если используем AddMvc, то устанавливаем дефолРоут и отключаем эндпоинтРоут в сервисе)
             app.UseStatusCodePages(); //обработка ошибок http (404...)
-            /*app.UseEndpoints(endpoints => { endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}"); });*/ //маршрутизация под useRouting(если в адресе не прописан контроллер, то используем по умолчанию контроллер для главной страницы и меотод)
+            app.UseEndpoints(endpoints => { endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}"); }); //маршрутизация под useRouting(если в адресе не прописан контроллер, то используем по умолчанию контроллер для главной страницы и меотод)
             //app.UseMvcWithDefaultRoute(); //другой способ маршрутизации
         }
     }

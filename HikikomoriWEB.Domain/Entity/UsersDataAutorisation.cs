@@ -22,6 +22,6 @@ namespace HikikomoriWEB.Domain.Entity
 
         [Required]
         [Display(Name = "Роль")]
-        public Roles Role { get; set; }
+        public int Role { get; set; }
     }
 }

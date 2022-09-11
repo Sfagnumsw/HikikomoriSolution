@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HikikomoriWEB.Migrations
 {
     [DbContext(typeof(HikDbContext))]
-    [Migration("20220906135255_FirstMigration")]
-    partial class FirstMigration
+    [Migration("20220911102151__init")]
+    partial class _init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -19,48 +19,6 @@ namespace HikikomoriWEB.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.16")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("HikikomoriWEB.Domain.Entity.Categories", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Category")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Categories");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 10000,
-                            Category = "Фильмы"
-                        },
-                        new
-                        {
-                            Id = 10001,
-                            Category = "Книги"
-                        },
-                        new
-                        {
-                            Id = 10002,
-                            Category = "Игры"
-                        },
-                        new
-                        {
-                            Id = 10003,
-                            Category = "Сериалы"
-                        },
-                        new
-                        {
-                            Id = 10004,
-                            Category = "Мультфильмы"
-                        });
-                });
 
             modelBuilder.Entity("HikikomoriWEB.Domain.Entity.RateContent", b =>
                 {
@@ -93,8 +51,6 @@ namespace HikikomoriWEB.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryId");
-
                     b.ToTable("RateContent");
                 });
 
@@ -123,8 +79,6 @@ namespace HikikomoriWEB.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryId");
-
                     b.ToTable("RememberContent");
                 });
 
@@ -152,28 +106,6 @@ namespace HikikomoriWEB.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("UsersData");
-                });
-
-            modelBuilder.Entity("HikikomoriWEB.Domain.Entity.RateContent", b =>
-                {
-                    b.HasOne("HikikomoriWEB.Domain.Entity.Categories", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Category");
-                });
-
-            modelBuilder.Entity("HikikomoriWEB.Domain.Entity.RememberContent", b =>
-                {
-                    b.HasOne("HikikomoriWEB.Domain.Entity.Categories", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Category");
                 });
 #pragma warning restore 612, 618
         }

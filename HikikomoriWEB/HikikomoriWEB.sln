@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{FA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HikikomoriWEB.Services", "..\HikikomoriWEB.Services\HikikomoriWEB.Services.csproj", "{86CA25BC-1B2C-4EA8-9844-5E56FEA001CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HikikomoriWEB.DAL", "..\HikikomoriWEB.DAL\HikikomoriWEB.DAL.csproj", "{97874E98-F642-43AD-ACC8-22BD93E439D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HikikomoriWEB.DAL", "..\HikikomoriWEB.DAL\HikikomoriWEB.DAL.csproj", "{97874E98-F642-43AD-ACC8-22BD93E439D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

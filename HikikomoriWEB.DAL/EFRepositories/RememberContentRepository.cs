@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HikikomoriWEB.DAL.EFRepositories
 {
-    class RememberContentRepository : IBaseContentRepository<RememberContent>
+    public class RememberContentRepository : IBaseContentRepository<RememberContent>
     {
         private readonly HikDbContext _context;
         public RememberContentRepository(HikDbContext context)

@@ -18,48 +18,6 @@ namespace HikikomoriWEB.Migrations
                 .HasAnnotation("ProductVersion", "5.0.16")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("HikikomoriWEB.Domain.Entity.Categories", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Category")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Categories");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 10000,
-                            Category = "Фильмы"
-                        },
-                        new
-                        {
-                            Id = 10001,
-                            Category = "Книги"
-                        },
-                        new
-                        {
-                            Id = 10002,
-                            Category = "Игры"
-                        },
-                        new
-                        {
-                            Id = 10003,
-                            Category = "Сериалы"
-                        },
-                        new
-                        {
-                            Id = 10004,
-                            Category = "Мультфильмы"
-                        });
-                });
-
             modelBuilder.Entity("HikikomoriWEB.Domain.Entity.RateContent", b =>
                 {
                     b.Property<int>("Id")
@@ -91,8 +49,6 @@ namespace HikikomoriWEB.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryId");
-
                     b.ToTable("RateContent");
                 });
 
@@ -121,8 +77,6 @@ namespace HikikomoriWEB.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryId");
-
                     b.ToTable("RememberContent");
                 });
 
@@ -150,28 +104,6 @@ namespace HikikomoriWEB.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("UsersData");
-                });
-
-            modelBuilder.Entity("HikikomoriWEB.Domain.Entity.RateContent", b =>
-                {
-                    b.HasOne("HikikomoriWEB.Domain.Entity.Categories", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Category");
-                });
-
-            modelBuilder.Entity("HikikomoriWEB.Domain.Entity.RememberContent", b =>
-                {
-                    b.HasOne("HikikomoriWEB.Domain.Entity.Categories", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Category");
                 });
 #pragma warning restore 612, 618
         }

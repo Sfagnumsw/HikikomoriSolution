@@ -22,10 +22,7 @@ namespace HikikomoriWEB.Domain.Entity
         public int CreationYear { get; set; }
 
         [Required]
-        [Display(Name = "IDКатегории")]
+        [Display(Name = "Категория")]
         public int CategoryId { get; set; }
-
-        [Display(Name = "Категория-Ссылочное свойство")]
-        public Categories Category { get; set; }
     }
 }
