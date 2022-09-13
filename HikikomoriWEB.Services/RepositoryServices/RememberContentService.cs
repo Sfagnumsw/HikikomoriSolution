@@ -28,7 +28,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
 
                 if(ListContent.Any() != true)
                 {
-                    response.Description = "RememberContent.Method [AllContent] : Список отложенного контента пуст";
+                    response.Description = "RememberContentService.Method [AllContent] : Список отложенного контента пуст";
                     response.StatusCode = StatusCode.NotFound;
                     return response;
                 }
@@ -42,7 +42,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
             {
                 return new ResponseRepository<IEnumerable<RememberContent>>()
                 {
-                    Description = $"RememberContent.Method [AllContent] : {ex.Message}",
+                    Description = $"RememberContentService.Method [AllContent] : {ex.Message}",
                     StatusCode = StatusCode.ServerError
                 };
             }
@@ -56,7 +56,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
 
                 if(_repository.GetOnId(ContentId) == null)
                 {
-                    response.Description = $"RememberContent.Method[DeleteContent] : Элемент таблицы с таким ID не найден";
+                    response.Description = $"RememberContentService.Method[DeleteContent] : Элемент таблицы с таким ID не найден";
                     response.StatusCode = StatusCode.NotFound;
                     return response;
                 }
@@ -69,28 +69,27 @@ namespace HikikomoriWEB.Services.RepositoryServices
             {
                 return new ResponseRepository<RememberContent>()
                 {
-                    Description = $"RememberContent.Method [DeleteContent] : {ex.Message}",
+                    Description = $"RememberContentService.Method [DeleteContent] : {ex.Message}",
                     StatusCode = StatusCode.ServerError
                 };
             }
         }
 
-        public async Task<IResponseRepository<IEnumerable<RememberContent>>> GetOnCategoryId(int CategoryId)
+        public async Task<IResponseRepository<IEnumerable<RememberContent>>> GetFilms()
         {
-
             try
             {
                 var response = new ResponseRepository<IEnumerable<RememberContent>>();
-                var ListContent = await _repository.GetOnCategoryId(CategoryId);
+                var FilmList = await _repository.GetOnCategoryId((int)Categories.Films);
 
-                if(ListContent.Any() != true)
+                if(FilmList.Any() != true)
                 {
-                    response.Description = "RememberContent.Method [GetOnCategoryId] : Элементы таблицы этой категории не найдены";
+                    response.Description = "RememberContentService.Method [GetOnCategoryId] : Элементы таблицы этой категории не найдены";
                     response.StatusCode = StatusCode.NotFound;
                     return response;
                 }
 
-                response.Data = ListContent;
+                response.Data = FilmList;
                 response.StatusCode = StatusCode.OK;
                 return response;
             }
@@ -99,7 +98,123 @@ namespace HikikomoriWEB.Services.RepositoryServices
             {
                 return new ResponseRepository<IEnumerable<RememberContent>>()
                 {
-                    Description = $"RememberContent.Method [GetOnCategoryId] : {ex.Message}",
+                    Description = $"RememberContentService.Method [GetOnCategoryId] : {ex.Message}",
+                    StatusCode = StatusCode.ServerError
+                };
+            }
+        }
+
+        public async Task<IResponseRepository<IEnumerable<RememberContent>>> GetBooks()
+        {
+            try
+            {
+                var response = new ResponseRepository<IEnumerable<RememberContent>>();
+                var BookList = await _repository.GetOnCategoryId((int)Categories.Books);
+
+                if (BookList.Any() != true)
+                {
+                    response.Description = "RememberContentService.Method [GetOnCategoryId] : Элементы таблицы этой категории не найдены";
+                    response.StatusCode = StatusCode.NotFound;
+                    return response;
+                }
+
+                response.Data = BookList;
+                response.StatusCode = StatusCode.OK;
+                return response;
+            }
+
+            catch (Exception ex)
+            {
+                return new ResponseRepository<IEnumerable<RememberContent>>()
+                {
+                    Description = $"RememberContentService.Method [GetOnCategoryId] : {ex.Message}",
+                    StatusCode = StatusCode.ServerError
+                };
+            }
+        }
+
+        public async Task<IResponseRepository<IEnumerable<RememberContent>>> GetGames()
+        {
+            try
+            {
+                var response = new ResponseRepository<IEnumerable<RememberContent>>();
+                var GameList = await _repository.GetOnCategoryId((int)Categories.Games);
+
+                if (GameList.Any() != true)
+                {
+                    response.Description = "RememberContentService.Method [GetOnCategoryId] : Элементы таблицы этой категории не найдены";
+                    response.StatusCode = StatusCode.NotFound;
+                    return response;
+                }
+
+                response.Data = GameList;
+                response.StatusCode = StatusCode.OK;
+                return response;
+            }
+
+            catch (Exception ex)
+            {
+                return new ResponseRepository<IEnumerable<RememberContent>>()
+                {
+                    Description = $"RememberContentService.Method [GetOnCategoryId] : {ex.Message}",
+                    StatusCode = StatusCode.ServerError
+                };
+            }
+        }
+
+        public async Task<IResponseRepository<IEnumerable<RememberContent>>> GetSerials()
+        {
+            try
+            {
+                var response = new ResponseRepository<IEnumerable<RememberContent>>();
+                var SerialList = await _repository.GetOnCategoryId((int)Categories.Serials);
+
+                if (SerialList.Any() != true)
+                {
+                    response.Description = "RememberContentService.Method [GetOnCategoryId] : Элементы таблицы этой категории не найдены";
+                    response.StatusCode = StatusCode.NotFound;
+                    return response;
+                }
+
+                response.Data = SerialList;
+                response.StatusCode = StatusCode.OK;
+                return response;
+            }
+
+            catch (Exception ex)
+            {
+                return new ResponseRepository<IEnumerable<RememberContent>>()
+                {
+                    Description = $"RememberContentService.Method [GetOnCategoryId] : {ex.Message}",
+                    StatusCode = StatusCode.ServerError
+                };
+            }
+        }
+
+        public async Task<IResponseRepository<IEnumerable<RememberContent>>> GetCartoons()
+        {
+            try
+            {
+                var response = new ResponseRepository<IEnumerable<RememberContent>>();
+                var CartoonList = await _repository.GetOnCategoryId((int)Categories.Cartoons);
+
+                if (CartoonList.Any() != true)
+                {
+                    response.Description = "RememberContentService.Method [GetOnCategoryId] : Элементы таблицы этой категории не найдены";
+                    response.StatusCode = StatusCode.NotFound;
+                    return response;
+                }
+
+                response.Data = CartoonList;
+                response.StatusCode = StatusCode.OK;
+                return response;
+            }
+
+            catch (Exception ex)
+            {
+                return new ResponseRepository<IEnumerable<RememberContent>>()
+                {
+                    Description = $"RememberContentService.Method [GetOnCategoryId] : {ex.Message}",
                     StatusCode = StatusCode.ServerError
                 };
             }
@@ -114,7 +229,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
 
                 if(ContentItem == null)
                 {
-                    response.Description = "RememberContent.Method [GetOnId] : Элемент таблицы с таким ID не найден";
+                    response.Description = "RememberContentService.Method [GetOnId] : Элемент таблицы с таким ID не найден";
                     response.StatusCode = StatusCode.NotFound;
                     return response;
                 }
@@ -128,7 +243,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
             {
                 return new ResponseRepository<RememberContent>()
                 {
-                    Description = $"RememberContent.Method [GetOnId] : {ex.Message}",
+                    Description = $"RememberContentService.Method [GetOnId] : {ex.Message}",
                     StatusCode = StatusCode.ServerError
                 };
             }
@@ -140,6 +255,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
             {
                 var response = new ResponseRepository<RememberContent>();
                 await _repository.SaveContent(obj);
+                response.Description = "Запись сохранена";
                 response.StatusCode = StatusCode.OK;
                 return response;
             }
@@ -148,7 +264,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
             {
                 return new ResponseRepository<RememberContent>()
                 {
-                    Description = $"RememberContent.Method [SaveContent] : {ex.Message}",
+                    Description = $"RememberContentService.Method [SaveContent] : {ex.Message}",
                     StatusCode = StatusCode.ServerError
                 };
             }

@@ -1,11 +1,10 @@
 ﻿@model RateContent
 
 <div>
-    <div class="rate-form-block">
+    <div>
         <form asp-controller="Home" asp-action="NewRate" method="post" class="remember-form">
             <div asp-validation-summary="All"></div>
             <div>
-                <label>@ViewBag.Check</label>
                 <input asp-for="Name" placeholder="Название" class="txt-input" />
                 <span asp-validation-for="Name"></span>
             </div>

@@ -24,7 +24,7 @@ namespace HikikomoriWEB
 
             //services.AddMvc(options => options.EnableEndpointRouting = false); //другой способ маршрутизации через configure(отключаем эндпоинт)
 
-            services.AddScoped<IBaseContentServices<RateContent>, RateContentService>(); //подключение функционала
+            services.AddScoped<IBaseContentServices<RateContent>, RateContentService>(); //подключение BL
             services.AddScoped<IBaseContentRepository<RateContent>, RateContentRepository>();
             services.AddScoped<IBaseContentServices<RememberContent>, RememberContentService>();
             services.AddScoped<IBaseContentRepository<RememberContent>, RememberContentRepository>();

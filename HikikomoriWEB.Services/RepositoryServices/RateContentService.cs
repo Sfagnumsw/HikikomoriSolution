@@ -28,7 +28,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
 
                 if(ContentList.Any() != true)
                 {
-                    response.Description = "RateContent.Method [AllContent] : Список оцененного контента пуст";
+                    response.Description = "RateContentService.Method [AllContent] : Список оцененного контента пуст";
                     response.StatusCode = StatusCode.NotFound;
                     return response;
                 }
@@ -42,7 +42,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
             {
                 return new ResponseRepository<IEnumerable<RateContent>>()
                 {
-                    Description = $"RateContent.Method [AllContent] : {ex.Message}",
+                    Description = $"RateContentService.Method [AllContent] : {ex.Message}",
                     StatusCode = StatusCode.ServerError
                 };
             }
@@ -57,7 +57,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
 
                 if(_repository.GetOnId(ContentId) == null)
                 {
-                    response.Description = $"RateContent.Method [DeleteContent] : Элемент таблицы с таким ID не найден";
+                    response.Description = $"RateContentService.Method [DeleteContent] : Элемент таблицы с таким ID не найден";
                     response.StatusCode = StatusCode.NotFound;
                     return response;
                 }
@@ -71,27 +71,28 @@ namespace HikikomoriWEB.Services.RepositoryServices
             {
                 return new ResponseRepository<RateContent>()
                 {
-                    Description = $"RateContent.Method [DeleteContent] : {ex.Message}",
+                    Description = $"RateContentService.Method [DeleteContent] : {ex.Message}",
                     StatusCode = StatusCode.ServerError
                 };
             }
             
         }
 
-        public async Task<IResponseRepository<IEnumerable<RateContent>>> GetOnCategoryId(int CategoryId)
+        public async Task<IResponseRepository<IEnumerable<RateContent>>> GetFilms()
         {
             try
             {
                 var response = new ResponseRepository<IEnumerable<RateContent>>();
-                var ContentList = await _repository.GetOnCategoryId(CategoryId);
+                var FilmList = await _repository.GetOnCategoryId((int)Categories.Films);
 
-                if(ContentList.Any() != true)
+                if(FilmList.Any() != true)
                 {
-                    response.Description = "RateContent.Method [GetOnCategoryId] : Элементы таблицы этой категории не найдены";
+                    response.Description = "RateContentService.Method [GetOnCategoryId] : Элементы таблицы этой категории не найдены";
                     response.StatusCode = StatusCode.NotFound;
+                    return response;
                 }
 
-                response.Data = ContentList;
+                response.Data = FilmList;
                 response.StatusCode = StatusCode.OK;
                 return response;
             }
@@ -100,7 +101,123 @@ namespace HikikomoriWEB.Services.RepositoryServices
             {
                 return new ResponseRepository<IEnumerable<RateContent>>()
                 {
-                    Description = $"RateContent.Method [GetOnCategoryId] : {ex.Message}",
+                    Description = $"RateContentService.Method [GetFilms] : {ex.Message}",
+                    StatusCode = StatusCode.ServerError
+                };
+            }
+        }
+
+        public async Task<IResponseRepository<IEnumerable<RateContent>>> GetBooks()
+        {
+            try
+            {
+                var response = new ResponseRepository<IEnumerable<RateContent>>();
+                var BookList = await _repository.GetOnCategoryId((int)Categories.Books);
+
+                if (BookList.Any() != true)
+                {
+                    response.Description = "RateContentService.Method [GetOnCategoryId] : Элементы таблицы этой категории не найдены";
+                    response.StatusCode = StatusCode.NotFound;
+                    return response;
+                }
+
+                response.Data = BookList;
+                response.StatusCode = StatusCode.OK;
+                return response;
+            }
+
+            catch (Exception ex)
+            {
+                return new ResponseRepository<IEnumerable<RateContent>>()
+                {
+                    Description = $"RateContentService.Method [GetFilms] : {ex.Message}",
+                    StatusCode = StatusCode.ServerError
+                };
+            }
+        }
+
+        public async Task<IResponseRepository<IEnumerable<RateContent>>> GetGames()
+        {
+            try
+            {
+                var response = new ResponseRepository<IEnumerable<RateContent>>();
+                var GameList = await _repository.GetOnCategoryId((int)Categories.Games);
+
+                if (GameList.Any() != true)
+                {
+                    response.Description = "RateContentService.Method [GetOnCategoryId] : Элементы таблицы этой категории не найдены";
+                    response.StatusCode = StatusCode.NotFound;
+                    return response;
+                }
+
+                response.Data = GameList;
+                response.StatusCode = StatusCode.OK;
+                return response;
+            }
+
+            catch (Exception ex)
+            {
+                return new ResponseRepository<IEnumerable<RateContent>>()
+                {
+                    Description = $"RateContentService.Method [GetFilms] : {ex.Message}",
+                    StatusCode = StatusCode.ServerError
+                };
+            }
+        }
+
+        public async Task<IResponseRepository<IEnumerable<RateContent>>> GetSerials()
+        {
+            try
+            {
+                var response = new ResponseRepository<IEnumerable<RateContent>>();
+                var SerialsList = await _repository.GetOnCategoryId((int)Categories.Serials);
+
+                if (SerialsList.Any() != true)
+                {
+                    response.Description = "RateContentService.Method [GetOnCategoryId] : Элементы таблицы этой категории не найдены";
+                    response.StatusCode = StatusCode.NotFound;
+                    return response;
+                }
+
+                response.Data = SerialsList;
+                response.StatusCode = StatusCode.OK;
+                return response;
+            }
+
+            catch (Exception ex)
+            {
+                return new ResponseRepository<IEnumerable<RateContent>>()
+                {
+                    Description = $"RateContentService.Method [GetFilms] : {ex.Message}",
+                    StatusCode = StatusCode.ServerError
+                };
+            }
+        }
+
+        public async Task<IResponseRepository<IEnumerable<RateContent>>> GetCartoons()
+        {
+            try
+            {
+                var response = new ResponseRepository<IEnumerable<RateContent>>();
+                var CartoonsList = await _repository.GetOnCategoryId((int)Categories.Cartoons);
+
+                if (CartoonsList.Any() != true)
+                {
+                    response.Description = "RateContentService.Method [GetOnCategoryId] : Элементы таблицы этой категории не найдены";
+                    response.StatusCode = StatusCode.NotFound;
+                    return response;
+                }
+
+                response.Data = CartoonsList;
+                response.StatusCode = StatusCode.OK;
+                return response;
+            }
+
+            catch (Exception ex)
+            {
+                return new ResponseRepository<IEnumerable<RateContent>>()
+                {
+                    Description = $"RateContentService.Method [GetFilms] : {ex.Message}",
                     StatusCode = StatusCode.ServerError
                 };
             }
@@ -115,7 +232,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
 
                 if(ContentItem == null)
                 {
-                    response.Description = "RateContent.Method [GetOnId] : Элемент таблицы с таким ID не найден";
+                    response.Description = "RateContentService.Method [GetOnId] : Элемент таблицы с таким ID не найден";
                     response.StatusCode = StatusCode.NotFound;
                     return response;
                 }
@@ -129,7 +246,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
             {
                 return new ResponseRepository<RateContent>()
                 {
-                    Description = $"RateContent.Method [GetOnId] : {ex.Message}",
+                    Description = $"RateContentService.Method [GetOnId] : {ex.Message}",
                     StatusCode = StatusCode.ServerError
                 };
             }
@@ -141,6 +258,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
             {
                 var response = new ResponseRepository<RateContent>();
                 await _repository.SaveContent(obj);
+                response.Description = "Запись сохранена";
                 response.StatusCode = StatusCode.OK;
                 return response;
             }
@@ -149,7 +267,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
             {
                 return new ResponseRepository<RateContent>()
                 {
-                    Description = $"RateContent.Method [SaveContent] : {ex.Message}",
+                    Description = $"RateContentService.Method [SaveContent] : {ex.Message}",
                     StatusCode = StatusCode.ServerError
                 };
             }

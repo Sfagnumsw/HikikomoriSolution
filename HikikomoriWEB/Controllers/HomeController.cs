@@ -24,6 +24,7 @@ namespace HikikomoriWEB.Controllers
             return View();
         }
 
+         // Форма оценивания контента
         [HttpGet]
         public IActionResult NewRate()
         {
@@ -36,12 +37,20 @@ namespace HikikomoriWEB.Controllers
         {
             if(ModelState.IsValid)
             {
-                await _rateService.SaveContent(obj);
-                return RedirectToAction("Index");
+                var response = await _rateService.SaveContent(obj);
+                if(response.StatusCode == Domain.Enum.StatusCode.OK)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    return RedirectToAction("Error");
+                }
             }
             return View();
         }
-
+        
+        //Форма отложенного контента
         [HttpGet]
         public  IActionResult NewRemember()
         {
@@ -54,8 +63,15 @@ namespace HikikomoriWEB.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _rememberService.SaveContent(obj);
-                return RedirectToAction("Index");
+                var response = await _rememberService.SaveContent(obj);
+                if(response.StatusCode == Domain.Enum.StatusCode.OK)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    return RedirectToAction("Error");
+                }
             }
             return View();
         }

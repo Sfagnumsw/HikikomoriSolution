@@ -1,0 +1,59 @@
+﻿<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Books</title>
+</head>
+<body>
+    <input type="button" class="delete-button">
+    <table class="table-list-rate">
+        <caption>Посмотрел</caption>
+        <thead>
+            <tr><th>Id</th><th>Название</th><th>Жанр</th><th>Студия издания</th><th>Год выпуска</th><th>Оценка</th></tr>
+        </thead>
+        <tbody>
+            @if (ViewBag.Rated != null)
+            {
+                foreach (var i in (List<RateContent>)ViewBag.Rated)
+                {
+                    <tr>
+                        <td>@i.Id</td>
+                        <td>@i.Name</td>
+                        <td>@i.Genre</td>
+                        <td>@i.Autor</td>
+                        <td>@i.CreationYear</td>
+                        <td>
+                            @i.Rating @if (i.Replay == true)
+                            {<img src="~/images/fav.png" class="ico">}
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr><td>Пока пусто</td></tr>
+            }
+        </tbody>
+    </table>
+
+    <br>
+    <table class="table-list-remember">
+        <caption>Посмотрю позже</caption>
+        <thead>
+            <tr><th>Id</th><th>Название</th><th>Жанр</th><th>Студия издания</th><th>Год создания</th></tr>
+        </thead>
+        <tbody>
+            @if (ViewBag.Remembered != null)
+            {
+                foreach (var i in (List<RememberContent>)ViewBag.Remembered)
+                {
+                    <tr><td>@i.Id</td><td>@i.Name</td><td>@i.Genre</td><td>@i.Autor</td><td>@i.CreationYear</td></tr>
+                }
+            }
+            else
+            {
+                <tr><td>Пока пусто</td></tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
