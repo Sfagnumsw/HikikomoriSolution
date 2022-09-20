@@ -2,6 +2,7 @@
 using HikikomoriWEB.Domain.Enum;
 using HikikomoriWEB.Domain.ViewModels;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using HikikomoriWEB.Domain.Interfaces;
 using System;
 using System.Reflection;
 using System.ComponentModel.DataAnnotations;
@@ -10,7 +11,7 @@ namespace HikikomoriWEB.Services.HelperMethods
 {
     public static class Helpers
     {
-        public static SelectList SelectListCategories()
+        public static SelectList SelectListCategories() //формирование selectlist для категорий
         {
             List<CategoryViewModel> categoryList = new List<CategoryViewModel>();
             var arr = typeof(Categories).GetFields();

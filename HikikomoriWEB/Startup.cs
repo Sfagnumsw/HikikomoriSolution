@@ -43,7 +43,7 @@ namespace HikikomoriWEB
             app.UseStaticFiles(); //поддержка статичных файлов (css,js...)
             app.UseRouting(); //система маршрутизации (если используем AddMvc, то устанавливаем дефол–оут и отключаем эндпоинт–оут в сервисе)
             app.UseStatusCodePages(); //обработка ошибок http (404...)
-            app.UseEndpoints(endpoints => { endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}"); }); //маршрутизаци€ под useRouting(если в адресе не прописан контроллер, то используем по умолчанию контроллер дл€ главной страницы и меотод)
+            app.UseEndpoints(endpoints => { endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}"); }); //маршрутизаци€ под useRouting(если в адресе не прописан контроллер, то используем по умолчанию контроллер дл€ главной страницы и метод)
             //app.UseMvcWithDefaultRoute(); //другой способ маршрутизации
         }
     }

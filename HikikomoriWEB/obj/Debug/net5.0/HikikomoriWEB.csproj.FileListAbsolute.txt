@@ -535,3 +535,9 @@ C:\Users\Sfagnum\Documents\обучение\Программирование\C#\
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Content\FilmList.cshtml.g.cs
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Content\GameList.cshtml.g.cs
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Content\SerialList.cshtml.g.cs
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Content\RatedListPartial.cshtml.g.cs
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Content\RememberedListPartial.cshtml.g.cs
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\nlog.config
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\NLog.dll
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\NLog.Web.AspNetCore.dll

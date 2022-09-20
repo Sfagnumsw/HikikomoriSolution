@@ -1,8 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "3cyq29KLi2FnxwXaKSZAsTTThPG+1/ALJLjH5MVpnd1/fkolM59DxBgo8b4qxmvg3yB22UxE75IUi9vIdqpYMQ==",
+  "dgSpecHash": "wx1u8eXFbbMx6rWhbeeDEhWyK47Oln1VRmWXCQSiBtyAF5vO2bt279VMfzUkPS4Za7j5yPSBdaj7aFo4t1yQYw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Sfagnum\\Documents\\обучение\\Программирование\\C#\\ASP.NET Core\\eaxDeskTop\\HikomoriASP\\HikikomoriWEB.Domain\\HikikomoriWEB.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Sfagnum\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Sfagnum\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0\\microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",
+    "C:\\Users\\Sfagnum\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Sfagnum\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
+    "C:\\Users\\Sfagnum\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Sfagnum\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
+    "C:\\Users\\Sfagnum\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\Sfagnum\\.nuget\\packages\\nlog\\5.0.4\\nlog.5.0.4.nupkg.sha512",
+    "C:\\Users\\Sfagnum\\.nuget\\packages\\nlog.extensions.logging\\5.0.4\\nlog.extensions.logging.5.0.4.nupkg.sha512",
+    "C:\\Users\\Sfagnum\\.nuget\\packages\\nlog.web.aspnetcore\\5.1.4\\nlog.web.aspnetcore.5.1.4.nupkg.sha512"
+  ],
   "logs": []
 }

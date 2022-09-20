@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "iHAloGXyC58rQrzIVnC03EymKU5Xf6UVpM0B8Q8iG5qdagVrlYkriL4zz0ms7UIHSK9T52LqxYH7hDJWnQ7fyQ==",
+  "dgSpecHash": "CDURPFl1gBfYBFUSEkDASYINFld1j4GK0eJOeAKmvSA+pdzkbU9aWugg6Cf493a9vgaUhGJdEclXrgpPstAJwg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Sfagnum\\Documents\\обучение\\Программирование\\C#\\ASP.NET Core\\eaxDeskTop\\HikomoriASP\\HikikomoriWEB\\HikikomoriWEB.csproj",
   "expectedPackageFiles": [
@@ -99,6 +99,9 @@
     "C:\\Users\\Sfagnum\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\Sfagnum\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\Sfagnum\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
+    "C:\\Users\\Sfagnum\\.nuget\\packages\\nlog\\5.0.4\\nlog.5.0.4.nupkg.sha512",
+    "C:\\Users\\Sfagnum\\.nuget\\packages\\nlog.extensions.logging\\5.0.4\\nlog.extensions.logging.5.0.4.nupkg.sha512",
+    "C:\\Users\\Sfagnum\\.nuget\\packages\\nlog.web.aspnetcore\\5.1.4\\nlog.web.aspnetcore.5.1.4.nupkg.sha512",
     "C:\\Users\\Sfagnum\\.nuget\\packages\\restsharp\\108.0.1\\restsharp.108.0.1.nupkg.sha512",
     "C:\\Users\\Sfagnum\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Sfagnum\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

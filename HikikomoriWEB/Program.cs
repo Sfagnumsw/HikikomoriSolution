@@ -1,11 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
+using NLog.Web;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace HikikomoriWEB
 {
@@ -21,6 +17,15 @@ namespace HikikomoriWEB
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                });
+                })
+                .ConfigureLogging(logging =>
+                {
+                    logging.ClearProviders();
+                    logging.SetMinimumLevel(LogLevel.Trace);
+                })
+                .UseNLog();
+                
+
+
     }
 }

@@ -9,5 +9,10 @@ namespace HikikomoriWEB.DAL.Context
         public DbSet<RateContent> RateContent { get; set; } //таблицы
         public DbSet<RememberContent> RememberContent { get; set; }
         public DbSet<UsersDataAutorisation> UsersData { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.EnableSensitiveDataLogging();
+        }
     }
 }

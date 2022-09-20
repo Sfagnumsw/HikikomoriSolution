@@ -1,14 +1,16 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace HikikomoriWEB.DAL.Interfaces
 {
     public interface IBaseContentRepository<T>
     {
-        Task<IEnumerable<T>> AllContent(); //получить контент
-        Task<T> GetOnId(int ContentId); //контент по ID
-        Task SaveContent(T obj); //сохранить
-        Task DeleteContent(int ContentId); //удалить
-        Task<IEnumerable<T>> GetOnCategoryId(int CategoryId); // получить весь контент из определенной категории
+        Task<IEnumerable<T>> GetAll(); // получить все
+        Task<T> GetOnId(int Id); // получить по ID
+        Task Save(T obj); // сохранить
+        Task Delete(int Id); // удалить
+        Task<IEnumerable<T>> GetOnCategoryId(int CategoryId); // контент из определенной категории
+
     }
 }

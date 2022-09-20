@@ -16,10 +16,15 @@ namespace HikikomoriWEB.DAL.EFRepositories
             _context = context;
         }
 
-        public async Task<IEnumerable<RateContent>> AllContent() => await _context.RateContent.ToListAsync();
+        public async Task<IEnumerable<RateContent>> GetAll() => await _context.RateContent.ToListAsync();
 
-        public async Task DeleteContent(int ContentId)
+        public async Task Delete(int ContentId)
         {
+            var local = _context.Set<RateContent>().Local.FirstOrDefault(i => i.Id.Equals(ContentId));
+            if (local != null)
+            {
+                _context.Entry(local).State = EntityState.Detached;
+            }
             _context.RateContent.Remove(new RateContent() { Id = ContentId });
             await _context.SaveChangesAsync();
         }
@@ -34,7 +39,7 @@ namespace HikikomoriWEB.DAL.EFRepositories
             return await _context.RateContent.FirstOrDefaultAsync(i => i.Id == ContentId);
         }
 
-        public async Task SaveContent(RateContent obj)
+        public async Task Save(RateContent obj)
         {
             if (obj.Id == default)
             {

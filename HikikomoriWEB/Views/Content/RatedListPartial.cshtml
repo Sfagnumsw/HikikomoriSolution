@@ -1,0 +1,24 @@
+﻿@model IEnumerable<RateContent>
+
+<table class="table-list-rate">
+    <caption>Оценил</caption>
+    <thead>
+        <tr><th>Id</th><th>Название</th><th>Жанр</th><th>Автор</th><th>Год выпуска</th><th>Оценка</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.Id</td>
+                <td>@i.Name</td>
+                <td>@i.Genre</td>
+                <td>@i.Autor</td>
+                <td>@i.CreationYear</td>
+                <td>
+                    @i.Rating @if (i.Replay == true)
+                    {<img src="~/images/fav.png" class="ico">}
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

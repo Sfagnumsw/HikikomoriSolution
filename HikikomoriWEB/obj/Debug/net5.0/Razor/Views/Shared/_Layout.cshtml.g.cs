@@ -26,8 +26,15 @@ using HikikomoriWEB.Domain.Entity;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\Views\_ViewImports.cshtml"
+using HikikomoriWEB.Domain.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4baffa84160cee29103bb2329db292b66870a700", @"/Views/Shared/_Layout.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"004d67ba6ba6b55eff395527a75197491a523683", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f505603e46851f5e4497f6e2d554ac9af6defa3c", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__Layout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #line hidden
@@ -56,7 +63,7 @@ using HikikomoriWEB.Domain.Entity;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<!DOCTYPE HTML>\r\n<html>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4baffa84160cee29103bb2329db292b66870a7003423", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4baffa84160cee29103bb2329db292b66870a7003675", async() => {
                 WriteLiteral("\r\n    ");
 #nullable restore
 #line 4 "C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\Views\Shared\_Layout.cshtml"
@@ -86,7 +93,7 @@ Write(await Html.PartialAsync("MetatagsPartial"));
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4baffa84160cee29103bb2329db292b66870a7005002", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4baffa84160cee29103bb2329db292b66870a7005254", async() => {
                 WriteLiteral("\r\n    <div id=\"page-wrapper\">\r\n        ");
 #nullable restore
 #line 9 "C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\Views\Shared\_Layout.cshtml"

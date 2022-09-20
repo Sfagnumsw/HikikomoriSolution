@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using HikikomoriWEB.Services.Interfaces;
 using HikikomoriWEB.Domain.Entity;
+using HikikomoriWEB.Domain.ViewModels;
 using System.Threading.Tasks;
-
 
 namespace HikikomoriWEB.Controllers
 {
@@ -17,6 +17,7 @@ namespace HikikomoriWEB.Controllers
             _rememberService = remember;
         }
 
+        #region Заполнение таблиц
         public async Task<IActionResult> FilmList()
         {
             var rateResponse = await _rateService.GetFilms();
@@ -25,10 +26,8 @@ namespace HikikomoriWEB.Controllers
             {
                 return RedirectToAction("Error");
             }
-            
-            ViewBag.Rated = rateResponse.Data;
-            ViewBag.Remembered = rememberResponse.Data;
-            return View();
+
+            return View(new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
         }
 
         public async Task<IActionResult> BookList()
@@ -40,9 +39,7 @@ namespace HikikomoriWEB.Controllers
                 return RedirectToAction("Error");
             }
 
-            ViewBag.Rated = rateResponse.Data;
-            ViewBag.Remembered = rememberResponse.Data;
-            return View();
+            return View(new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
         }
 
         public async Task<IActionResult> GameList()
@@ -54,9 +51,7 @@ namespace HikikomoriWEB.Controllers
                 return RedirectToAction("Error");
             }
 
-            ViewBag.Rated = rateResponse.Data;
-            ViewBag.Remembered = rememberResponse.Data;
-            return View();
+            return View(new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
         }
 
         public async Task<IActionResult> SerialList()
@@ -68,9 +63,7 @@ namespace HikikomoriWEB.Controllers
                 return RedirectToAction("Error");
             }
 
-            ViewBag.Rated = rateResponse.Data;
-            ViewBag.Remembered = rememberResponse.Data;
-            return View();
+            return View(new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
         }
 
         public async Task<IActionResult> CartoonList()
@@ -82,9 +75,22 @@ namespace HikikomoriWEB.Controllers
                 return RedirectToAction("Error");
             }
 
-            ViewBag.Rated = rateResponse.Data;
-            ViewBag.Remembered = rememberResponse.Data;
-            return View();
+            return View(new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
+        }
+        #endregion
+
+        public async Task<IActionResult> RemoveActon(int Id, string tableClass)
+        {
+            switch (tableClass)
+            {
+                case "table-list-rate" :
+                    await _rateService.DeleteContent(Id);
+                    break;
+                case "table-list-remember":
+                    await _rememberService.DeleteContent(Id);
+                    break;
+            }
+            return RedirectToAction("Index"); //изменить
         }
     }
 }

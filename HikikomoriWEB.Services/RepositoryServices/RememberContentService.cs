@@ -24,7 +24,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
             try
             {
                 var response = new ResponseRepository<IEnumerable<RememberContent>>();
-                var ListContent = await _repository.AllContent();
+                var ListContent = await _repository.GetAll();
 
                 if(ListContent.Any() != true)
                 {
@@ -60,7 +60,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
                     response.StatusCode = StatusCode.NotFound;
                     return response;
                 }
-                await _repository.DeleteContent(ContentId);
+                await _repository.Delete(ContentId);
                 response.StatusCode = StatusCode.OK;
                 return response;
             }
@@ -254,7 +254,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
             try
             {
                 var response = new ResponseRepository<RememberContent>();
-                await _repository.SaveContent(obj);
+                await _repository.Save(obj);
                 response.Description = "Запись сохранена";
                 response.StatusCode = StatusCode.OK;
                 return response;

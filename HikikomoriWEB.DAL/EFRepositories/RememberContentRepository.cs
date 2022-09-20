@@ -16,11 +16,16 @@ namespace HikikomoriWEB.DAL.EFRepositories
             _context = context;
         }
 
-        public async Task<IEnumerable<RememberContent>> AllContent() => await _context.RememberContent.ToListAsync();
+        public async Task<IEnumerable<RememberContent>> GetAll() => await _context.RememberContent.ToListAsync();
 
-        public async Task DeleteContent(int ContentId)
+        public async Task Delete(int ContentId)
         {
-            _context.RememberContent.Remove(new RememberContent { Id = ContentId });
+            var local = _context.Set<RememberContent>().Local.FirstOrDefault(i => i.Id.Equals(ContentId));
+            if (local != null)
+            {
+                _context.Entry(local).State = EntityState.Detached;
+            }
+            _context.RememberContent.Remove(new RememberContent() { Id = ContentId });
             await _context.SaveChangesAsync();
         }
 
@@ -34,7 +39,7 @@ namespace HikikomoriWEB.DAL.EFRepositories
             return await _context.RememberContent.FirstOrDefaultAsync(i => i.Id == ContentId);
         }
 
-        public async Task SaveContent(RememberContent obj)
+        public async Task Save(RememberContent obj)
         {
             if (obj.Id == default)
             {

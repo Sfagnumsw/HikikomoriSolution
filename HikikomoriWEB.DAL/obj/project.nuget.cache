@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zh2nb5+AQSgyC7CIt/0DXWh9g29pQ3Er7Ej1OdrKJey2J4xBt3wY6hIXK/mmUX8oMZaUoTnjITkKNMvp012Www==",
+  "dgSpecHash": "L+V/eohCD3IpL7+pEFaj4EdfH3/EBrLX51YO/pKKmYZwgbg63Nm5/1oIW5VsuukBCPNxfHXgUR6FRwJIiAlRRA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Sfagnum\\Documents\\обучение\\Программирование\\C#\\ASP.NET Core\\eaxDeskTop\\HikomoriASP\\HikikomoriWEB.DAL\\HikikomoriWEB.DAL.csproj",
   "expectedPackageFiles": [
@@ -9,12 +9,16 @@
     "C:\\Users\\Sfagnum\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.16\\microsoft.entityframeworkcore.analyzers.5.0.16.nupkg.sha512",
     "C:\\Users\\Sfagnum\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Sfagnum\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
+    "C:\\Users\\Sfagnum\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Sfagnum\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.2\\microsoft.extensions.dependencyinjection.5.0.2.nupkg.sha512",
     "C:\\Users\\Sfagnum\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Sfagnum\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
     "C:\\Users\\Sfagnum\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Sfagnum\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
     "C:\\Users\\Sfagnum\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\Sfagnum\\.nuget\\packages\\nlog\\5.0.4\\nlog.5.0.4.nupkg.sha512",
+    "C:\\Users\\Sfagnum\\.nuget\\packages\\nlog.extensions.logging\\5.0.4\\nlog.extensions.logging.5.0.4.nupkg.sha512",
+    "C:\\Users\\Sfagnum\\.nuget\\packages\\nlog.web.aspnetcore\\5.1.4\\nlog.web.aspnetcore.5.1.4.nupkg.sha512",
     "C:\\Users\\Sfagnum\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\Sfagnum\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\Sfagnum\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512"
