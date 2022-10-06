@@ -3,8 +3,10 @@ using HikikomoriWEB.Services.Interfaces;
 using System.Threading.Tasks;
 using HikikomoriWEB.Domain.Entity;
 using HikikomoriWEB.Services.HelperMethods;
+using HikikomoriWEB.Services.RequestServices;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
+using HikikomoriWEB.Domain.ViewModels;
 
 namespace HikikomoriWEB.Controllers
 {
@@ -12,23 +14,23 @@ namespace HikikomoriWEB.Controllers
     {
         private readonly IBaseContentServices<RateContent> _rateService;
         private readonly IBaseContentServices<RememberContent> _rememberService;
-
         public HomeController(IBaseContentServices<RateContent> rate, IBaseContentServices<RememberContent> remember)
         {
             _rateService = rate;
             _rememberService = remember;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var Quote = await QuotesApiRequest.Quote();
+            return View(Quote);
         }
 
          // Форма оценивания контента
         [HttpGet]
         public IActionResult NewRate()
         {
-            ViewBag.Categories = Helpers.SelectListCategories();
+            ViewBag.Categories = ControllerAssistant.SelectListCategories();
             return View();
         }
 
@@ -38,7 +40,7 @@ namespace HikikomoriWEB.Controllers
             if(ModelState.IsValid)
             {
                 var response = await _rateService.SaveContent(obj);
-                if(response.StatusCode == Domain.Enum.StatusCode.OK)
+                if(ControllerAssistant.ErrorCheck<RateContent>(response))
                 {
                     return RedirectToAction("Index");
                 }
@@ -54,7 +56,7 @@ namespace HikikomoriWEB.Controllers
         [HttpGet]
         public  IActionResult NewRemember()
         {
-            ViewBag.Categories = Helpers.SelectListCategories();
+            ViewBag.Categories = ControllerAssistant.SelectListCategories();
             return View();
         }
 
@@ -64,7 +66,7 @@ namespace HikikomoriWEB.Controllers
             if (ModelState.IsValid)
             {
                 var response = await _rememberService.SaveContent(obj);
-                if(response.StatusCode == Domain.Enum.StatusCode.OK)
+                if(ControllerAssistant.ErrorCheck<RememberContent>(response))
                 {
                     return RedirectToAction("Index");
                 }

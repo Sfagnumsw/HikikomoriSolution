@@ -1,0 +1,683 @@
+2022-10-02 15:17:41.0760|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-10-02 15:17:41.2640|0|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\Sfagnum\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2022-10-02 15:17:41.2972|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Sfagnum\AppData\Local\ASP.NET\DataProtection-Keys\key-0d510eb8-9566-4c17-be1c-e451ecc27bc8.xml'. 
+2022-10-02 15:17:41.3212|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Sfagnum\AppData\Local\ASP.NET\DataProtection-Keys\key-ec05d73b-b37e-4ffd-8919-e0841fb55cbc.xml'. 
+2022-10-02 15:17:41.3293|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {0d510eb8-9566-4c17-be1c-e451ecc27bc8}. 
+2022-10-02 15:17:41.3293|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {ec05d73b-b37e-4ffd-8919-e0841fb55cbc}. 
+2022-10-02 15:17:41.3512|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {ec05d73b-b37e-4ffd-8919-e0841fb55cbc} with expiration date 2022-10-14 18:41:14Z as default key. 
+2022-10-02 15:17:41.4574|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-10-02 15:17:41.4574|0|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2022-10-02 15:17:41.4574|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-10-02 15:17:41.4737|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2022-10-02 15:17:41.4737|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2022-10-02 15:17:41.4737|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {ec05d73b-b37e-4ffd-8919-e0841fb55cbc} as the default key. 
+2022-10-02 15:17:41.4737|0|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {ec05d73b-b37e-4ffd-8919-e0841fb55cbc} was loaded during application startup. 
+2022-10-02 15:17:41.7413|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly HikikomoriWEB 
+2022-10-02 15:17:41.7413|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-10-02 15:17:41.7413|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-10-02 15:17:41.7413|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB 
+2022-10-02 15:17:41.7413|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-10-02 15:17:41.8286|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:44324/ - - 
+2022-10-02 15:17:41.8286|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-10-02 15:17:41.8286|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-10-02 15:17:41.8286|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path / does not match a supported file type 
+2022-10-02 15:17:41.8873|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/' 
+2022-10-02 15:17:41.8939|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB)' with route pattern '{controller=Home}/{action=Index}/{id?}' is valid for the request path '/' 
+2022-10-02 15:17:41.8939|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB)' 
+2022-10-02 15:17:41.8939|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB)' 
+2022-10-02 15:17:41.9108|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-10-02 15:17:41.9915|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller HikikomoriWEB.Controllers.HomeController (HikikomoriWEB). 
+2022-10-02 15:17:41.9915|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-10-02 15:17:41.9915|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter 
+2022-10-02 15:17:41.9915|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000) 
+2022-10-02 15:17:41.9915|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-10-02 15:17:41.9915|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter 
+2022-10-02 15:17:41.9915|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 15:17:41.9915|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 15:17:41.9915|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller HikikomoriWEB.Controllers.HomeController (HikikomoriWEB) 
+2022-10-02 15:17:42.2261|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2022-10-02 15:17:42.2708|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller HikikomoriWEB.Controllers.HomeController (HikikomoriWEB) 
+2022-10-02 15:17:42.2708|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter. 
+2022-10-02 15:17:42.2708|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-10-02 15:17:42.2708|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-10-02 15:17:42.2810|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB) - Validation state: Valid 
+2022-10-02 15:17:44.3925|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB), returned result Microsoft.AspNetCore.Mvc.ViewResult in 2105.03ms. 
+2022-10-02 15:17:44.3925|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-10-02 15:17:44.3925|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-10-02 15:17:44.3925|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter. 
+2022-10-02 15:17:44.3925|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 15:17:44.3925|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 15:17:44.3925|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ViewResult. 
+2022-10-02 15:17:44.3925|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Content/BookList.cshtml'. 
+2022-10-02 15:17:44.3925|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Content/CartoonList.cshtml'. 
+2022-10-02 15:17:44.3925|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Content/FilmList.cshtml'. 
+2022-10-02 15:17:44.3925|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Content/GameList.cshtml'. 
+2022-10-02 15:17:44.3925|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Content/RatedListPartial.cshtml'. 
+2022-10-02 15:17:44.3925|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Content/RememberedListPartial.cshtml'. 
+2022-10-02 15:17:44.3925|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Content/SerialList.cshtml'. 
+2022-10-02 15:17:44.3925|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Home/Index.cshtml'. 
+2022-10-02 15:17:44.3925|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Home/NewRate.cshtml'. 
+2022-10-02 15:17:44.3925|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Home/NewRemember.cshtml'. 
+2022-10-02 15:17:44.3925|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Shared/CssPartial.cshtml'. 
+2022-10-02 15:17:44.3925|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Shared/FooterPartial.cshtml'. 
+2022-10-02 15:17:44.3925|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Shared/HeaderPartial.cshtml'. 
+2022-10-02 15:17:44.3925|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Shared/MetatagsPartial.cshtml'. 
+2022-10-02 15:17:44.3925|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Shared/ScriptPartial.cshtml'. 
+2022-10-02 15:17:44.3925|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Shared/SidebarPartial.cshtml'. 
+2022-10-02 15:17:44.3925|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Shared/_Layout.cshtml'. 
+2022-10-02 15:17:44.3925|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/_ViewImports.cshtml'. 
+2022-10-02 15:17:44.3925|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/_ViewStart.cshtml'. 
+2022-10-02 15:17:44.4179|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view 'Index' in controller 'Home'. 
+2022-10-02 15:17:44.4179|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/Home/Index.cshtml'. 
+2022-10-02 15:17:44.4230|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/Views/Home/_ViewStart.cshtml'. 
+2022-10-02 15:17:44.4230|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/_ViewStart.cshtml'. 
+2022-10-02 15:17:44.4230|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/_ViewStart.cshtml'. 
+2022-10-02 15:17:44.4230|0|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Index. 
+2022-10-02 15:17:44.4379|0|DEBUG|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view path '/Views/Home/Index.cshtml' was found in 17.2827ms. 
+2022-10-02 15:17:44.5126|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 15:17:44.5307|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Home/NewRate and  
+2022-10-02 15:17:44.5526|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Home/NewRate 
+2022-10-02 15:17:44.5669|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 15:17:44.5669|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Home/NewRemember and  
+2022-10-02 15:17:44.5669|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Home/NewRemember 
+2022-10-02 15:17:44.5669|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view '_Layout' in controller 'Home'. 
+2022-10-02 15:17:44.5669|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/Views/Home/_Layout.cshtml'. 
+2022-10-02 15:17:44.5669|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/Shared/_Layout.cshtml'. 
+2022-10-02 15:17:44.5894|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view 'CssPartial' in controller 'Home'. 
+2022-10-02 15:17:44.5894|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/Views/Home/CssPartial.cshtml'. 
+2022-10-02 15:17:44.5894|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/Shared/CssPartial.cshtml'. 
+2022-10-02 15:17:44.6273|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view 'MetatagsPartial' in controller 'Home'. 
+2022-10-02 15:17:44.6273|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/Views/Home/MetatagsPartial.cshtml'. 
+2022-10-02 15:17:44.6273|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/Shared/MetatagsPartial.cshtml'. 
+2022-10-02 15:17:44.6273|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view 'HeaderPartial' in controller 'Home'. 
+2022-10-02 15:17:44.6273|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/Views/Home/HeaderPartial.cshtml'. 
+2022-10-02 15:17:44.6273|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/Shared/HeaderPartial.cshtml'. 
+2022-10-02 15:17:44.6442|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 15:17:44.6442|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in  and  
+2022-10-02 15:17:44.6442|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result / 
+2022-10-02 15:17:44.6442|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 15:17:44.6442|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/FilmList and  
+2022-10-02 15:17:44.6442|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/FilmList 
+2022-10-02 15:17:44.6442|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 15:17:44.6442|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/BookList and  
+2022-10-02 15:17:44.6442|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/BookList 
+2022-10-02 15:17:44.6442|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 15:17:44.6442|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/SerialList and  
+2022-10-02 15:17:44.6442|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/SerialList 
+2022-10-02 15:17:44.6442|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 15:17:44.6442|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/CartoonList and  
+2022-10-02 15:17:44.6442|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/CartoonList 
+2022-10-02 15:17:44.6442|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 15:17:44.6442|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/GameList and  
+2022-10-02 15:17:44.6442|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/GameList 
+2022-10-02 15:17:44.6442|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view 'SidebarPartial' in controller 'Home'. 
+2022-10-02 15:17:44.6442|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/Views/Home/SidebarPartial.cshtml'. 
+2022-10-02 15:17:44.6442|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/Shared/SidebarPartial.cshtml'. 
+2022-10-02 15:17:44.6442|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view 'FooterPartial' in controller 'Home'. 
+2022-10-02 15:17:44.6442|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/Views/Home/FooterPartial.cshtml'. 
+2022-10-02 15:17:44.6442|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/Shared/FooterPartial.cshtml'. 
+2022-10-02 15:17:44.6592|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view 'ScriptPartial' in controller 'Home'. 
+2022-10-02 15:17:44.6592|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/Views/Home/ScriptPartial.cshtml'. 
+2022-10-02 15:17:44.6592|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/Shared/ScriptPartial.cshtml'. 
+2022-10-02 15:17:44.7076|0|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Index executed in 291.923ms. 
+2022-10-02 15:17:44.7076|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ViewResult. 
+2022-10-02 15:17:44.7076|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 15:17:44.7076|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 15:17:44.7076|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 15:17:44.7076|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 15:17:44.7076|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB) in 2716.3946ms 
+2022-10-02 15:17:44.7076|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB)' 
+2022-10-02 15:17:44.7478|0|DEBUG|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "18086456109425491970" disconnecting. 
+2022-10-02 15:17:44.7536|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:44324/ - - - 200 - text/html;+charset=utf-8 2927.9675ms 
+2022-10-02 15:17:44.7833|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:44324/js/PostIdForDelete.js?v=QeeSf1CLmg-lo1GRhUypC1VecDB131z650oz0fcHwsA - - 
+2022-10-02 15:17:44.7833|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-10-02 15:17:44.7833|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2022-10-02 15:17:44.7833|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /js/PostIdForDelete.js was not modified 
+2022-10-02 15:17:44.7833|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /js/PostIdForDelete.js 
+2022-10-02 15:17:44.7833|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:44324/js/PostIdForDelete.js?v=QeeSf1CLmg-lo1GRhUypC1VecDB131z650oz0fcHwsA - - - 304 - application/javascript 12.7118ms 
+2022-10-02 15:17:44.7833|0|DEBUG|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "18302628887244308502" disconnecting. 
+2022-10-02 15:17:45.0829|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:44324/favicon.ico - - 
+2022-10-02 15:17:45.0829|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-10-02 15:17:45.0829|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /favicon.ico does not match an existing file 
+2022-10-02 15:17:45.0829|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/favicon.ico' 
+2022-10-02 15:17:45.0829|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2022-10-02 15:17:45.1029|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:44324/favicon.ico - - - 404 - text/plain 19.9683ms 
+2022-10-02 15:18:02.9823|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:44324/ - - 
+2022-10-02 15:18:02.9823|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-10-02 15:18:02.9823|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path / does not match a supported file type 
+2022-10-02 15:18:02.9823|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/' 
+2022-10-02 15:18:02.9823|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB)' with route pattern '{controller=Home}/{action=Index}/{id?}' is valid for the request path '/' 
+2022-10-02 15:18:02.9823|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB)' 
+2022-10-02 15:18:02.9823|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB)' 
+2022-10-02 15:18:02.9839|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller HikikomoriWEB.Controllers.HomeController (HikikomoriWEB). 
+2022-10-02 15:18:02.9839|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-10-02 15:18:02.9839|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter 
+2022-10-02 15:18:02.9839|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000) 
+2022-10-02 15:18:02.9839|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-10-02 15:18:02.9839|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter 
+2022-10-02 15:18:02.9839|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 15:18:02.9839|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 15:18:02.9839|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller HikikomoriWEB.Controllers.HomeController (HikikomoriWEB) 
+2022-10-02 15:18:02.9839|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller HikikomoriWEB.Controllers.HomeController (HikikomoriWEB) 
+2022-10-02 15:18:02.9839|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter. 
+2022-10-02 15:18:02.9839|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-10-02 15:18:02.9839|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-10-02 15:18:02.9839|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB) - Validation state: Valid 
+2022-10-02 15:18:03.6848|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB), returned result Microsoft.AspNetCore.Mvc.ViewResult in 699.3445ms. 
+2022-10-02 15:18:03.6848|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-10-02 15:18:03.6848|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-10-02 15:18:03.6848|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter. 
+2022-10-02 15:18:03.6848|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 15:18:03.6848|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 15:18:03.6848|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ViewResult. 
+2022-10-02 15:18:03.6848|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache hit for view 'Index' in controller 'Home'. 
+2022-10-02 15:18:03.6848|0|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Index. 
+2022-10-02 15:18:03.6848|0|DEBUG|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view path '/Views/Home/Index.cshtml' was found in 0.2814ms. 
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Home/NewRate and  
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Home/NewRate 
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Home/NewRemember and  
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Home/NewRemember 
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache hit for view '_Layout' in controller 'Home'. 
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache hit for view 'CssPartial' in controller 'Home'. 
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache hit for view 'MetatagsPartial' in controller 'Home'. 
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache hit for view 'HeaderPartial' in controller 'Home'. 
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in  and  
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result / 
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/FilmList and  
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/FilmList 
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/BookList and  
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/BookList 
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/SerialList and  
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/SerialList 
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/CartoonList and  
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/CartoonList 
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/GameList and  
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/GameList 
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache hit for view 'SidebarPartial' in controller 'Home'. 
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache hit for view 'FooterPartial' in controller 'Home'. 
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache hit for view 'ScriptPartial' in controller 'Home'. 
+2022-10-02 15:18:03.6870|0|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Index executed in 10.9893ms. 
+2022-10-02 15:18:03.6870|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ViewResult. 
+2022-10-02 15:18:03.6870|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 15:18:03.6870|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 15:18:03.6870|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 15:18:03.6870|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 15:18:03.6870|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB) in 712.527ms 
+2022-10-02 15:18:03.6870|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB)' 
+2022-10-02 15:18:03.6870|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:44324/ - - - 200 - text/html;+charset=utf-8 714.8843ms 
+2022-10-02 15:18:03.6870|0|DEBUG|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "18086456109425491974" disconnecting. 
+2022-10-02 15:18:05.2383|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:44324/Home/NewRate - - 
+2022-10-02 15:18:05.2383|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-10-02 15:18:05.2383|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /Home/NewRate does not match a supported file type 
+2022-10-02 15:18:05.2532|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/Home/NewRate' 
+2022-10-02 15:18:05.2532|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'HikikomoriWEB.Controllers.HomeController.NewRate (HikikomoriWEB)' with route pattern '{controller=Home}/{action=Index}/{id?}' is valid for the request path '/Home/NewRate' 
+2022-10-02 15:18:05.2532|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'HikikomoriWEB.Controllers.HomeController.NewRate (HikikomoriWEB)' 
+2022-10-02 15:18:05.2532|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'HikikomoriWEB.Controllers.HomeController.NewRate (HikikomoriWEB)' 
+2022-10-02 15:18:05.2532|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "NewRate", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NewRate() on controller HikikomoriWEB.Controllers.HomeController (HikikomoriWEB). 
+2022-10-02 15:18:05.2532|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-10-02 15:18:05.2532|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter 
+2022-10-02 15:18:05.2532|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000) 
+2022-10-02 15:18:05.2532|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-10-02 15:18:05.2532|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter 
+2022-10-02 15:18:05.2532|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 15:18:05.2532|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 15:18:05.2532|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller HikikomoriWEB.Controllers.HomeController (HikikomoriWEB) 
+2022-10-02 15:18:05.2532|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller HikikomoriWEB.Controllers.HomeController (HikikomoriWEB) 
+2022-10-02 15:18:05.2532|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter. 
+2022-10-02 15:18:05.2532|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-10-02 15:18:05.2532|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-10-02 15:18:05.2532|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method HikikomoriWEB.Controllers.HomeController.NewRate (HikikomoriWEB) - Validation state: Valid 
+2022-10-02 15:18:06.7113|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method HikikomoriWEB.Controllers.HomeController.NewRate (HikikomoriWEB), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1449.2262ms. 
+2022-10-02 15:18:06.7113|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-10-02 15:18:06.7113|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-10-02 15:18:06.7113|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter. 
+2022-10-02 15:18:06.7113|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 15:18:06.7113|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 15:18:06.7113|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ViewResult. 
+2022-10-02 15:18:06.7113|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view 'NewRate' in controller 'Home'. 
+2022-10-02 15:18:06.7113|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/Home/NewRate.cshtml'. 
+2022-10-02 15:18:06.7113|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/Views/Home/_ViewStart.cshtml'. 
+2022-10-02 15:18:06.7113|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/_ViewStart.cshtml'. 
+2022-10-02 15:18:06.7113|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/_ViewStart.cshtml'. 
+2022-10-02 15:18:06.7113|0|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view NewRate. 
+2022-10-02 15:18:06.7113|0|DEBUG|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view path '/Views/Home/NewRate.cshtml' was found in 1.509ms. 
+2022-10-02 15:18:06.7335|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 15:18:06.7335|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Home/NewRate and  
+2022-10-02 15:18:06.7335|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Home/NewRate 
+2022-10-02 15:18:06.7795|0|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {ec05d73b-b37e-4ffd-8919-e0841fb55cbc} with purposes ('C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB', 'Microsoft.AspNetCore.Antiforgery.AntiforgeryToken.v1'). 
+2022-10-02 15:18:06.7807|0|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {ec05d73b-b37e-4ffd-8919-e0841fb55cbc} with purposes ('C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB', 'Microsoft.AspNetCore.Antiforgery.AntiforgeryToken.v1'). 
+2022-10-02 15:18:06.8305|0|DEBUG|Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery|A new antiforgery cookie token was created. 
+2022-10-02 15:18:07.2677|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache hit for view '_Layout' in controller 'Home'. 
+2022-10-02 15:18:07.2677|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache hit for view 'CssPartial' in controller 'Home'. 
+2022-10-02 15:18:07.2677|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache hit for view 'MetatagsPartial' in controller 'Home'. 
+2022-10-02 15:18:07.2677|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache hit for view 'HeaderPartial' in controller 'Home'. 
+2022-10-02 15:18:07.2677|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 15:18:07.2677|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in  and  
+2022-10-02 15:18:07.2677|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result / 
+2022-10-02 15:18:07.2677|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 15:18:07.2677|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/FilmList and  
+2022-10-02 15:18:07.2677|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/FilmList 
+2022-10-02 15:18:07.2677|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 15:18:07.2677|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/BookList and  
+2022-10-02 15:18:07.2677|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/BookList 
+2022-10-02 15:18:07.2677|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 15:18:07.2677|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/SerialList and  
+2022-10-02 15:18:07.2677|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/SerialList 
+2022-10-02 15:18:07.2677|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 15:18:07.2677|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/CartoonList and  
+2022-10-02 15:18:07.2677|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/CartoonList 
+2022-10-02 15:18:07.2677|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 15:18:07.2677|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/GameList and  
+2022-10-02 15:18:07.2677|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/GameList 
+2022-10-02 15:18:07.2677|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache hit for view 'SidebarPartial' in controller 'Home'. 
+2022-10-02 16:20:56.5506|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-10-02 16:20:56.8031|0|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\Sfagnum\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2022-10-02 16:20:56.8934|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Sfagnum\AppData\Local\ASP.NET\DataProtection-Keys\key-0d510eb8-9566-4c17-be1c-e451ecc27bc8.xml'. 
+2022-10-02 16:20:56.9086|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Sfagnum\AppData\Local\ASP.NET\DataProtection-Keys\key-ec05d73b-b37e-4ffd-8919-e0841fb55cbc.xml'. 
+2022-10-02 16:20:56.9578|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {0d510eb8-9566-4c17-be1c-e451ecc27bc8}. 
+2022-10-02 16:20:56.9578|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {ec05d73b-b37e-4ffd-8919-e0841fb55cbc}. 
+2022-10-02 16:20:56.9795|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {ec05d73b-b37e-4ffd-8919-e0841fb55cbc} with expiration date 2022-10-14 18:41:14Z as default key. 
+2022-10-02 16:20:57.1292|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-10-02 16:20:57.1292|0|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2022-10-02 16:20:57.1292|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-10-02 16:20:57.1438|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2022-10-02 16:20:57.1438|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2022-10-02 16:20:57.1438|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {ec05d73b-b37e-4ffd-8919-e0841fb55cbc} as the default key. 
+2022-10-02 16:20:57.1438|0|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {ec05d73b-b37e-4ffd-8919-e0841fb55cbc} was loaded during application startup. 
+2022-10-02 16:20:58.6522|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly HikikomoriWEB 
+2022-10-02 16:20:58.6522|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-10-02 16:20:58.6522|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-10-02 16:20:58.6522|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB 
+2022-10-02 16:20:58.6522|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-10-02 16:20:58.8746|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:44324/ - - 
+2022-10-02 16:20:58.9100|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-10-02 16:20:58.9100|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-10-02 16:20:58.9100|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path / does not match a supported file type 
+2022-10-02 16:20:58.9838|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/' 
+2022-10-02 16:20:58.9838|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB)' with route pattern '{controller=Home}/{action=Index}/{id?}' is valid for the request path '/' 
+2022-10-02 16:20:58.9838|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB)' 
+2022-10-02 16:20:58.9838|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB)' 
+2022-10-02 16:20:59.0190|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-10-02 16:20:59.2869|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller HikikomoriWEB.Controllers.HomeController (HikikomoriWEB). 
+2022-10-02 16:20:59.2869|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-10-02 16:20:59.2869|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter 
+2022-10-02 16:20:59.2869|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000) 
+2022-10-02 16:20:59.2869|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-10-02 16:20:59.2869|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter 
+2022-10-02 16:20:59.2869|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 16:20:59.2869|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 16:20:59.2869|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller HikikomoriWEB.Controllers.HomeController (HikikomoriWEB) 
+2022-10-02 16:20:59.7722|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2022-10-02 16:20:59.8512|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller HikikomoriWEB.Controllers.HomeController (HikikomoriWEB) 
+2022-10-02 16:20:59.8512|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter. 
+2022-10-02 16:20:59.8512|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-10-02 16:20:59.8512|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-10-02 16:20:59.8512|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB) - Validation state: Valid 
+2022-10-02 16:21:07.7217|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB), returned result Microsoft.AspNetCore.Mvc.ViewResult in 7856.7677ms. 
+2022-10-02 16:21:07.7217|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-10-02 16:21:07.7217|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-10-02 16:21:07.7217|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter. 
+2022-10-02 16:21:07.7217|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 16:21:07.7217|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 16:21:07.7217|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ViewResult. 
+2022-10-02 16:21:07.7678|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Content/BookList.cshtml'. 
+2022-10-02 16:21:07.7678|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Content/CartoonList.cshtml'. 
+2022-10-02 16:21:07.7678|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Content/FilmList.cshtml'. 
+2022-10-02 16:21:07.7678|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Content/GameList.cshtml'. 
+2022-10-02 16:21:07.7678|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Content/RatedListPartial.cshtml'. 
+2022-10-02 16:21:07.7678|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Content/RememberedListPartial.cshtml'. 
+2022-10-02 16:21:07.7678|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Content/SerialList.cshtml'. 
+2022-10-02 16:21:07.7678|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Home/Index.cshtml'. 
+2022-10-02 16:21:07.7678|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Home/NewRate.cshtml'. 
+2022-10-02 16:21:07.7678|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Home/NewRemember.cshtml'. 
+2022-10-02 16:21:07.7678|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Shared/CssPartial.cshtml'. 
+2022-10-02 16:21:07.7678|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Shared/FooterPartial.cshtml'. 
+2022-10-02 16:21:07.7678|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Shared/HeaderPartial.cshtml'. 
+2022-10-02 16:21:07.7678|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Shared/MetatagsPartial.cshtml'. 
+2022-10-02 16:21:07.7678|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Shared/ScriptPartial.cshtml'. 
+2022-10-02 16:21:07.7678|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Shared/SidebarPartial.cshtml'. 
+2022-10-02 16:21:07.7678|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Shared/_Layout.cshtml'. 
+2022-10-02 16:21:07.7678|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/_ViewImports.cshtml'. 
+2022-10-02 16:21:07.7678|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/_ViewStart.cshtml'. 
+2022-10-02 16:21:07.8020|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view 'Index' in controller 'Home'. 
+2022-10-02 16:21:07.8020|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/Home/Index.cshtml'. 
+2022-10-02 16:21:07.8239|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/Views/Home/_ViewStart.cshtml'. 
+2022-10-02 16:21:07.8239|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/_ViewStart.cshtml'. 
+2022-10-02 16:21:07.8239|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/_ViewStart.cshtml'. 
+2022-10-02 16:21:07.8424|0|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Index. 
+2022-10-02 16:21:07.8475|0|DEBUG|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view path '/Views/Home/Index.cshtml' was found in 43.0203ms. 
+2022-10-02 16:21:07.9890|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 16:21:08.0193|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Home/NewRate and  
+2022-10-02 16:21:08.0487|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Home/NewRate 
+2022-10-02 16:21:08.0691|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 16:21:08.0691|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Home/NewRemember and  
+2022-10-02 16:21:08.0691|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Home/NewRemember 
+2022-10-02 16:21:08.0691|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view '_Layout' in controller 'Home'. 
+2022-10-02 16:21:08.0691|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/Views/Home/_Layout.cshtml'. 
+2022-10-02 16:21:08.0691|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/Shared/_Layout.cshtml'. 
+2022-10-02 16:21:08.0900|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view 'CssPartial' in controller 'Home'. 
+2022-10-02 16:21:08.0900|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/Views/Home/CssPartial.cshtml'. 
+2022-10-02 16:21:08.0900|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/Shared/CssPartial.cshtml'. 
+2022-10-02 16:21:08.1679|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view 'MetatagsPartial' in controller 'Home'. 
+2022-10-02 16:21:08.1679|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/Views/Home/MetatagsPartial.cshtml'. 
+2022-10-02 16:21:08.1679|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/Shared/MetatagsPartial.cshtml'. 
+2022-10-02 16:21:08.1743|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view 'HeaderPartial' in controller 'Home'. 
+2022-10-02 16:21:08.1743|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/Views/Home/HeaderPartial.cshtml'. 
+2022-10-02 16:21:08.1743|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/Shared/HeaderPartial.cshtml'. 
+2022-10-02 16:21:08.1743|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 16:21:08.1743|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in  and  
+2022-10-02 16:21:08.1743|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result / 
+2022-10-02 16:21:08.1743|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 16:21:08.1743|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/FilmList and  
+2022-10-02 16:21:08.1743|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/FilmList 
+2022-10-02 16:21:08.1743|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 16:21:08.1743|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/BookList and  
+2022-10-02 16:21:08.1743|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/BookList 
+2022-10-02 16:21:08.1743|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 16:21:08.1743|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/SerialList and  
+2022-10-02 16:21:08.1743|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/SerialList 
+2022-10-02 16:21:08.1743|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 16:21:08.1743|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/CartoonList and  
+2022-10-02 16:21:08.1743|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/CartoonList 
+2022-10-02 16:21:08.1869|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 16:21:08.1869|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/GameList and  
+2022-10-02 16:21:08.1869|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/GameList 
+2022-10-02 16:21:08.1869|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view 'SidebarPartial' in controller 'Home'. 
+2022-10-02 16:21:08.1869|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/Views/Home/SidebarPartial.cshtml'. 
+2022-10-02 16:21:08.1869|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/Shared/SidebarPartial.cshtml'. 
+2022-10-02 16:21:08.1869|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view 'FooterPartial' in controller 'Home'. 
+2022-10-02 16:21:08.1869|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/Views/Home/FooterPartial.cshtml'. 
+2022-10-02 16:21:08.1869|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/Shared/FooterPartial.cshtml'. 
+2022-10-02 16:21:08.1869|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view 'ScriptPartial' in controller 'Home'. 
+2022-10-02 16:21:08.1869|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/Views/Home/ScriptPartial.cshtml'. 
+2022-10-02 16:21:08.1869|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/Shared/ScriptPartial.cshtml'. 
+2022-10-02 16:21:08.3485|0|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Index executed in 549.4042ms. 
+2022-10-02 16:21:08.3485|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ViewResult. 
+2022-10-02 16:21:08.3485|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 16:21:08.3485|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 16:21:08.3485|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 16:21:08.3485|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 16:21:08.3485|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB) in 9062.2148ms 
+2022-10-02 16:21:08.3485|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB)' 
+2022-10-02 16:21:08.3783|0|DEBUG|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "18374686494167138315" disconnecting. 
+2022-10-02 16:21:08.3783|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:44324/ - - - 200 - text/html;+charset=utf-8 9515.3075ms 
+2022-10-02 16:21:08.4272|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:44324/js/PostIdForDelete.js?v=QeeSf1CLmg-lo1GRhUypC1VecDB131z650oz0fcHwsA - - 
+2022-10-02 16:21:08.4272|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-10-02 16:21:08.4565|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2022-10-02 16:21:08.4565|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /js/PostIdForDelete.js was not modified 
+2022-10-02 16:21:08.4775|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /js/PostIdForDelete.js 
+2022-10-02 16:21:08.4775|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:44324/js/PostIdForDelete.js?v=QeeSf1CLmg-lo1GRhUypC1VecDB131z650oz0fcHwsA - - - 304 - application/javascript 51.3297ms 
+2022-10-02 16:21:08.4775|0|DEBUG|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "18374686494167138317" disconnecting. 
+2022-10-02 16:21:08.6345|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:44324/favicon.ico - - 
+2022-10-02 16:21:08.6345|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-10-02 16:21:08.6345|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /favicon.ico does not match an existing file 
+2022-10-02 16:21:08.6345|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/favicon.ico' 
+2022-10-02 16:21:08.6345|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2022-10-02 16:21:08.6461|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:44324/favicon.ico - - - 404 - text/plain 11.5012ms 
+2022-10-02 16:21:20.9219|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:44324/Content/BookList - - 
+2022-10-02 16:21:20.9219|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-10-02 16:21:20.9219|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /Content/BookList does not match a supported file type 
+2022-10-02 16:21:20.9219|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/Content/BookList' 
+2022-10-02 16:21:20.9219|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'HikikomoriWEB.Controllers.ContentController.BookList (HikikomoriWEB)' with route pattern '{controller=Home}/{action=Index}/{id?}' is valid for the request path '/Content/BookList' 
+2022-10-02 16:21:20.9219|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'HikikomoriWEB.Controllers.ContentController.BookList (HikikomoriWEB)' 
+2022-10-02 16:21:20.9219|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'HikikomoriWEB.Controllers.ContentController.BookList (HikikomoriWEB)' 
+2022-10-02 16:21:20.9219|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "BookList", controller = "Content"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookList() on controller HikikomoriWEB.Controllers.ContentController (HikikomoriWEB). 
+2022-10-02 16:21:20.9219|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-10-02 16:21:20.9219|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter 
+2022-10-02 16:21:20.9219|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000) 
+2022-10-02 16:21:20.9219|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-10-02 16:21:20.9219|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter 
+2022-10-02 16:21:20.9219|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 16:21:20.9219|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 16:21:20.9219|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller HikikomoriWEB.Controllers.ContentController (HikikomoriWEB) 
+2022-10-02 16:21:20.9219|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller HikikomoriWEB.Controllers.ContentController (HikikomoriWEB) 
+2022-10-02 16:21:20.9219|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter. 
+2022-10-02 16:21:20.9219|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-10-02 16:21:20.9219|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-10-02 16:21:20.9219|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method HikikomoriWEB.Controllers.ContentController.BookList (HikikomoriWEB) - Validation state: Valid 
+2022-10-02 16:21:21.0975|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An additional 'IServiceProvider' was created for internal use by Entity Framework. An existing service provider was not used due to the following configuration changes: configuration changed for 'Core:EnableSensitiveDataLogging'. 
+2022-10-02 16:21:21.9065|0|WARN|Microsoft.EntityFrameworkCore.Model.Validation|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2022-10-02 16:21:22.2316|0|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 5.0.16 initialized 'HikDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled MigrationsAssembly=HikikomoriWEB  
+2022-10-02 16:21:22.6293|0|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<RateContent>()
+    .Where(i => i.CategoryId == __CategoryId_0)' 
+2022-10-02 16:21:23.0387|0|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<RateContent>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: RateContent.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: RateContent.Autor (string), 1], [Property: RateContent.CategoryId (int) Required, 2], [Property: RateContent.CreationYear (int) Required, 3], [Property: RateContent.Genre (string), 4], [Property: RateContent.Name (string) Required, 5], [Property: RateContent.Rating (int) Required, 6], [Property: RateContent.Replay (bool) Required, 7], }
+        SELECT r.Id, r.Autor, r.CategoryId, r.CreationYear, r.Genre, r.Name, r.Rating, r.Replay
+        FROM RateContent AS r
+        WHERE r.CategoryId == @__CategoryId_0), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, RateContent>, 
+    HikikomoriWEB.DAL.Context.HikDbContext, 
+    False, 
+    False
+)' 
+2022-10-02 16:21:23.1373|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-10-02 16:21:23.3192|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (203ms). 
+2022-10-02 16:21:23.3548|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Hikikomori2.0' on server '(LocalDB)\MSSQLLocalDB'. 
+2022-10-02 16:21:45.3766|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Hikikomori2.0' on server '(LocalDB)\MSSQLLocalDB'. 
+2022-10-02 16:21:45.4102|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__CategoryId_0='10001'], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Autor], [r].[CategoryId], [r].[CreationYear], [r].[Genre], [r].[Name], [r].[Rating], [r].[Replay]
+FROM [RateContent] AS [r]
+WHERE [r].[CategoryId] = @__CategoryId_0 
+2022-10-02 16:21:47.3573|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1,969ms) [Parameters=[@__CategoryId_0='10001'], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Autor], [r].[CategoryId], [r].[CreationYear], [r].[Genre], [r].[Name], [r].[Rating], [r].[Replay]
+FROM [RateContent] AS [r]
+WHERE [r].[CategoryId] = @__CategoryId_0 
+2022-10-02 16:21:47.4096|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-10-02 16:21:47.4475|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Hikikomori2.0' on server '(LocalDB)\MSSQLLocalDB'. 
+2022-10-02 16:21:47.4690|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Hikikomori2.0' on server '(LocalDB)\MSSQLLocalDB'. 
+2022-10-02 16:21:47.4690|0|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<RememberContent>()
+    .Where(i => i.CategoryId == __CategoryId_0)' 
+2022-10-02 16:21:47.4690|0|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<RememberContent>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: RememberContent.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: RememberContent.Autor (string), 1], [Property: RememberContent.CategoryId (int) Required, 2], [Property: RememberContent.CreationYear (int) Required, 3], [Property: RememberContent.Genre (string), 4], [Property: RememberContent.Name (string) Required, 5], }
+        SELECT r.Id, r.Autor, r.CategoryId, r.CreationYear, r.Genre, r.Name
+        FROM RememberContent AS r
+        WHERE r.CategoryId == @__CategoryId_0), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, RememberContent>, 
+    HikikomoriWEB.DAL.Context.HikDbContext, 
+    False, 
+    False
+)' 
+2022-10-02 16:21:47.4690|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2022-10-02 16:21:47.4690|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2022-10-02 16:21:47.4690|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Hikikomori2.0' on server '(LocalDB)\MSSQLLocalDB'. 
+2022-10-02 16:21:47.4690|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Hikikomori2.0' on server '(LocalDB)\MSSQLLocalDB'. 
+2022-10-02 16:21:47.4690|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__CategoryId_0='10001'], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Autor], [r].[CategoryId], [r].[CreationYear], [r].[Genre], [r].[Name]
+FROM [RememberContent] AS [r]
+WHERE [r].[CategoryId] = @__CategoryId_0 
+2022-10-02 16:21:47.5854|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (103ms) [Parameters=[@__CategoryId_0='10001'], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Autor], [r].[CategoryId], [r].[CreationYear], [r].[Genre], [r].[Name]
+FROM [RememberContent] AS [r]
+WHERE [r].[CategoryId] = @__CategoryId_0 
+2022-10-02 16:21:47.5854|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed. 
+2022-10-02 16:21:47.5854|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Hikikomori2.0' on server '(LocalDB)\MSSQLLocalDB'. 
+2022-10-02 16:21:47.5854|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Hikikomori2.0' on server '(LocalDB)\MSSQLLocalDB'. 
+2022-10-02 16:21:47.6122|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method HikikomoriWEB.Controllers.ContentController.BookList (HikikomoriWEB), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 26680.4928ms. 
+2022-10-02 16:21:47.6122|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-10-02 16:21:47.6122|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-10-02 16:21:47.6122|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter. 
+2022-10-02 16:21:47.6122|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 16:21:47.6122|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 16:21:47.6122|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.RedirectToActionResult. 
+2022-10-02 16:21:47.6375|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 16:21:47.6375|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/Error and  
+2022-10-02 16:21:47.6375|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/Error 
+2022-10-02 16:21:47.6375|0|INFO|Microsoft.AspNetCore.Mvc.RedirectToActionResult|Executing RedirectResult, redirecting to /Content/Error. 
+2022-10-02 16:21:47.6375|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.RedirectToActionResult. 
+2022-10-02 16:21:47.6375|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 16:21:47.6375|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 16:21:47.6375|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 16:21:47.6375|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 16:21:47.6375|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action HikikomoriWEB.Controllers.ContentController.BookList (HikikomoriWEB) in 26708.2178ms 
+2022-10-02 16:21:47.6375|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'HikikomoriWEB.Controllers.ContentController.BookList (HikikomoriWEB)' 
+2022-10-02 16:21:47.6415|0|DEBUG|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "18374686481282236445" disconnecting. 
+2022-10-02 16:21:47.6415|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'HikDbContext' disposed. 
+2022-10-02 16:21:47.6619|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:44324/Content/BookList - - - 302 - - 26740.0171ms 
+2022-10-02 16:21:47.6981|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:44324/Content/Error - - 
+2022-10-02 16:21:47.6981|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-10-02 16:21:47.6981|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /Content/Error does not match a supported file type 
+2022-10-02 16:21:47.6981|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/Content/Error' 
+2022-10-02 16:21:47.6981|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2022-10-02 16:21:47.7026|0|DEBUG|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "18230571301796315137" disconnecting. 
+2022-10-02 16:21:47.7026|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:44324/Content/Error - - - 404 - text/plain 4.5669ms 
+2022-10-02 16:26:31.8060|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-10-02 16:26:31.9723|0|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\Sfagnum\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2022-10-02 16:26:32.0056|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Sfagnum\AppData\Local\ASP.NET\DataProtection-Keys\key-0d510eb8-9566-4c17-be1c-e451ecc27bc8.xml'. 
+2022-10-02 16:26:32.0056|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Sfagnum\AppData\Local\ASP.NET\DataProtection-Keys\key-ec05d73b-b37e-4ffd-8919-e0841fb55cbc.xml'. 
+2022-10-02 16:26:32.0155|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {0d510eb8-9566-4c17-be1c-e451ecc27bc8}. 
+2022-10-02 16:26:32.0155|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {ec05d73b-b37e-4ffd-8919-e0841fb55cbc}. 
+2022-10-02 16:26:32.0386|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {ec05d73b-b37e-4ffd-8919-e0841fb55cbc} with expiration date 2022-10-14 18:41:14Z as default key. 
+2022-10-02 16:26:32.1518|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-10-02 16:26:32.1562|0|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2022-10-02 16:26:32.1562|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2022-10-02 16:26:32.1562|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2022-10-02 16:26:32.1562|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2022-10-02 16:26:32.1723|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {ec05d73b-b37e-4ffd-8919-e0841fb55cbc} as the default key. 
+2022-10-02 16:26:32.1723|0|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {ec05d73b-b37e-4ffd-8919-e0841fb55cbc} was loaded during application startup. 
+2022-10-02 16:26:32.4284|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly HikikomoriWEB 
+2022-10-02 16:26:32.4284|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-10-02 16:26:32.4284|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-10-02 16:26:32.4284|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB 
+2022-10-02 16:26:32.4284|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-10-02 16:26:32.5157|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:44324/ - - 
+2022-10-02 16:26:32.5157|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-10-02 16:26:32.5157|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-10-02 16:26:32.5157|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path / does not match a supported file type 
+2022-10-02 16:26:32.5795|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/' 
+2022-10-02 16:26:32.5795|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB)' with route pattern '{controller=Home}/{action=Index}/{id?}' is valid for the request path '/' 
+2022-10-02 16:26:32.5795|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB)' 
+2022-10-02 16:26:32.5795|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB)' 
+2022-10-02 16:26:32.6014|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-10-02 16:26:32.6744|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller HikikomoriWEB.Controllers.HomeController (HikikomoriWEB). 
+2022-10-02 16:26:32.6744|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-10-02 16:26:32.6744|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter 
+2022-10-02 16:26:32.6744|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000) 
+2022-10-02 16:26:32.6744|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-10-02 16:26:32.6744|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter 
+2022-10-02 16:26:32.6744|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 16:26:32.6744|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 16:26:32.6744|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller HikikomoriWEB.Controllers.HomeController (HikikomoriWEB) 
+2022-10-02 16:26:32.8782|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2022-10-02 16:26:32.9232|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller HikikomoriWEB.Controllers.HomeController (HikikomoriWEB) 
+2022-10-02 16:26:32.9232|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter. 
+2022-10-02 16:26:32.9232|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-10-02 16:26:32.9232|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-10-02 16:26:32.9232|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB) - Validation state: Valid 
+2022-10-02 16:26:33.8862|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB), returned result Microsoft.AspNetCore.Mvc.ViewResult in 950.0737ms. 
+2022-10-02 16:26:33.8862|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-10-02 16:26:33.8862|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-10-02 16:26:33.8862|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter. 
+2022-10-02 16:26:33.8862|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 16:26:33.8908|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 16:26:33.8908|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ViewResult. 
+2022-10-02 16:26:33.8908|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Content/BookList.cshtml'. 
+2022-10-02 16:26:33.8908|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Content/CartoonList.cshtml'. 
+2022-10-02 16:26:33.8908|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Content/FilmList.cshtml'. 
+2022-10-02 16:26:33.8908|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Content/GameList.cshtml'. 
+2022-10-02 16:26:33.8908|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Content/RatedListPartial.cshtml'. 
+2022-10-02 16:26:33.8908|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Content/RememberedListPartial.cshtml'. 
+2022-10-02 16:26:33.8908|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Content/SerialList.cshtml'. 
+2022-10-02 16:26:33.8908|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Home/Index.cshtml'. 
+2022-10-02 16:26:33.8908|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Home/NewRate.cshtml'. 
+2022-10-02 16:26:33.8908|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Home/NewRemember.cshtml'. 
+2022-10-02 16:26:33.8908|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Shared/CssPartial.cshtml'. 
+2022-10-02 16:26:33.8908|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Shared/FooterPartial.cshtml'. 
+2022-10-02 16:26:33.8908|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Shared/HeaderPartial.cshtml'. 
+2022-10-02 16:26:33.8908|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Shared/MetatagsPartial.cshtml'. 
+2022-10-02 16:26:33.8908|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Shared/ScriptPartial.cshtml'. 
+2022-10-02 16:26:33.8908|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Shared/SidebarPartial.cshtml'. 
+2022-10-02 16:26:33.8908|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Shared/_Layout.cshtml'. 
+2022-10-02 16:26:33.8908|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/_ViewImports.cshtml'. 
+2022-10-02 16:26:33.8908|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with compiled view: '/Views/_ViewStart.cshtml'. 
+2022-10-02 16:26:33.9128|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view 'Index' in controller 'Home'. 
+2022-10-02 16:26:33.9128|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/Home/Index.cshtml'. 
+2022-10-02 16:26:33.9128|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/Views/Home/_ViewStart.cshtml'. 
+2022-10-02 16:26:33.9128|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/_ViewStart.cshtml'. 
+2022-10-02 16:26:33.9128|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/_ViewStart.cshtml'. 
+2022-10-02 16:26:33.9271|0|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Index. 
+2022-10-02 16:26:33.9271|0|DEBUG|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view path '/Views/Home/Index.cshtml' was found in 16.4125ms. 
+2022-10-02 16:26:34.0020|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 16:26:34.0181|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Home/NewRate and  
+2022-10-02 16:26:34.0337|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Home/NewRate 
+2022-10-02 16:26:34.0337|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 16:26:34.0337|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Home/NewRemember and  
+2022-10-02 16:26:34.0337|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Home/NewRemember 
+2022-10-02 16:26:34.0508|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view '_Layout' in controller 'Home'. 
+2022-10-02 16:26:34.0508|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/Views/Home/_Layout.cshtml'. 
+2022-10-02 16:26:34.0508|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/Shared/_Layout.cshtml'. 
+2022-10-02 16:26:34.0652|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view 'CssPartial' in controller 'Home'. 
+2022-10-02 16:26:34.0652|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/Views/Home/CssPartial.cshtml'. 
+2022-10-02 16:26:34.0652|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/Shared/CssPartial.cshtml'. 
+2022-10-02 16:26:34.1153|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view 'MetatagsPartial' in controller 'Home'. 
+2022-10-02 16:26:34.1153|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/Views/Home/MetatagsPartial.cshtml'. 
+2022-10-02 16:26:34.1153|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/Shared/MetatagsPartial.cshtml'. 
+2022-10-02 16:26:34.1153|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view 'HeaderPartial' in controller 'Home'. 
+2022-10-02 16:26:34.1153|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/Views/Home/HeaderPartial.cshtml'. 
+2022-10-02 16:26:34.1153|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/Shared/HeaderPartial.cshtml'. 
+2022-10-02 16:26:34.1306|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 16:26:34.1306|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in  and  
+2022-10-02 16:26:34.1306|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result / 
+2022-10-02 16:26:34.1306|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 16:26:34.1306|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/FilmList and  
+2022-10-02 16:26:34.1306|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/FilmList 
+2022-10-02 16:26:34.1306|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 16:26:34.1306|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/BookList and  
+2022-10-02 16:26:34.1306|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/BookList 
+2022-10-02 16:26:34.1306|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 16:26:34.1306|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/SerialList and  
+2022-10-02 16:26:34.1306|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/SerialList 
+2022-10-02 16:26:34.1306|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 16:26:34.1306|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/CartoonList and  
+2022-10-02 16:26:34.1306|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/CartoonList 
+2022-10-02 16:26:34.1306|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2022-10-02 16:26:34.1306|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Content/GameList and  
+2022-10-02 16:26:34.1306|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Content/GameList 
+2022-10-02 16:26:34.1306|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view 'SidebarPartial' in controller 'Home'. 
+2022-10-02 16:26:34.1306|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/Views/Home/SidebarPartial.cshtml'. 
+2022-10-02 16:26:34.1306|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/Shared/SidebarPartial.cshtml'. 
+2022-10-02 16:26:34.1433|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view 'FooterPartial' in controller 'Home'. 
+2022-10-02 16:26:34.1433|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/Views/Home/FooterPartial.cshtml'. 
+2022-10-02 16:26:34.1433|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/Shared/FooterPartial.cshtml'. 
+2022-10-02 16:26:34.1433|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view 'ScriptPartial' in controller 'Home'. 
+2022-10-02 16:26:34.1433|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Could not find a file for view at path '/Views/Home/ScriptPartial.cshtml'. 
+2022-10-02 16:26:34.1433|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Located compiled view for view at path '/Views/Shared/ScriptPartial.cshtml'. 
+2022-10-02 16:26:34.1883|0|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Index executed in 277.7049ms. 
+2022-10-02 16:26:34.1883|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ViewResult. 
+2022-10-02 16:26:34.1883|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 16:26:34.1883|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 16:26:34.1883|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 16:26:34.1883|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2022-10-02 16:26:34.1883|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB) in 1514.2651ms 
+2022-10-02 16:26:34.1883|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'HikikomoriWEB.Controllers.HomeController.Index (HikikomoriWEB)' 
+2022-10-02 16:26:34.2236|0|DEBUG|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "18086456109425491978" disconnecting. 
+2022-10-02 16:26:34.2236|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:44324/css/main.css?v=Vub_qQnv-tvOwl1I2M9kUFA8h4raRVQCuwpwcZSyPoI - - 
+2022-10-02 16:26:34.2236|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-10-02 16:26:34.2236|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2022-10-02 16:26:34.2236|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:44324/ - - - 200 - text/html;+charset=utf-8 1716.5669ms 
+2022-10-02 16:26:34.2841|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/css/main.css'. Physical path: 'C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\wwwroot\css\main.css' 
+2022-10-02 16:26:34.3359|0|DEBUG|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "18374686494167138319" disconnecting. 
+2022-10-02 16:26:34.3359|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:44324/css/main.css?v=Vub_qQnv-tvOwl1I2M9kUFA8h4raRVQCuwpwcZSyPoI - - - 200 38383 text/css 112.6547ms 
+2022-10-02 16:26:34.5884|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:44324/favicon.ico - - 
+2022-10-02 16:26:34.5884|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-10-02 16:26:34.5884|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /favicon.ico does not match an existing file 
+2022-10-02 16:26:34.5943|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/favicon.ico' 
+2022-10-02 16:26:34.5943|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2022-10-02 16:26:34.5943|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:44324/favicon.ico - - - 404 - text/plain 17.3895ms 

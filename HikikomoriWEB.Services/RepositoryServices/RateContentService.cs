@@ -14,12 +14,10 @@ namespace HikikomoriWEB.Services.RepositoryServices
 {
     public class RateContentService : IBaseContentServices<RateContent>
     {
-        private readonly ILogger<RateContentService> _logger;
         private readonly IBaseContentRepository<RateContent> _repository;
-        public RateContentService(IBaseContentRepository<RateContent> repository, ILogger<RateContentService> logger)
+        public RateContentService(IBaseContentRepository<RateContent> repository)
         {
             _repository = repository;
-            _logger = logger;
         }
 
         public async Task<IResponseRepository<IEnumerable<RateContent>>> GetAll()

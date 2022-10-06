@@ -53,13 +53,6 @@ namespace HikikomoriWEB.Services.RepositoryServices
             try
             {
                 var response = new ResponseRepository<RememberContent>();
-
-                if(_repository.GetOnId(ContentId) == null)
-                {
-                    response.Description = $"RememberContentService.Method[DeleteContent] : Элемент таблицы с таким ID не найден";
-                    response.StatusCode = StatusCode.NotFound;
-                    return response;
-                }
                 await _repository.Delete(ContentId);
                 response.StatusCode = StatusCode.OK;
                 return response;

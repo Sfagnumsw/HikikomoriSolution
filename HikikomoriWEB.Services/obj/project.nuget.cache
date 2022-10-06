@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "E95GP1Js3qf4n1yOVpwadJVdUx3LlM+/ZM26fVLjGhW8gWUGfLQELbebiZtibkN/w5GzwTraSxDTIzhGSwdI3A==",
+  "dgSpecHash": "8kKTo2F7RSDQOqOB8Uyjz242nwQgknpYMK6P7znSdxjdulqBTmqAHxj7VVJCUymK/eD8bx16DdB6n/9lU0dyBQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Sfagnum\\Documents\\обучение\\Программирование\\C#\\ASP.NET Core\\eaxDeskTop\\HikomoriASP\\HikikomoriWEB.Services\\HikikomoriWEB.Services.csproj",
   "expectedPackageFiles": [
@@ -60,7 +60,7 @@
     "C:\\Users\\Sfagnum\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Sfagnum\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\Sfagnum\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
-    "C:\\Users\\Sfagnum\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\Sfagnum\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Sfagnum\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
     "C:\\Users\\Sfagnum\\.nuget\\packages\\nlog\\5.0.4\\nlog.5.0.4.nupkg.sha512",
     "C:\\Users\\Sfagnum\\.nuget\\packages\\nlog.extensions.logging\\5.0.4\\nlog.extensions.logging.5.0.4.nupkg.sha512",
