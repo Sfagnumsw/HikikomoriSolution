@@ -22,23 +22,14 @@ section, summary, time, mark, audio, video {
   font: inherit;
   vertical-align: baseline; }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
+/*article, aside, details, figcaption, figure, header, hgroup, menu, nav, section {
+    display: block;
+}*/
 body {
-  line-height: 1;
-  height: 100%;
-  width: 100%; }
+  line-height: 1; }
 
 ol, ul {
   list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-  blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none; }
 
 table {
   border-collapse: collapse;
@@ -103,27 +94,12 @@ p, ul {
 p {
   line-height: 1.8em; }
 
-strong {
-  color: #474e43; }
-
 img.left {
   float: left;
   margin: 2px 1.25em 0 0; }
 
 img.top {
   margin: 4px 0 2.25em 0; }
-
-ul {
-  padding: 0.25em 0 0 0; }
-
-* > p:last-child {
-  margin-bottom: 0 !important; }
-
-section, article {
-  margin: 0 0 60px 0; }
-
-section:last-child, article:last-child {
-  margin-bottom: 0; }
 
 /* Container */
 .container {
@@ -529,59 +505,32 @@ article.blog-post {
   article.blog-post .blog-post-image {
     width: 100%; }
 
-.button {
-  background-image: -moz-linear-gradient(top, #008dad, #007b9d);
-  background-image: -webkit-linear-gradient(top, #008dad, #007b9d);
-  background-image: -ms-linear-gradient(top, #008dad, #007b9d);
-  background-image: linear-gradient(top, #008dad, #007b9d);
-  display: inline-block;
-  padding: 15px 25px 15px 25px;
-  background-color: #007b9d;
-  border-radius: 10px;
-  text-transform: lowercase;
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  border: solid 1px #006e8b;
-  box-shadow: inset 0px 0px 0px 1px #18a8c8; }
-  .button:hover {
-    background-image: -moz-linear-gradient(top, #1b9fbe, #118eb1);
-    background-image: -webkit-linear-gradient(top, #1b9fbe, #118eb1);
-    background-image: -ms-linear-gradient(top, #1b9fbe, #118eb1);
-    background-image: linear-gradient(top, #1b9fbe, #118eb1);
-    background-color: #118eb1;
-    box-shadow: inset 0px 0px 0px 1px #3ecceb; }
-
 /* Header */
 #header-wrapper {
   background-image: url(../images/bg-1.jpg); }
 
 #header {
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  -ms-box-sizing: content-box;
-  box-sizing: content-box;
+  /*@include vendor('box-sizing', 'content-box');*/
   position: relative;
   margin: 2.5% 0 2.5% 0;
   padding: 0 40px 0 40px;
   border-radius: 10px;
   border: solid 1px #FECB20;
-  background-image: url(../images/bg-1.png);
+  background-image: url(../images/bg-1.jpg);
   height: 86px; }
   #header h1 {
-    font-family: 'Open Sans', sans-serif;
     position: absolute;
     left: 40px;
     top: 0;
     color: #FECB20;
-    text-shadow: #FECB20 0 0 9px;
+    text-shadow: #FECB20 0 0 10px;
     font-size: 2.4em;
     letter-spacing: -2px;
-    line-height: 86px; }
+    line-height: 86px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif; }
     #header h1 a {
-      color: #FECB20;
-      text-decoration: none; }
+      text-decoration: none;
+      color: #FECB20; }
   #header nav {
     position: absolute;
     right: 40px;
@@ -596,44 +545,11 @@ article.blog-post {
       color: #fff;
       padding: 0 25px 0 25px;
       outline: 0;
-      /*&.current-page-item {
-				@include vendor('background-image', 'linear-gradient(top, #007b99, #007897)');
-				background-color: #007897;
-				box-shadow: inset 0px 1px 5px 1px rgba(0, 0, 0, 0.1), 0px 0px 5px 1px rgba(255, 255, 255, 0.1);
-			}*/ }
+      font-family: "Trebuchet MS", Helvetica, sans-serif; }
       #header nav a:hover {
         color: #FECB20;
         text-shadow: #FECB20 0 0 9px;
         box-shadow: inset 0px 1px 5px 1px rgba(0, 0, 0, 0.05), 0px 0px 5px 1px rgba(255, 255, 255, 0.05); }
-
-/* Banner */
-#banner-wrapper {
-  padding: 2em 0; }
-
-#banner {
-  position: relative;
-  width: 100%;
-  padding: 6em 0;
-  border-radius: 10px;
-  background-image: url(../sass/images/banner.jpg);
-  background-size: cover;
-  text-align: center;
-  box-shadow: inset 0 0 0 20px #fff; }
-  #banner h2 {
-    font-size: 3.3em;
-    color: #fff;
-    text-align: center;
-    letter-spacing: -2px;
-    margin: 0; }
-  #banner span {
-    display: block;
-    left: 0;
-    margin: 0.5em 0 0 0;
-    font-size: 1.6em;
-    color: #fff;
-    letter-spacing: -1px;
-    text-transform: lowercase;
-    opacity: 0.8; }
 
 /* Main */
 #main {
@@ -642,14 +558,12 @@ article.blog-post {
 
 /* Copyright */
 .copyright {
-  text-align: center; }
-  .copyright ul {
-    margin: 0;
-    padding: 4px; }
-  .copyright li {
+  text-align: center;
+  background-image: url(../images/bg-1.jpg); }
+  .copyright ul li {
     display: inline;
     margin-right: 5px; }
-  .copyright a {
+  .copyright ul a {
     color: #4C364D; }
 
 /* Large */
@@ -670,42 +584,9 @@ article.blog-post {
       font-size: 1.1em; }
       #header nav a {
         padding: 0 20px 0 20px; }
-  /* Banner */
-  #banner {
-    width: 100%;
-    padding: 5em 0; }
-    #banner h2 {
-      font-size: 3em; }
-    #banner span {
-      font-size: 1.4em; } }
-
-.button {
-  font-size: 1em; }
-
-.blog-post-image {
-  width: 100%; }
-
-/* Banner */
-#banner-wrapper {
-  background: #c8d2bc url(../sass/images/bg1.png);
-  padding: 20px 0; }
-
-#banner {
-  box-shadow: inset 0 0 0 10px #fff;
-  padding: 4em 1em; }
-  #banner h2 {
-    font-size: 2em;
-    letter-spacing: -2px;
-    line-height: 1.25em; }
-  #banner span {
-    font-size: 1.25em;
-    letter-spacing: -1px;
-    line-height: 1.25em; }
-
-/* Main */
-#main {
-  /*background-image: */
-  padding: 40px 0; }
+  /* Main */
+  #main {
+    padding: 40px 0; } }
 
 .table-list-rate {
   text-align: center;
@@ -802,13 +683,13 @@ article.blog-post {
 
 .type-action-content {
   text-align: justify;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-size: 25px;
   line-height: 1.3;
   color: #fff; }
   .type-action-content p {
     color: black;
-    font-family: 'Open Sans', sans-serif; }
+    font-family: 'Segoe UI', sans-serif; }
   .type-action-content ul {
     margin: 30px auto 0;
     list-style: none;
@@ -825,28 +706,19 @@ article.blog-post {
     text-decoration: none;
     letter-spacing: .25em;
     padding: 10px;
-    position: relative;
-    border: solid 1px #FECB20;
-    border-radius: 15px; }
+    position: relative; }
   .type-action-content .rate-link {
     color: #F7A992; }
   .type-action-content .rate-link:hover {
     color: #f25e30;
-    text-shadow: #F7A992 0 0 10px; }
+    text-shadow: #f25e30 0 0 10px; }
   .type-action-content .remember-link {
     color: #ff99b4; }
   .type-action-content .remember-link:hover {
     color: #ff668f;
-    text-shadow: #ff99b4 0 0 10px; }
+    text-shadow: #ff668f 0 0 10px; }
 
-.small-image-list {
-  color: #4C364D; }
-  .small-image-list h4 {
-    text-align: center;
-    font-size: medium;
-    color: #4C364D; }
-
-.remember-form {
+.r-form {
   margin: 0 auto;
   max-width: 95%;
   box-sizing: border-box;
@@ -862,7 +734,7 @@ article.blog-post {
   border-radius: 3px;
   border: rgba(0, 0, 0, 0.3) 2px solid;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   font-size: 18px;
   padding: 10px;
   margin-bottom: 30px;
@@ -883,7 +755,7 @@ article.blog-post {
   margin: 20px 0px 0px 0px;
   background: #ffffff;
   color: #FECB20;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   font-weight: 400;
   font-size: 16pt;
   transition: background .4s;
@@ -894,21 +766,14 @@ article.blog-post {
   background: #F7A992;
   text-shadow: 0 1px 1px #000; }
 
-.sidebar p {
-  font-family: 'Franklin Gothic', sans-serif;
-  font-size: 19px;
-  text-align: center;
-  color: black; }
-
-.sidebar h3 {
-  font-family: 'Franklin Gothic', sans-serif;
-  text-align: center;
-  color: black; }
-
-.sidebar h2 {
-  font-family: 'Open Sans', sans-serif;
-  text-align: center;
-  color: #FECB20; }
+.sidebar {
+  border-left: solid 2px #FECB20;
+  border-right: solid 2px #FECB20;
+  padding: 5px; }
+  .sidebar h3 {
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    color: black; }
 
 .toggle-check {
   position: relative;

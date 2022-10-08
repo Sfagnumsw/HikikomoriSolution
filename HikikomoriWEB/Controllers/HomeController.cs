@@ -22,8 +22,8 @@ namespace HikikomoriWEB.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var Quote = await QuotesApiRequest.Quote();
-            return View(Quote);
+
+            return View();
         }
 
          // Форма оценивания контента
