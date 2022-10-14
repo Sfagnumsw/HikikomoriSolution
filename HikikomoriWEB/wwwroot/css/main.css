@@ -569,8 +569,6 @@ article.blog-post {
 /* Large */
 @media screen and (max-width: 1280px) {
   /* Reusable */
-  ul.small-image-list img {
-    width: 50px; }
   ul.big-image-list img {
     width: 75px; }
   /* Header */
@@ -767,13 +765,19 @@ article.blog-post {
   text-shadow: 0 1px 1px #000; }
 
 .sidebar {
-  border-left: solid 2px #FECB20;
-  border-right: solid 2px #FECB20;
-  padding: 5px; }
+  border-left: solid 3px #FECB20;
+  padding: 5px;
+  text-align: center; }
   .sidebar h3 {
     font-family: 'Segoe UI', sans-serif;
-    text-align: center;
     color: black; }
+  .sidebar p {
+    font-family: 'Segoe UI', sans-serif;
+    text-align: justify;
+    color: darkgrey; }
+  .sidebar span {
+    font-family: 'Segoe UI', sans-serif;
+    color: darkgrey; }
 
 .toggle-check {
   position: relative;

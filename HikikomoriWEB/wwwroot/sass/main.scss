@@ -285,12 +285,6 @@ article {
     /* Reusable */
 
     ul {
-        &.small-image-list {
-            img {
-                width: 50px;
-            }
-        }
-
         &.big-image-list {
             img {
                 width: 75px;
@@ -545,14 +539,24 @@ article {
 }
 
 .sidebar {
-    border-left: solid 2px #FECB20;
-    border-right: solid 2px #FECB20;
+    border-left: solid 3px #FECB20;
     padding: 5px;
+    text-align: center;
 
     h3 {
         font-family: 'Segoe UI', sans-serif;
-        text-align: center;
         color: black;
+    }
+
+    p {
+        font-family: 'Segoe UI', sans-serif;
+        text-align: justify;
+        color: darkgrey;
+    }
+
+    span {
+        font-family: 'Segoe UI', sans-serif;
+        color: darkgrey;
     }
 }
 

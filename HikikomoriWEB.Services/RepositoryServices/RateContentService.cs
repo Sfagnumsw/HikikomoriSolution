@@ -15,9 +15,11 @@ namespace HikikomoriWEB.Services.RepositoryServices
     public class RateContentService : IBaseContentServices<RateContent>
     {
         private readonly IBaseContentRepository<RateContent> _repository;
-        public RateContentService(IBaseContentRepository<RateContent> repository)
+        private readonly ILogger<RateContent> _logger;
+        public RateContentService(IBaseContentRepository<RateContent> repository, ILogger<RateContent> logger)
         {
             _repository = repository;
+            _logger = logger;
         }
 
         public async Task<IResponseRepository<IEnumerable<RateContent>>> GetAll()
@@ -92,6 +94,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
 
             catch (Exception ex)
             {
+                _logger.LogInformation(ex.Message);
                 return new ResponseRepository<IEnumerable<RateContent>>()
                 {
                     Description = $"RateContentService.Method [GetFilms] : {ex.Message}",

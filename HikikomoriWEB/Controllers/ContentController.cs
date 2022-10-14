@@ -23,7 +23,7 @@ namespace HikikomoriWEB.Controllers
         {
             var rateResponse = await _rateService.GetFilms();
             var rememberResponse = await _rememberService.GetFilms();
-            if(ControllerAssistant.ErrorCheck<RateContent, RememberContent>(rateResponse, rememberResponse))
+            if(!(rateResponse.ErrorCheck<RateContent>() && rememberResponse.ErrorCheck<RememberContent>()))
             {
                 return RedirectToAction("Error");
             }
@@ -34,7 +34,7 @@ namespace HikikomoriWEB.Controllers
         {
             var rateResponse = await _rateService.GetBooks();
             var rememberResponse = await _rememberService.GetBooks();
-            if (ControllerAssistant.ErrorCheck<RateContent, RememberContent>(rateResponse, rememberResponse))
+            if (!(rateResponse.ErrorCheck<RateContent>() && rememberResponse.ErrorCheck<RememberContent>()))
             {
                 return RedirectToAction("Error");
             }
@@ -45,7 +45,7 @@ namespace HikikomoriWEB.Controllers
         {
             var rateResponse = await _rateService.GetGames();
             var rememberResponse = await _rememberService.GetGames();
-            if (ControllerAssistant.ErrorCheck<RateContent, RememberContent>(rateResponse, rememberResponse))
+            if (!(rateResponse.ErrorCheck<RateContent>() && rememberResponse.ErrorCheck<RememberContent>()))
             {
                 return RedirectToAction("Error");
             }
@@ -56,7 +56,7 @@ namespace HikikomoriWEB.Controllers
         {
             var rateResponse = await _rateService.GetSerials();
             var rememberResponse = await _rememberService.GetSerials();
-            if (ControllerAssistant.ErrorCheck<RateContent, RememberContent>(rateResponse, rememberResponse))
+            if (!(rateResponse.ErrorCheck<RateContent>() && rememberResponse.ErrorCheck<RememberContent>()))
             {
                 return RedirectToAction("Error");
             }
@@ -67,7 +67,7 @@ namespace HikikomoriWEB.Controllers
         {
             var rateResponse = await _rateService.GetCartoons();
             var rememberResponse = await _rememberService.GetCartoons();
-            if (ControllerAssistant.ErrorCheck<RateContent, RememberContent>(rateResponse, rememberResponse))
+            if (!(rateResponse.ErrorCheck<RateContent>() && rememberResponse.ErrorCheck<RememberContent>()))
             {
                 return RedirectToAction("Error");
             }

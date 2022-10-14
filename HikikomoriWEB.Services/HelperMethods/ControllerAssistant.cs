@@ -22,25 +22,18 @@ namespace HikikomoriWEB.Services.HelperMethods
             return new SelectList(categoryList, "Value", "Name");
         }
 
-        public static bool ErrorCheck<Rate, Remember>(IResponseRepository<IEnumerable<Rate>> rated, IResponseRepository<IEnumerable<Remember>> remembered) //проверка StatusCode
-        where Rate : AbstractContent
-        where Remember : AbstractContent
-        {
-            if (rated.StatusCode == StatusCode.ServerError || remembered.StatusCode == StatusCode.ServerError)
-            {
-                return false;
-            }
-            return true;
-        }
-
-        public static bool ErrorCheck<RContent>(IResponseRepository<RContent> content)
+        public static bool ErrorCheck<RContent>(this IResponseRepository<IEnumerable<RContent>> content) //проверка StatusCode
         where RContent : AbstractContent
         {
-            if (content.StatusCode == StatusCode.ServerError)
-            {
-                return false;
-            }
-            return true;
+            if (content.StatusCode != StatusCode.ServerError) return true;
+            else return false;
+        }
+
+        public static bool ErrorCheck<RContent>(this IResponseRepository<RContent> content)
+        where RContent : AbstractContent
+        {
+            if (content.StatusCode != StatusCode.ServerError) return true;
+            else return false;
         }
     }
 }
