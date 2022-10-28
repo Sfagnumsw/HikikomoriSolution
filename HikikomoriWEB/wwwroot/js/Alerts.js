@@ -1,3 +1,0 @@
-$('.button-sub').click(function() {
-
-})

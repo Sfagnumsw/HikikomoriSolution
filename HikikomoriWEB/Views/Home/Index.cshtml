@@ -1,7 +1,9 @@
-﻿<div class="type-action-content">
+﻿<div class="index-content">
     <p>Добро пожаловать, хикан. Это любительский сервис для учета твоего контента, здесь ты можешь оценить контент с которым ты уже ознакомился или записать что-нибудь на будущее, чтобы вернуться к этому позже. В соответсвующих вкладках будут храниться твои списки.</p>
-    <ul>
-        <li><a asp-controller="Home" asp-action="NewRate" class="rate-link">Оценить</a></li>
-        <li><a asp-controller="Home" asp-action="NewRemember" class = "remember-link">Записать на будущее</a></li>
-    </ul>
+    <div class="type-form">
+        <button class="rate-link">Оценить</button>
+        <button class="remember-link">Отложить на потом</button>
+    </div>
 </div>
+@await Html.PartialAsync("RateFormPartial")
+@await Html.PartialAsync("RememberFormPartial") 

@@ -19,52 +19,7 @@ namespace HikikomoriWEB.Controllers
 
         public IActionResult Index()
         {
-
             return View();
-        }
-
-        // Форма оценивания контента
-        [HttpGet]
-        public IActionResult NewRate()
-        {
-            ViewBag.Categories = ControllerAssistant.SelectListCategories();
-            return View();
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> NewRate(RateContent obj)
-        {
-            var response = await _rateService.SaveContent(obj);
-            if (response.ErrorCheck<RateContent>())
-            {
-                return RedirectToAction("Index");
-            }
-            else
-            {
-                return RedirectToAction("Error");
-            }
-        }
-
-        //Форма отложенного контента
-        [HttpGet]
-        public IActionResult NewRemember()
-        {
-            ViewBag.Categories = ControllerAssistant.SelectListCategories();
-            return View();
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> NewRemember(RememberContent obj)
-        {
-            var response = await _rememberService.SaveContent(obj);
-            if (response.ErrorCheck<RememberContent>())
-            {
-                return RedirectToAction("Index");
-            }
-            else
-            {
-                return RedirectToAction("Error");
-            }
         }
     }
 }

@@ -38,12 +38,15 @@ section, summary, time, mark, audio, video {
     vertical-align: baseline;
 }
 
-/*article, aside, details, figcaption, figure, header, hgroup, menu, nav, section {
-    display: block;
-}*/
-
 body {
     line-height: 1;
+    height: 100%;
+    -webkit-text-size-adjust: none;
+    font-size: 13.5pt;
+    font-family: sans-serif;
+    background-color: #e3e9dc;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: -1px;
 }
 
 ol, ul {
@@ -53,10 +56,6 @@ ol, ul {
 table {
     border-collapse: collapse;
     border-spacing: 0;
-}
-
-body {
-    -webkit-text-size-adjust: none;
 }
 
 mark {
@@ -69,13 +68,9 @@ input::-moz-focus-inner {
     padding: 0;
 }
 
-
-/* Basic */
-
-// Set box model to border-box.
-// Based on css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
 html {
     box-sizing: border-box;
+    height: 100%;
 }
 
 *, *:before, *:after {
@@ -86,43 +81,8 @@ html {
     width: device-width;
 }
 
-body {
-    font-size: 13.5pt;
-    font-family: sans-serif;
-    background-color: #e3e9dc;
-    font-family: 'Ubuntu Condensed', sans-serif;
-    color: #878e83;
-    letter-spacing: -1px;
-}
-
-h1, h2, h3, h4 {
-    color: #007897;
-    font-weight: normal;
-}
-
 h1 {
     text-transform: lowercase;
-}
-
-h2 {
-    text-transform: lowercase;
-    font-size: 1.6em;
-    letter-spacing: -1px;
-    margin-bottom: 1em;
-}
-
-h3, h4 {
-    color: #283121;
-    margin-bottom: 0.5em;
-}
-
-h3 {
-    font-size: 1.2em;
-    margin-bottom: 0.8em;
-}
-
-h4 {
-    font-size: 1em;
 }
 
 p, ul {
@@ -144,7 +104,11 @@ img {
     }
 }
 
-/* Container */
+.wrapper{
+    min-height:100%;
+    display:flex;
+    flex-direction: column;
+}
 
 .container {
     margin: 0 auto;
@@ -160,8 +124,6 @@ img {
     }
 }
 
-/* Row */
-
 .row {
     @include html-grid((50px, 50px));
 
@@ -173,8 +135,6 @@ img {
         @include html-grid((35px, 35px), 'large');
     }
 }
-
-/* Reusable */
 
 article {
     &.blog-post {
@@ -195,14 +155,11 @@ article {
     }
 }
 
-/* Header */
-
 #header-wrapper {
     background-image: url(../images/bg-1.jpg);
 }
 
 #header {
-    /*@include vendor('box-sizing', 'content-box');*/
     position: relative;
     margin: 2.5% 0 2.5% 0;
     padding: 0 40px 0 40px;
@@ -254,44 +211,56 @@ article {
     }
 }
 
-/* Main */
-
 #main {
     background-color: #fff;
     padding: 4em 0;
-}
+    flex: 1 1 auto;
 
-/* Copyright */
+    .sidebar {
+        border-left: solid 3px #FECB20;
+        padding: 5px;
+        text-align: center;
 
-.copyright {
-    text-align: center;
-    background-image: url(../images/bg-1.jpg);
-    ul {
-
-        li {
-            display: inline;
-            margin-right: 5px;
+        h3 {
+            font-family: 'Segoe UI', sans-serif;
+            color: black;
         }
 
-        a {
-            color: #4C364D;
+        p {
+            font-family: 'Segoe UI', sans-serif;
+            text-align: justify;
+            color: darkgrey;
+        }
+
+        span {
+            font-family: 'Segoe UI', sans-serif;
+            color: darkgrey;
         }
     }
 }
 
+.copyright {
+    text-align: center;
+    background-image: url(../images/bg-1.jpg);
+    height: 10%;
+    color: #FECB20;
 
-/* Large */
+      li {
+            display: inline;
+            margin-right: 5px;
+      }
+}
+
 @include breakpoint('<=large') {
-    /* Reusable */
-
     ul {
+
         &.big-image-list {
+
             img {
                 width: 75px;
             }
         }
     }
-    /* Header */
 
     #header {
         height: 76px;
@@ -310,7 +279,6 @@ article {
             }
         }
     }
-    /* Main */
 
     #main {
         padding: 40px 0;
@@ -424,14 +392,7 @@ article {
     border-bottom: 2px solid #FF0000;
 }
 
-.active {
-    visibility: visible;
-    content: '';
-    position: relative;
-    background: #FECB20;
-}
-
-.type-action-content {
+.index-content {
     text-align: justify;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-size: 25px;
@@ -441,52 +402,53 @@ article {
     p {
         color: black;
         font-family: 'Segoe UI', sans-serif;
+        padding-bottom: 10px;
     }
 
-    ul {
-        margin: 30px auto 0;
-        list-style: none;
-        display: inline;
-        justify-content: space-between;
+    .type-form {
         text-align: center;
-        max-width: 400px;
-    }
 
-    li {
-        position: relative;
-        padding: 10px;
-    }
+        button {
+            background-color: #fff;
+            margin: 5px;
+            padding: 5px;
+            cursor: pointer;
+            font-size: 28px;
+            font-family: 'Open Sans', sans-serif;
+            outline: none;
+            border: 1px solid #fff;
+        }
 
-    a {
-        color: #4C364D;
-        text-transform: uppercase;
-        text-decoration: none;
-        letter-spacing: .25em;
-        padding: 10px;
-        position: relative;
-    }
+        .rate-link {
+            color: #F7A992;
+        }
 
-    .rate-link {
-        color: #F7A992;
-    }
+        .rate-link:hover {
+            color: #f25e30;
+            text-shadow: #f25e30 0 0 10px;
+        }
 
-    .rate-link:hover {
-        color: #f25e30;
-        text-shadow: #f25e30 0 0 10px;
-    }
+        .remember-link {
+            color: #ff99b4;
+        }
 
-    .remember-link {
-        color: #ff99b4;
-    }
-
-    .remember-link:hover {
-        color: #ff668f;
-        text-shadow: #ff668f 0 0 10px;
+        .remember-link:hover {
+            color: #ff668f;
+            text-shadow: #ff668f 0 0 10px;
+        }
     }
 }
 
+.form-container{
+    display: none;
+}
+
+#rate-form, #remember-form{
+
+}
+
 .r-form {
-    margin: 0 auto;
+    margin-top: 10px;
     max-width: 95%;
     box-sizing: border-box;
     padding: 40px;
@@ -494,70 +456,70 @@ article {
     background: RGBA(255,255,255,1);
     -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .45);
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .45);
+
+    .txt-input {
+        height: 50px;
+        width: 100%;
+        border-radius: 3px;
+        border: rgba(0,0,0,.3) 2px solid;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 18px;
+        padding: 10px;
+        margin-bottom: 30px;
+        color: #FECB20;
+    }
+
+    .rate-txt-input:focus {
+        outline: none;
+        border: #F7A992 2px solid;
+        color: #F7A992;
+    }
+
+    .remember-txt-input:focus {
+        outline: none;
+        border: #ffcbd9 2px solid;
+        color: #ffcbd9;
+    }
+
+    .button-sub {
+        height: 50px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 20px 0px 0px 0px;
+        background: #ffffff;
+        color: #000;
+        font-family: 'Segoe UI', sans-serif;
+        font-weight: 400;
+        font-size: 16pt;
+        transition: background .4s;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+
+    .rate-button-sub {
+        border: #F7A992 2px solid;
+    }
+
+    .rate-button-sub:hover {
+        text-decoration: none;
+        background: #F7A992;
+    }
+
+    .remember-button-sub {
+        border: #ffcbd9 2px solid;
+    }
+
+    .remember-button-sub:hover {
+        text-decoration: none;
+        background: #ffcbd9;
+    }
 }
 
-.txt-input {
-    height: 50px;
-    width: 100%;
-    border-radius: 3px;
-    border: rgba(0,0,0,.3) 2px solid;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+.label-check {
+    font-family: 'Open Sans', sans-serif;
     font-size: 18px;
-    padding: 10px;
-    margin-bottom: 30px;
-    color: #FECB20;
-}
-
-.txt-input:focus {
-    outline: none;
-    border: #F7A992 2px solid;
-    color: #F7A992;
-}
-
-.button-sub {
-    height: 50px;
-    width: 100%;
-    border-radius: 3px;
-    border: #F7A992 1px solid;
-    box-sizing: border-box;
-    padding: 10px;
-    margin: 20px 0px 0px 0px;
-    background: #ffffff;
-    color: #FECB20;
-    font-family: 'Segoe UI', sans-serif;
-    font-weight: 400;
-    font-size: 16pt;
-    transition: background .4s;
-    cursor: pointer;
-}
-
-.button-sub:hover {
-    text-decoration: none;
-    background: #F7A992;
-    text-shadow: 0 1px 1px #000
-}
-
-.sidebar {
-    border-left: solid 3px #FECB20;
-    padding: 5px;
-    text-align: center;
-
-    h3 {
-        font-family: 'Segoe UI', sans-serif;
-        color: black;
-    }
-
-    p {
-        font-family: 'Segoe UI', sans-serif;
-        text-align: justify;
-        color: darkgrey;
-    }
-
-    span {
-        font-family: 'Segoe UI', sans-serif;
-        color: darkgrey;
-    }
 }
 
 .toggle-check {
@@ -630,11 +592,6 @@ article {
     }
 }
 
-.label-check {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-}
-
 .delete-button {
     position: relative;
     left: 100%;
@@ -648,4 +605,17 @@ article {
 
 .delete-button:hover {
     box-shadow: 0px 0px 17px 0px #FECB20;
+}
+
+.active-row {
+    visibility: visible;
+    content: '';
+    position: relative;
+    background: #FECB20;
+}
+
+.active-tab {
+    border: solid 3px #FECB20;
+    border-radius: 9px;
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.5);
 }
