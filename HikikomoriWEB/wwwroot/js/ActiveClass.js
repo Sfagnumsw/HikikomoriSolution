@@ -6,4 +6,4 @@ $('.table-list-rate tr, .table-list-remember tr').click(function() {
 $('.rate-link, .remember-link').click(function(){
     $('.rate-link, .remember-link').removeClass("active-tab");
     $(this).addClass("active-tab");
-})
+});

@@ -538,7 +538,5 @@ C:\Users\Sfagnum\Documents\обучение\Программирование\C#\
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\NLog.dll
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\NLog.Extensions.Logging.dll
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\NLog.Web.AspNetCore.dll
-C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\hik-app\package-lock.json
-C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\hik-app\package.json
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Home\RateFormPartial.cshtml.g.cs
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Home\RememberFormPartial.cshtml.g.cs

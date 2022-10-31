@@ -9,6 +9,7 @@ using HikikomoriWEB.DAL.Interfaces;
 using HikikomoriWEB.Domain.Enum;
 using HikikomoriWEB.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
+using HikikomoriWEB.Domain.ViewModels;
 
 namespace HikikomoriWEB.Services.RepositoryServices
 {
@@ -253,6 +254,16 @@ namespace HikikomoriWEB.Services.RepositoryServices
             try
             {
                 var response = new ResponseRepository<RateContent>();
+                //RateContent DBObj = new RateContent()
+                //{
+                //    Name = obj.Name,
+                //    Autor = obj.Autor,
+                //    Genre = obj.Genre,
+                //    CreationYear = obj.CreationYear,
+                //    CategoryId = obj.CategoryId,
+                //    Rating = obj.Rating,
+                //    Replay = obj.Replay
+                //};
                 await _repository.Save(obj);
                 response.Description = "Запись сохранена";
                 response.StatusCode = StatusCode.OK;

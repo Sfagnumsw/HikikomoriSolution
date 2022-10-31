@@ -1,11 +1,11 @@
-﻿@model RateContent
+﻿@model RateContentViewModel
 
-<div id="rate-form" class="form-container">
-    <form asp-controller="Home" asp-action="NewRate" method="post" class="r-form">
+<div id="rate-form-container" class="form-container">
+    <form asp-controller="Home" asp-action="RateFormPost" method="post" id="rate-form" class="r-form">
         <div asp-validation-summary="All"></div>
         <div>
-            <input asp-for="Name" placeholder="Название" class="txt-input rate-txt-input" />
             <span asp-validation-for="Name"></span>
+            <input asp-for="Name" placeholder="Название" class="txt-input rate-txt-input" />
         </div>
         <div>
             <select asp-for="CategoryId" asp-items=@ViewBag.Categories class="txt-input rate-txt-input">
@@ -13,29 +13,28 @@
             </select>
         </div>
         <div>
-            <input asp-for="Genre" placeholder="Жанр" class="txt-input rate-txt-input">
             <span asp-validation-for="Genre"></span>
+            <input asp-for="Genre" placeholder="Жанр" class="txt-input rate-txt-input">
         </div>
         <div>
-            <input asp-for="Autor" placeholder="Автор" class="txt-input rate-txt-input">
             <span asp-validation-for="Autor"></span>
+            <input asp-for="Autor" placeholder="Автор" class="txt-input rate-txt-input">
         </div>
         <div>
-            <input asp-for="CreationYear" placeholder="Год выпуска" class="txt-input rate-txt-input" />
             <span asp-validation-for="CreationYear"></span>
+            <input asp-for="CreationYear" placeholder="Год выпуска" class="txt-input rate-txt-input" />
         </div>
         <div>
-            <input asp-for="Rating" placeholder="Оценка" class="txt-input rate-txt-input" />
             <span asp-validation-for="Rating"></span>
+            <input asp-for="Rating" placeholder="Оценка" class="txt-input rate-txt-input" />
         </div>
         <div>
             <label class="label-check">Пометить как избранное<img src="~/images/fav.png" class="ico"></label>
             <input id="cbx" style="display:none" asp-for="Replay" />
             <label for="cbx" class="toggle-check"><span></span></label>
-            <span asp-validation-for="Replay"></span>
         </div>
         <div>
-            <input type="submit" value="Сохранить" class="button-sub rate-button-sub" />
+            <input type="button" value="Сохранить" class="button-sub rate-button-sub" />
         </div>
     </form>
 </div>

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HikikomoriWEB.Domain.ResponseEntity
 {
-    public class ResponseRepository<T> : IResponseRepository<T>
+    public class ResponseRepository<T> : IResponseRepository<T> //наследование от интерефейса необязательно(но соответсвует парадигме)
     {
         public string Description { get; set; }
         public StatusCode StatusCode { get; set; }
