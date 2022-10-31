@@ -8,10 +8,11 @@ using HikikomoriWEB.Domain.Interfaces;
 using HikikomoriWEB.Domain.ResponseEntity;
 using HikikomoriWEB.DAL.Interfaces;
 using System.Threading.Tasks;
+using HikikomoriWEB.Domain.ViewModels;
 
 namespace HikikomoriWEB.Services.RepositoryServices
 {
-    public class RememberContentService : IBaseContentServices<RememberContent>
+    public class RememberContentService : IBaseContentServices<RememberContent, RememberContentViewModel>
     {
         private readonly IBaseContentRepository<RememberContent> _repository;
         public RememberContentService(IBaseContentRepository<RememberContent> repository)
@@ -242,12 +243,20 @@ namespace HikikomoriWEB.Services.RepositoryServices
             }
         }
 
-        public async Task<IResponseRepository<RememberContent>> SaveContent(RememberContent obj)
+        public async Task<IResponseRepository<RememberContent>> SaveContent(RememberContentViewModel obj)
         {
             try
             {
                 var response = new ResponseRepository<RememberContent>();
-                await _repository.Save(obj);
+                RememberContent DBObj = new RememberContent()
+                {
+                    Name = obj.Name,
+                    Autor = obj.Autor,
+                    CategoryId = obj.CategoryId,
+                    Genre = obj.Genre,
+                    CreationYear = obj.CreationYear
+                };
+                await _repository.Save(DBObj);
                 response.Description = "Запись сохранена";
                 response.StatusCode = StatusCode.OK;
                 return response;
@@ -257,7 +266,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
             {
                 return new ResponseRepository<RememberContent>()
                 {
-                    Description = $"RememberContentService.Method [SaveContent] : {ex.Message}",
+                    Description = $"Ошибка сохранения | RememberContentService.Method [SaveContent] : {ex.Message}",
                     StatusCode = StatusCode.ServerError
                 };
             }

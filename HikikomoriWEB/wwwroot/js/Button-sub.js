@@ -12,16 +12,27 @@ $('.rate-button-sub').click(function(){
             data: form,
             success: function (response) {
                 alert(response);
-            }
-        })
-
-        }
-    }   
+            },
+            error: function(){
+                alert("Ошибка запроса");
+            } 
+        });
+    }
 });
 
 $('.remember-button-sub').click(function(){
     if($('#remember-form').valid()){
         var form = $('#remember-form').serialize();
-        console.log(form);
+        $.ajax({
+            url: "/Home/RememberFormPost",
+            type: "POST",
+            data: form,
+            success: function (response) {
+                alert(response);
+            },
+            error: function(){
+                alert("Ошибка запроса");
+            } 
+        });
     }   
 });

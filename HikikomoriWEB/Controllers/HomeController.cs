@@ -9,10 +9,10 @@ namespace HikikomoriWEB.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IBaseContentServices<RateContent> _rateService;
-        private readonly IBaseContentServices<RememberContent> _rememberService;
+        private readonly IBaseContentServices<RateContent,RateContentViewModel> _rateService;
+        private readonly IBaseContentServices<RememberContent,RememberContentViewModel> _rememberService;
 
-        public HomeController(IBaseContentServices<RateContent> rate, IBaseContentServices<RememberContent> remember)
+        public HomeController(IBaseContentServices<RateContent, RateContentViewModel> rate, IBaseContentServices<RememberContent, RememberContentViewModel> remember)
         {
             _rateService = rate;
             _rememberService = remember;
@@ -27,15 +27,15 @@ namespace HikikomoriWEB.Controllers
         [HttpPost]
         public async Task<ContentResult> RateFormPost(RateContentViewModel obj)
         {
-            //var response = await _rateService.SaveContent(obj);
-            //return Content("asd");
+            var response = await _rateService.SaveContent(obj);
+            return Content(response.Description);
         }
 
         [HttpPost]
-        public ContentResult RememberFormPost(RememberContentViewModel obj)
+        public async Task<ContentResult> RememberFormPost(RememberContentViewModel obj)
         {
-
-            //return Content("");
+            var response = await _rememberService.SaveContent(obj);
+            return Content(response.Description);
         }
     }
 }

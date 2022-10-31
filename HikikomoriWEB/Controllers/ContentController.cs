@@ -9,10 +9,10 @@ namespace HikikomoriWEB.Controllers
 {
     public class ContentController : Controller
     {
-        private readonly IBaseContentServices<RateContent> _rateService;
-        private readonly IBaseContentServices<RememberContent> _rememberService;
+        private readonly IBaseContentServices<RateContent,RateContentViewModel> _rateService;
+        private readonly IBaseContentServices<RememberContent, RememberContentViewModel> _rememberService;
 
-        public ContentController(IBaseContentServices<RateContent> rate, IBaseContentServices<RememberContent> remember)
+        public ContentController(IBaseContentServices<RateContent, RateContentViewModel> rate, IBaseContentServices<RememberContent, RememberContentViewModel> remember)
         {
             _rateService = rate;
             _rememberService = remember;

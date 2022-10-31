@@ -13,7 +13,7 @@ using HikikomoriWEB.Domain.ViewModels;
 
 namespace HikikomoriWEB.Services.RepositoryServices
 {
-    public class RateContentService : IBaseContentServices<RateContent>
+    public class RateContentService : IBaseContentServices<RateContent,RateContentViewModel>
     {
         private readonly IBaseContentRepository<RateContent> _repository;
         private readonly ILogger<RateContent> _logger;
@@ -249,22 +249,22 @@ namespace HikikomoriWEB.Services.RepositoryServices
             }
         }
 
-        public async Task<IResponseRepository<RateContent>> SaveContent(RateContent obj)
+        public async Task<IResponseRepository<RateContent>> SaveContent(RateContentViewModel obj)
         {
             try
             {
                 var response = new ResponseRepository<RateContent>();
-                //RateContent DBObj = new RateContent()
-                //{
-                //    Name = obj.Name,
-                //    Autor = obj.Autor,
-                //    Genre = obj.Genre,
-                //    CreationYear = obj.CreationYear,
-                //    CategoryId = obj.CategoryId,
-                //    Rating = obj.Rating,
-                //    Replay = obj.Replay
-                //};
-                await _repository.Save(obj);
+                RateContent DBObj = new RateContent()
+                {
+                    Name = obj.Name,
+                    Autor = obj.Autor,
+                    Genre = obj.Genre,
+                    CreationYear = obj.CreationYear,
+                    CategoryId = obj.CategoryId,
+                    Rating = obj.Rating,
+                    Replay = obj.Replay
+                };
+                await _repository.Save(DBObj);
                 response.Description = "Запись сохранена";
                 response.StatusCode = StatusCode.OK;
                 return response;
@@ -274,7 +274,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
             {
                 return new ResponseRepository<RateContent>()
                 {
-                    Description = $"RateContentService.Method [SaveContent] : {ex.Message}",
+                    Description = $"Ошибка сохранения | RateContentService.Method [SaveContent] : {ex.Message}",
                     StatusCode = StatusCode.ServerError
                 };
             }
