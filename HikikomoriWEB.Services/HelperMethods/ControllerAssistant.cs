@@ -2,9 +2,8 @@
 using HikikomoriWEB.Domain.Enum;
 using HikikomoriWEB.Domain.ViewModels;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using HikikomoriWEB.Domain.Interfaces;
-using HikikomoriWEB.Domain.Entity;
 using System.ComponentModel.DataAnnotations;
+using HikikomoriWEB.Domain.ResponseEntity;
 
 namespace HikikomoriWEB.Services.HelperMethods
 {
@@ -22,15 +21,15 @@ namespace HikikomoriWEB.Services.HelperMethods
             return new SelectList(categoryList, "Value", "Name");
         }
 
-        public static bool ErrorCheck<RContent>(this IResponseRepository<IEnumerable<RContent>> content) //проверка StatusCode
-        where RContent : AbstractContent
+        public static bool ErrorCheck<RContent>(this ResponseRepository<IEnumerable<RContent>> content) //проверка StatusCode
+        where RContent : AbstractContentViewModel
         {
             if (content.StatusCode != StatusCode.ServerError) return true;
             else return false;
         }
 
-        public static bool ErrorCheck<RContent>(this IResponseRepository<RContent> content)
-        where RContent : AbstractContent
+        public static bool ErrorCheck<RContent>(this ResponseRepository<RContent> content)
+        where RContent : AbstractContentViewModel
         {
             if (content.StatusCode != StatusCode.ServerError) return true;
             else return false;

@@ -4,80 +4,56 @@ using HikikomoriWEB.Domain.Entity;
 using HikikomoriWEB.Domain.ViewModels;
 using System.Threading.Tasks;
 using HikikomoriWEB.Services.HelperMethods;
+using System.Collections.Generic;
+using HikikomoriWEB.Domain.ResponseEntity;
 
 namespace HikikomoriWEB.Controllers
 {
     public class ContentController : Controller
     {
-        private readonly IBaseContentServices<RateContent,RateContentViewModel> _rateService;
-        private readonly IBaseContentServices<RememberContent, RememberContentViewModel> _rememberService;
+        private readonly IBaseContentServices<RateContentViewModel> _rateService;
+        private readonly IBaseContentServices<RememberContentViewModel> _rememberService;
 
-        public ContentController(IBaseContentServices<RateContent, RateContentViewModel> rate, IBaseContentServices<RememberContent, RememberContentViewModel> remember)
+        public ContentController(IBaseContentServices<RateContentViewModel> rate, IBaseContentServices<RememberContentViewModel> remember)
         {
             _rateService = rate;
             _rememberService = remember;
         }
 
-        #region Заполнение таблиц
-        public async Task<IActionResult> FilmList()
+        public async Task<IActionResult> ContentList(string type) //таблицы с контентом
         {
-            var rateResponse = await _rateService.GetFilms();
-            var rememberResponse = await _rememberService.GetFilms();
-            if(!(rateResponse.ErrorCheck<RateContent>() && rememberResponse.ErrorCheck<RememberContent>()))
+            ResponseRepository<IEnumerable<RateContentViewModel>> rateResponse;
+            ResponseRepository<IEnumerable<RememberContentViewModel>> rememberResponse;
+            switch (type)
             {
-                return RedirectToAction("Error");
+                case "films":
+                    rateResponse = await _rateService.GetFilms();
+                    rememberResponse = await _rememberService.GetFilms();
+                    return View(new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
+                case "books":
+                    rateResponse = await _rateService.GetBooks();
+                    rememberResponse = await _rememberService.GetBooks();
+                    return View(new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
+                case "games":
+                    rateResponse = await _rateService.GetGames();
+                    rememberResponse = await _rememberService.GetGames();
+                    return View(new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
+                case "serials":
+                    rateResponse = await _rateService.GetSerials();
+                    rememberResponse = await _rememberService.GetSerials();
+                    return View(new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
+                case "cartoons":
+                    rateResponse = await _rateService.GetCartoons();
+                    rememberResponse = await _rememberService.GetCartoons();
+                    return View(new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
+                default:
+                    return RedirectToAction("Error");
             }
-            return View(new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
         }
 
-        public async Task<IActionResult> BookList()
+        public async Task<IActionResult> RemoveAction(int Id, string tableClass) //удаление строки таблицы(удаление контента из БД)
         {
-            var rateResponse = await _rateService.GetBooks();
-            var rememberResponse = await _rememberService.GetBooks();
-            if (!(rateResponse.ErrorCheck<RateContent>() && rememberResponse.ErrorCheck<RememberContent>()))
-            {
-                return RedirectToAction("Error");
-            }
-            return View(new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
-        }
-
-        public async Task<IActionResult> GameList()
-        {
-            var rateResponse = await _rateService.GetGames();
-            var rememberResponse = await _rememberService.GetGames();
-            if (!(rateResponse.ErrorCheck<RateContent>() && rememberResponse.ErrorCheck<RememberContent>()))
-            {
-                return RedirectToAction("Error");
-            }
-            return View(new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
-        }
-
-        public async Task<IActionResult> SerialList()
-        {
-            var rateResponse = await _rateService.GetSerials();
-            var rememberResponse = await _rememberService.GetSerials();
-            if (!(rateResponse.ErrorCheck<RateContent>() && rememberResponse.ErrorCheck<RememberContent>()))
-            {
-                return RedirectToAction("Error");
-            }
-            return View(new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
-        }
-
-        public async Task<IActionResult> CartoonList()
-        {
-            var rateResponse = await _rateService.GetCartoons();
-            var rememberResponse = await _rememberService.GetCartoons();
-            if (!(rateResponse.ErrorCheck<RateContent>() && rememberResponse.ErrorCheck<RememberContent>()))
-            {
-                return RedirectToAction("Error");
-            }
-            return View(new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
-        }
-        #endregion
-
-        public async Task<IActionResult> RemoveAction(int Id, string tableClass)
-        {
-            if(Id != 0 && tableClass != null)
+            if (Id != 0 && tableClass != null)
             {
                 switch (tableClass)
                 {

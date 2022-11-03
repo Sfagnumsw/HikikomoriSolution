@@ -240,15 +240,37 @@ article {
 }
 
 .copyright {
+    padding-top: 8px;
     text-align: center;
     background-image: url(../images/bg-1.jpg);
     height: 10%;
     color: #FECB20;
 
-      li {
-            display: inline;
-            margin-right: 5px;
-      }
+    p {
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 15px;
+    }
+
+    li {
+        display: inline;
+        margin-right: 5px;
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 17px;
+
+        a {
+            text-decoration: none;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 17px;
+        }
+
+        .vk {
+            content: url(../images/vk.ico);
+        }
+
+        .tg {
+            content: url(../images/tg.ico);
+        }
+    }
 }
 
 @include breakpoint('<=large') {
@@ -298,7 +320,8 @@ article {
     background: #fff !important;
 
     caption {
-        color: #007897;
+        font-style: "Trebuchet MS", Helvetica, sans-serif;
+        color: dimgrey;
         font-size: 18px;
     }
 
@@ -329,6 +352,10 @@ article {
         border-bottom: 2px solid #F7A992;
         font-size: 15px;
     }
+
+    tr td:nth-child(1), th:nth-child(1) {
+        display: none;
+    }
 }
 
 .table-list-rate tbody:nth-child(even) {
@@ -355,7 +382,8 @@ article {
     background: #fff !important;
 
     caption {
-        color: #007897;
+        font-style: "Trebuchet MS", Helvetica, sans-serif;
+        color: dimgrey;
         font-size: 18px;
     }
 
@@ -378,6 +406,10 @@ article {
         border-left: 2px solid #ffcbd9;
         border-right: 2px solid #ffcbd9;
         font-size: 15px;
+    }
+
+    tr td:nth-child(1), th:nth-child(1) {
+        display: none;
     }
 }
 

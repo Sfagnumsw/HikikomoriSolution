@@ -1,4 +1,4 @@
-﻿@model IEnumerable<RememberContent>
+﻿@model IEnumerable<RememberContentViewModel>
 
 <table class="table-list-remember">
     <caption>Оценю позже</caption>
@@ -9,7 +9,7 @@
         @foreach (var i in Model)
         {
             <tr>
-                <td>@i.Id</td>
+                <td class="item-id">@i.Id</td>
                 <td>@i.Name</td>
                 <td>@i.Genre</td>
                 <td>@i.Autor</td>

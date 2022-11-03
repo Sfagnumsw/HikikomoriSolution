@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace HikikomoriWEB.Domain.ViewModels
 {
-    public class ContentListViewModel
+    public class ContentListViewModel //список всего контента для передачи в представление
     {
-        public IEnumerable<RateContent> RatedList { get; set; }
-        public IEnumerable<RememberContent> RememberedList { get; set; }
+        public IEnumerable<RateContentViewModel> RatedList { get; set; }
+        public IEnumerable<RememberContentViewModel> RememberedList { get; set; }
 
-        public ContentListViewModel(IEnumerable<RateContent> rated, IEnumerable<RememberContent> remembered)
+        public ContentListViewModel(IEnumerable<RateContentViewModel> rated, IEnumerable<RememberContentViewModel> remembered)
         {
             RatedList = rated;
             RememberedList = remembered;

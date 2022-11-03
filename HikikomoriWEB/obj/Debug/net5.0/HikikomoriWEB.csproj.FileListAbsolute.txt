@@ -527,11 +527,6 @@ C:\Users\Sfagnum\Documents\обучение\Программирование\C#\
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\HikikomoriWEB.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Content\BookList.cshtml.g.cs
-C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Content\CartoonList.cshtml.g.cs
-C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Content\FilmList.cshtml.g.cs
-C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Content\GameList.cshtml.g.cs
-C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Content\SerialList.cshtml.g.cs
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Content\RatedListPartial.cshtml.g.cs
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Content\RememberedListPartial.cshtml.g.cs
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\nlog.config
@@ -540,3 +535,4 @@ C:\Users\Sfagnum\Documents\обучение\Программирование\C#\
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\NLog.Web.AspNetCore.dll
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Home\RateFormPartial.cshtml.g.cs
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Home\RememberFormPartial.cshtml.g.cs
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Content\ContentList.cshtml.g.cs

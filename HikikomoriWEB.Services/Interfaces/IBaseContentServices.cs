@@ -1,22 +1,20 @@
 ﻿using HikikomoriWEB.Domain.Entity;
-using HikikomoriWEB.Domain.Interfaces;
 using HikikomoriWEB.Domain.ViewModels;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using HikikomoriWEB.Domain.ResponseEntity;
 
 namespace HikikomoriWEB.Services.Interfaces
 {
-    public interface IBaseContentServices<T,K>
-        where T : AbstractContent
+    public interface IBaseContentServices<K>
         where K : AbstractContentViewModel
     {
-        Task<IResponseRepository<T>> SaveContent(K obj);
-        Task<IResponseRepository<T>> DeleteContent(int ContentId);
-        Task<IResponseRepository<T>> GetOnId(int ContentId);
-        Task<IResponseRepository<IEnumerable<T>>> GetFilms();
-        Task<IResponseRepository<IEnumerable<T>>> GetBooks();
-        Task<IResponseRepository<IEnumerable<T>>> GetGames();
-        Task<IResponseRepository<IEnumerable<T>>> GetSerials();
-        Task<IResponseRepository<IEnumerable<T>>> GetCartoons();
+        Task<ResponseRepository<K>> SaveContent(K obj);
+        Task<ResponseRepository<K>> DeleteContent(int ContentId);
+        Task<ResponseRepository<IEnumerable<K>>> GetFilms();
+        Task<ResponseRepository<IEnumerable<K>>> GetBooks();
+        Task<ResponseRepository<IEnumerable<K>>> GetGames();
+        Task<ResponseRepository<IEnumerable<K>>> GetSerials();
+        Task<ResponseRepository<IEnumerable<K>>> GetCartoons();
     }
 }

@@ -5,9 +5,12 @@ namespace HikikomoriWEB.Domain.ViewModels
 {
     public abstract class AbstractContentViewModel
     {
+        [Required]
+        public int Id { get; set; }
+
         [Required(ErrorMessage = "Введите название")]
         [Display(Name = "Название")]
-        public virtual string Name { get; set; }
+        public string Name { get; set; }
 
         [Display(Name = "Жанр")]
         public string Genre { get; set; }
