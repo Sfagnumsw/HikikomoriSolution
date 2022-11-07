@@ -1,5 +1,4 @@
-﻿using HikikomoriWEB.Domain.Enum;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace HikikomoriWEB.Domain.Entity
 {
