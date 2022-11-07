@@ -1,5 +1,4 @@
-﻿using HikikomoriWEB.Domain.Entity;
-using HikikomoriWEB.Domain.ViewModels;
+﻿using HikikomoriWEB.Domain.ViewModels;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using HikikomoriWEB.Domain.ResponseEntity;

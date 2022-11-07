@@ -7,7 +7,6 @@ using HikikomoriWEB.Domain.Entity;
 using HikikomoriWEB.Domain.ResponseEntity;
 using HikikomoriWEB.DAL.Interfaces;
 using HikikomoriWEB.Domain.Enum;
-using Microsoft.Extensions.Logging;
 using HikikomoriWEB.Domain.ViewModels;
 
 namespace HikikomoriWEB.Services.RepositoryServices

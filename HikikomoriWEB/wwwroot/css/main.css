@@ -560,10 +560,6 @@ article.blog-post {
       text-decoration: none;
       font-family: 'Segoe UI', sans-serif;
       font-size: 17px; }
-    .copyright li .vk {
-      content: url(../images/vk.ico); }
-    .copyright li .tg {
-      content: url(../images/tg.ico); }
 
 @media screen and (max-width: 1280px) {
   ul.big-image-list img {

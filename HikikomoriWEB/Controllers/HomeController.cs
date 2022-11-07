@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using HikikomoriWEB.Services.Interfaces;
 using System.Threading.Tasks;
-using HikikomoriWEB.Domain.Entity;
 using HikikomoriWEB.Services.HelperMethods;
 using HikikomoriWEB.Domain.ViewModels;
 
