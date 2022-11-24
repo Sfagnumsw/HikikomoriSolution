@@ -10,6 +10,8 @@ namespace HikikomoriWEB.Domain.Enum
     {
         OK = 200,
         NotFound = 404,
-        ServerError = 500
+        ServerError = 500,
+        UserExists = 409,
+        Prohibited = 403,
     }
 }

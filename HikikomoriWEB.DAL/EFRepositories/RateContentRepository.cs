@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HikikomoriWEB.Domain.Enum;
 
 namespace HikikomoriWEB.DAL.EFRepositories
 {
@@ -29,9 +30,9 @@ namespace HikikomoriWEB.DAL.EFRepositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<RateContent>> GetOnCategoryId(int CategoryId)
+        public async Task<IEnumerable<RateContent>> GetOnCategoryId(Categories category)
         {
-            return await _context.RateContent.Where(i => i.CategoryId == CategoryId).ToListAsync();
+            return await _context.RateContent.Where(i => i.CategoryId == category).ToListAsync();
         }
 
         public async Task<RateContent> GetOnId(int ContentId)

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using HikikomoriWEB.Domain.Enum;
 
 namespace HikikomoriWEB.Domain.ViewModels
 {
@@ -24,6 +25,6 @@ namespace HikikomoriWEB.Domain.ViewModels
 
         [Required(ErrorMessage = "Выберете категорию")]
         [Display(Name = "Категория")]
-        public int CategoryId { get; set; }
+        public Categories CategoryId { get; set; }
     }
 }

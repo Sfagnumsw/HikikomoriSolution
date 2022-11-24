@@ -13,3 +13,6 @@ C:\Users\Sfagnum\Documents\обучение\Программирование\C#\
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.DAL\obj\Debug\net5.0\HikikomoriWEB.DAL.dll
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.DAL\obj\Debug\net5.0\ref\HikikomoriWEB.DAL.dll
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.DAL\obj\Debug\net5.0\HikikomoriWEB.DAL.pdb
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.DAL\bin\Debug\net5.0\HikikomoriWEB.DAL.runtimeconfig.json
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.DAL\bin\Debug\net5.0\HikikomoriWEB.DAL.runtimeconfig.dev.json
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.DAL\obj\Debug\net5.0\HikikomoriWEB.DAL.genruntimeconfig.cache

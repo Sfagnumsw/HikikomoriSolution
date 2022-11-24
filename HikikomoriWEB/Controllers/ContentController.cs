@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 using HikikomoriWEB.Services.HelperMethods;
 using System.Collections.Generic;
 using HikikomoriWEB.Domain.ResponseEntity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HikikomoriWEB.Controllers
 {
+    [Authorize]
     public class ContentController : Controller
     {
         private readonly IBaseContentServices<RateContentViewModel> _rateService;
@@ -20,10 +22,11 @@ namespace HikikomoriWEB.Controllers
             _rememberService = remember;
         }
 
+        [Authorize]
         public async Task<IActionResult> ContentList(string type) //таблицы с контентом
         {
-            ResponseRepository<IEnumerable<RateContentViewModel>> rateResponse;
-            ResponseRepository<IEnumerable<RememberContentViewModel>> rememberResponse;
+            ServiceResponse<IEnumerable<RateContentViewModel>> rateResponse;
+            ServiceResponse<IEnumerable<RememberContentViewModel>> rememberResponse;
             switch (type)
             {
                 case "films":
@@ -51,6 +54,7 @@ namespace HikikomoriWEB.Controllers
             }
         }
 
+        [Authorize]
         public async Task<IActionResult> RemoveAction(int Id, string tableClass) //удаление строки таблицы(удаление контента из БД)
         {
             if (Id != 0 && tableClass != null)

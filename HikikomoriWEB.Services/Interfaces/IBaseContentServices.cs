@@ -8,12 +8,12 @@ namespace HikikomoriWEB.Services.Interfaces
     public interface IBaseContentServices<K>
         where K : AbstractContentViewModel
     {
-        Task<ResponseRepository<K>> SaveContent(K obj);
-        Task<ResponseRepository<K>> DeleteContent(int ContentId);
-        Task<ResponseRepository<IEnumerable<K>>> GetFilms();
-        Task<ResponseRepository<IEnumerable<K>>> GetBooks();
-        Task<ResponseRepository<IEnumerable<K>>> GetGames();
-        Task<ResponseRepository<IEnumerable<K>>> GetSerials();
-        Task<ResponseRepository<IEnumerable<K>>> GetCartoons();
+        Task<ServiceResponseEmpty> SaveContent(K obj);
+        Task<ServiceResponseEmpty> DeleteContent(int ContentId);
+        Task<ServiceResponse<IEnumerable<K>>> GetFilms();
+        Task<ServiceResponse<IEnumerable<K>>> GetBooks();
+        Task<ServiceResponse<IEnumerable<K>>> GetGames();
+        Task<ServiceResponse<IEnumerable<K>>> GetSerials();
+        Task<ServiceResponse<IEnumerable<K>>> GetCartoons();
     }
 }

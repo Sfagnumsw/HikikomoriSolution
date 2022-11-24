@@ -2,11 +2,15 @@
 using System.ComponentModel.DataAnnotations;
 
 namespace HikikomoriWEB.Domain.Entity
+
 {
     public abstract class AbstractContent
     {
         [Required]
         public int Id { get; set; }
+
+        [Required]
+        public string UserId { get; set; }
 
         [Required]
         [Display(Name = "Название")]
@@ -23,6 +27,6 @@ namespace HikikomoriWEB.Domain.Entity
 
         [Required]
         [Display(Name = "Категория")]
-        public int CategoryId { get; set; }
+        public Categories CategoryId { get; set; }
     }
 }

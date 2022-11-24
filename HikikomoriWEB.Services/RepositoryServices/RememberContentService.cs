@@ -19,11 +19,11 @@ namespace HikikomoriWEB.Services.RepositoryServices
             _repository = repository;
         } 
 
-        public async Task<ResponseRepository<RememberContentViewModel>> DeleteContent(int ContentId)
+        public async Task<ServiceResponseEmpty> DeleteContent(int ContentId)
         {
             try
             {
-                var response = new ResponseRepository<RememberContentViewModel>();
+                var response = new ServiceResponseEmpty();
                 await _repository.Delete(ContentId);
                 response.Description = "Запись удалена";
                 response.StatusCode = StatusCode.OK;
@@ -31,7 +31,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
             }
             catch(Exception ex)
             {
-                return new ResponseRepository<RememberContentViewModel>()
+                return new ServiceResponseEmpty()
                 {
                     Description = $"RememberContentService.Method [DeleteContent] : {ex.Message}",
                     StatusCode = StatusCode.ServerError
@@ -39,11 +39,11 @@ namespace HikikomoriWEB.Services.RepositoryServices
             }
         }
 
-        public async Task<ResponseRepository<RememberContentViewModel>> SaveContent(RememberContentViewModel obj)
+        public async Task<ServiceResponseEmpty> SaveContent(RememberContentViewModel obj)
         {
             try
             {
-                var response = new ResponseRepository<RememberContentViewModel>();
+                var response = new ServiceResponseEmpty();
 
                 RememberContent DBObj = new RememberContent()
                 {
@@ -51,7 +51,8 @@ namespace HikikomoriWEB.Services.RepositoryServices
                     Autor = obj.Autor,
                     CategoryId = obj.CategoryId,
                     Genre = obj.Genre,
-                    CreationYear = obj.CreationYear
+                    CreationYear = obj.CreationYear,
+                    
                 };
 
                 await _repository.Save(DBObj);
@@ -59,10 +60,9 @@ namespace HikikomoriWEB.Services.RepositoryServices
                 response.StatusCode = StatusCode.OK;
                 return response;
             }
-
             catch (Exception ex)
             {
-                return new ResponseRepository<RememberContentViewModel>()
+                return new ServiceResponseEmpty()
                 {
                     Description = $"Ошибка сохранения | RememberContentService.Method [SaveContent] : {ex.Message}",
                     StatusCode = StatusCode.ServerError
@@ -70,38 +70,38 @@ namespace HikikomoriWEB.Services.RepositoryServices
             }
         }
 
-        public async Task<ResponseRepository<IEnumerable<RememberContentViewModel>>> GetFilms()
+        public async Task<ServiceResponse<IEnumerable<RememberContentViewModel>>> GetFilms()
         {
-            return await GetContent((int)Categories.Films);
+            return await GetContent(Categories.Films);
         }
 
-        public async Task<ResponseRepository<IEnumerable<RememberContentViewModel>>> GetBooks()
+        public async Task<ServiceResponse<IEnumerable<RememberContentViewModel>>> GetBooks()
         {
-            return await GetContent((int)Categories.Books);
+            return await GetContent(Categories.Books);
         }
 
-        public async Task<ResponseRepository<IEnumerable<RememberContentViewModel>>> GetGames()
+        public async Task<ServiceResponse<IEnumerable<RememberContentViewModel>>> GetGames()
         {
-            return await GetContent((int)Categories.Games);
+            return await GetContent(Categories.Games);
         }
 
-        public async Task<ResponseRepository<IEnumerable<RememberContentViewModel>>> GetSerials()
+        public async Task<ServiceResponse<IEnumerable<RememberContentViewModel>>> GetSerials()
         {
-            return await GetContent((int)Categories.Serials);
+            return await GetContent(Categories.Serials);
         }
 
-        public async Task<ResponseRepository<IEnumerable<RememberContentViewModel>>> GetCartoons()
+        public async Task<ServiceResponse<IEnumerable<RememberContentViewModel>>> GetCartoons()
         {
-            return await GetContent((int)Categories.Cartoons);
+            return await GetContent(Categories.Cartoons);
         }
 
-        private async Task<ResponseRepository<IEnumerable<RememberContentViewModel>>> GetContent(int CategoryId)
+        private async Task<ServiceResponse<IEnumerable<RememberContentViewModel>>> GetContent(Categories category)
         {
             try
             {
-                var response = new ResponseRepository<IEnumerable<RememberContentViewModel>>();
+                var response = new ServiceResponse<IEnumerable<RememberContentViewModel>>();
                 var ViewModelList = new List<RememberContentViewModel>();
-                var RepositoryContentList = await _repository.GetOnCategoryId(CategoryId);
+                var RepositoryContentList = await _repository.GetOnCategoryId(category);
 
                 if (RepositoryContentList.Any() != true)
                 {
@@ -129,7 +129,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
             }
             catch (Exception ex)
             {
-                return new ResponseRepository<IEnumerable<RememberContentViewModel>>()
+                return new ServiceResponse<IEnumerable<RememberContentViewModel>>()
                 {
                     Description = $"RememberContentService.Method [GetOnCategoryId] : {ex.Message}",
                     StatusCode = StatusCode.ServerError

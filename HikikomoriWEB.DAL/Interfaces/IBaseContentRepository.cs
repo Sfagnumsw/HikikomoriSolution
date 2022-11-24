@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HikikomoriWEB.Domain.Enum;
 
 namespace HikikomoriWEB.DAL.Interfaces
 {
@@ -10,7 +11,7 @@ namespace HikikomoriWEB.DAL.Interfaces
         Task<T> GetOnId(int Id); // получить по ID
         Task Save(T obj); // сохранить
         Task Delete(int Id); // удалить
-        Task<IEnumerable<T>> GetOnCategoryId(int CategoryId); // контент из определенной категории
+        Task<IEnumerable<T>> GetOnCategoryId(Categories category); // контент из определенной категории
 
     }
 }

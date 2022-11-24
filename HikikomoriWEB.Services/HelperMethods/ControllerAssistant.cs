@@ -21,14 +21,14 @@ namespace HikikomoriWEB.Services.HelperMethods
             return new SelectList(categoryList, "Value", "Name");
         }
 
-        public static bool ErrorCheck<RContent>(this ResponseRepository<IEnumerable<RContent>> content) //проверка StatusCode
+        public static bool ErrorCheck<RContent>(this ServiceResponse<IEnumerable<RContent>> content) //проверка StatusCode
         where RContent : AbstractContentViewModel
         {
             if (content.StatusCode != StatusCode.ServerError) return true;
             else return false;
         }
 
-        public static bool ErrorCheck<RContent>(this ResponseRepository<RContent> content)
+        public static bool ErrorCheck<RContent>(this ServiceResponse<RContent> content)
         where RContent : AbstractContentViewModel
         {
             if (content.StatusCode != StatusCode.ServerError) return true;

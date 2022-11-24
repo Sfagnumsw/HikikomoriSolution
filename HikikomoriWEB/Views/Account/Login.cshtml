@@ -1,0 +1,19 @@
+﻿@model SignInViewModel
+
+<div>
+    <form id="signin-form">
+        <div asp-validation-summary="All"></div>
+        <div>
+            <span asp-validation-for="UserName"></span>
+            <input type="text" asp-for="UserName">
+        </div>
+        <div>
+            <span asp-validation-for="Password"></span>
+            <input type="password" asp-for="Password">
+        </div>
+        <div>
+            <input type="button" value="Войти" class="signin-button">
+        </div>
+        <a asp-action="Registration" asp-controller="Account">Регистрация</a>
+    </form>
+</div>

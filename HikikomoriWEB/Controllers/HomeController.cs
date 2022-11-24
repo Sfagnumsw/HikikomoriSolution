@@ -3,6 +3,7 @@ using HikikomoriWEB.Services.Interfaces;
 using System.Threading.Tasks;
 using HikikomoriWEB.Services.HelperMethods;
 using HikikomoriWEB.Domain.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HikikomoriWEB.Controllers
 {
@@ -23,12 +24,14 @@ namespace HikikomoriWEB.Controllers
             return View();
         }
 
+
         [HttpPost]
         public async Task<ContentResult> RateFormPost(RateContentViewModel obj)
         {
             var response = await _rateService.SaveContent(obj);
             return Content(response.Description);
         }
+
 
         [HttpPost]
         public async Task<ContentResult> RememberFormPost(RememberContentViewModel obj)

@@ -4,10 +4,13 @@ namespace HikikomoriWEB.Domain.Enum
 {
     public enum Roles
     {
-        [Display(Name = "Админ")]
-        Admin = 0,
-
         [Display(Name = "Пользователь")]
-        User = 1
+        admin = 1,
+
+        [Display(Name = "Админ")]
+        user = 2,
+
+        [Display(Name = "Модератор")]
+        moder = 3
     }
 }

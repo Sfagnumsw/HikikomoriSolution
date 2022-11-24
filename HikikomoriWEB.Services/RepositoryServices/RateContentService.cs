@@ -19,20 +19,19 @@ namespace HikikomoriWEB.Services.RepositoryServices
             _repository = repository;
         }
 
-        public async Task<ResponseRepository<RateContentViewModel>> DeleteContent(int ContentId)
+        public async Task<ServiceResponseEmpty> DeleteContent(int ContentId)
         {
             try
             {
-                var response = new ResponseRepository<RateContentViewModel>();
+                var response = new ServiceResponseEmpty();
                 await _repository.Delete(ContentId);
                 response.Description = "Запись удалена";
                 response.StatusCode = StatusCode.OK;
                 return response;
             }
-
             catch (Exception ex)
             {
-                return new ResponseRepository<RateContentViewModel>()
+                return new ServiceResponseEmpty()
                 {
                     Description = $"RateContentService.Method [DeleteContent] : {ex.Message}",
                     StatusCode = StatusCode.ServerError
@@ -41,11 +40,11 @@ namespace HikikomoriWEB.Services.RepositoryServices
 
         }
 
-        public async Task<ResponseRepository<RateContentViewModel>> SaveContent(RateContentViewModel obj)
+        public async Task<ServiceResponseEmpty> SaveContent(RateContentViewModel obj)
         {
             try
             {
-                var response = new ResponseRepository<RateContentViewModel>();
+                var response = new ServiceResponseEmpty();
 
                 RateContent DBObj = new RateContent()
                 {
@@ -55,7 +54,8 @@ namespace HikikomoriWEB.Services.RepositoryServices
                     CreationYear = obj.CreationYear,
                     CategoryId = obj.CategoryId,
                     Rating = obj.Rating,
-                    Replay = obj.Replay
+                    Replay = obj.Replay,
+                                                         //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 };
 
                 await _repository.Save(DBObj);
@@ -63,10 +63,9 @@ namespace HikikomoriWEB.Services.RepositoryServices
                 response.StatusCode = StatusCode.OK;
                 return response;
             }
-
             catch (Exception ex)
             {
-                return new ResponseRepository<RateContentViewModel>()
+                return new ServiceResponseEmpty()
                 {
                     Description = $"Ошибка сохранения | RateContentService.Method [SaveContent] : {ex.Message}",
                     StatusCode = StatusCode.ServerError
@@ -74,38 +73,38 @@ namespace HikikomoriWEB.Services.RepositoryServices
             }
         }
 
-        public async Task<ResponseRepository<IEnumerable<RateContentViewModel>>> GetFilms()
+        public async Task<ServiceResponse<IEnumerable<RateContentViewModel>>> GetFilms()
         {
-            return await GetContent((int)Categories.Films);
+            return await GetContent(Categories.Films);
         }
 
-        public async Task<ResponseRepository<IEnumerable<RateContentViewModel>>> GetBooks()
+        public async Task<ServiceResponse<IEnumerable<RateContentViewModel>>> GetBooks()
         {
-            return await GetContent((int)Categories.Books);
+            return await GetContent(Categories.Books);
         }
 
-        public async Task<ResponseRepository<IEnumerable<RateContentViewModel>>> GetGames()
+        public async Task<ServiceResponse<IEnumerable<RateContentViewModel>>> GetGames()
         {
-            return await GetContent((int)Categories.Games);
+            return await GetContent(Categories.Games);
         }
 
-        public async Task<ResponseRepository<IEnumerable<RateContentViewModel>>> GetSerials()
+        public async Task<ServiceResponse<IEnumerable<RateContentViewModel>>> GetSerials()
         {
-            return await GetContent((int)Categories.Serials);
+            return await GetContent(Categories.Serials);
         }
 
-        public async Task<ResponseRepository<IEnumerable<RateContentViewModel>>> GetCartoons()
+        public async Task<ServiceResponse<IEnumerable<RateContentViewModel>>> GetCartoons()
         {
-            return await GetContent((int)Categories.Cartoons);
+            return await GetContent(Categories.Cartoons);
         }
 
-        private async Task<ResponseRepository<IEnumerable<RateContentViewModel>>> GetContent(int CategoryId)
+        private async Task<ServiceResponse<IEnumerable<RateContentViewModel>>> GetContent(Categories category)
         {
             try
             {
-                var response = new ResponseRepository<IEnumerable<RateContentViewModel>>();
+                var response = new ServiceResponse<IEnumerable<RateContentViewModel>>();
                 var ViewModelList = new List<RateContentViewModel>();
-                var RepositoryContentList = await _repository.GetOnCategoryId(CategoryId);
+                var RepositoryContentList = await _repository.GetOnCategoryId(category);
 
                 if (RepositoryContentList.Any() != true)
                 {
@@ -135,7 +134,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
             }
             catch (Exception ex)
             {
-                return new ResponseRepository<IEnumerable<RateContentViewModel>>()
+                return new ServiceResponse<IEnumerable<RateContentViewModel>>()
                 {
                     Description = $"RateContentService.Method [GetFilms] : {ex.Message}",
                     StatusCode = StatusCode.ServerError

@@ -24,8 +24,5 @@ namespace HikikomoriWEB
                     logging.SetMinimumLevel(LogLevel.Trace);
                 })
                 .UseNLog();
-                
-
-
     }
 }
