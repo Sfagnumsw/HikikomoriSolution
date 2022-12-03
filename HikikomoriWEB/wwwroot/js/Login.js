@@ -10,14 +10,13 @@ $('.signin-button').click(function(){
         type: "POST",
         data: SerilizaeForm,
         success: function(data){
-            if(data == 200){
+            var SerilizaeData = JSON.parse(data);
+            if(SerilizaeData.StatusCode == 200){
+                alert(SerilizaeData.Description);
                 window.location.replace("/Home/Index");
             }
-            else if(data == 403){
-                alert("Неверный логин или пароль");
-            }
             else{
-                alert("Не удалось обработать запрос (ServerError)")
+                alert(SerilizaeData.Description);
             }
         }
     });
@@ -36,12 +35,12 @@ $('.reg-button').click(function(){
         data: SerilizaeForm,
         success: function(data){
             var SerilizaeData = JSON.parse(data);
-            if(SerilizaeData.Status == 200){
-                alert(SerilizaeData.Message);
+            if(SerilizaeData.StatusCode == 200){
+                alert(SerilizaeData.Description);
                 window.location.replace("/Account/Login");
             }
             else{
-                alert(SerilizaeData.Message);
+                alert(SerilizaeData.Description);
             }
         }
     });

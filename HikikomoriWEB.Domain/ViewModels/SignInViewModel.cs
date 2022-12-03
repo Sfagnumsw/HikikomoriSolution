@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HikikomoriWEB.Domain.ViewModels
 {
-    public class SignInViewModel
+    public class SignInViewModel //модель входа в систему
     {
         [Required]
         [Display(Name = "Логин")]

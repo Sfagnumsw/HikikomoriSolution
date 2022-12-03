@@ -4,7 +4,7 @@ using HikikomoriWEB.Domain.Enum;
 
 namespace HikikomoriWEB.Domain.ViewModels
 {
-    public abstract class AbstractContentViewModel
+    public abstract class AbstractContentViewModel //шаблон формы заполнения 
     {
         [Required]
         public int Id { get; set; }

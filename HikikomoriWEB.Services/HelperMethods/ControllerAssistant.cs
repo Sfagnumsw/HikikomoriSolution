@@ -7,7 +7,7 @@ using HikikomoriWEB.Domain.ResponseEntity;
 
 namespace HikikomoriWEB.Services.HelperMethods
 {
-    public static class ControllerAssistant
+    public static class ControllerAssistant //вспомогательные методы
     {
         public static SelectList SelectListCategories() //формирование selectlist для категорий
         {
@@ -19,20 +19,6 @@ namespace HikikomoriWEB.Services.HelperMethods
                 categoryList.Add(new CategoryViewModel() { Name = ((DisplayAttribute)i.GetCustomAttributes(typeof(DisplayAttribute), true)[0]).Name, Value = int.Parse(i.GetRawConstantValue().ToString()) });
             }
             return new SelectList(categoryList, "Value", "Name");
-        }
-
-        public static bool ErrorCheck<RContent>(this ServiceResponse<IEnumerable<RContent>> content) //проверка StatusCode
-        where RContent : AbstractContentViewModel
-        {
-            if (content.StatusCode != StatusCode.ServerError) return true;
-            else return false;
-        }
-
-        public static bool ErrorCheck<RContent>(this ServiceResponse<RContent> content)
-        where RContent : AbstractContentViewModel
-        {
-            if (content.StatusCode != StatusCode.ServerError) return true;
-            else return false;
         }
     }
 }

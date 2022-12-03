@@ -5,9 +5,10 @@ using HikikomoriWEB.Services.HelperMethods;
 using HikikomoriWEB.Domain.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 
+
 namespace HikikomoriWEB.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : Controller //контроллер главной страницы
     {
         private readonly IBaseContentServices<RateContentViewModel> _rateService;
         private readonly IBaseContentServices<RememberContentViewModel> _rememberService;
@@ -24,7 +25,7 @@ namespace HikikomoriWEB.Controllers
             return View();
         }
 
-
+        [Authorize]
         [HttpPost]
         public async Task<ContentResult> RateFormPost(RateContentViewModel obj)
         {
@@ -32,7 +33,7 @@ namespace HikikomoriWEB.Controllers
             return Content(response.Description);
         }
 
-
+        [Authorize]
         [HttpPost]
         public async Task<ContentResult> RememberFormPost(RememberContentViewModel obj)
         {

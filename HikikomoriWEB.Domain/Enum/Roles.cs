@@ -2,7 +2,7 @@
 
 namespace HikikomoriWEB.Domain.Enum
 {
-    public enum Roles
+    public enum Roles //роли пользователей для авторизации
     {
         [Display(Name = "Пользователь")]
         admin = 1,

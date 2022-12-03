@@ -1,15 +1,15 @@
 ﻿@model SignInViewModel
 
-<div>
+<div class="account-form">
     <form id="signin-form">
         <div asp-validation-summary="All"></div>
         <div>
             <span asp-validation-for="UserName"></span>
-            <input type="text" asp-for="UserName">
+            <input type="text" asp-for="UserName" placeholder="Логин" class="txt-input .rate-txt-input">
         </div>
         <div>
             <span asp-validation-for="Password"></span>
-            <input type="password" asp-for="Password">
+            <input type="password" asp-for="Password" placeholder="Пароль" class="txt-input .rate-txt-input">
         </div>
         <div>
             <input type="button" value="Войти" class="signin-button">

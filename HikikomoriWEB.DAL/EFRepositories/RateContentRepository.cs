@@ -9,14 +9,13 @@ using HikikomoriWEB.Domain.Enum;
 
 namespace HikikomoriWEB.DAL.EFRepositories
 {
-    public class RateContentRepository : IBaseContentRepository<RateContent>
+    public class RateContentRepository : IBaseContentRepository<RateContent> //репозиторий оцененного контента
     {
         private readonly HikDbContext _context;
         public RateContentRepository(HikDbContext context)
         {
             _context = context;
         }
-
         public async Task<IEnumerable<RateContent>> GetAll() => await _context.RateContent.ToListAsync();
 
         public async Task Delete(int ContentId)
@@ -30,9 +29,9 @@ namespace HikikomoriWEB.DAL.EFRepositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<RateContent>> GetOnCategoryId(Categories category)
+        public async Task<IEnumerable<RateContent>> GetOnCategoryId(Categories category, string userId)
         {
-            return await _context.RateContent.Where(i => i.CategoryId == category).ToListAsync();
+            return await _context.RateContent.Where(i => i.CategoryId == category && i.UserId == userId).ToListAsync();
         }
 
         public async Task<RateContent> GetOnId(int ContentId)

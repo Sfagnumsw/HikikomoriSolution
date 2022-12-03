@@ -1,23 +1,23 @@
 ﻿@model RegistrationViewModel
 
-<div>
+<div class="account-form">
     <form id="reg-form">
         <div asp-validation-summary="All"></div>
         <div>
             <span asp-validation-for="Email"></span>
-            <input type="email" asp-for="Email" placeholder="Почта">
+            <input type="email" asp-for="Email" placeholder="Почта" class="txt-input  .remember-txt-input" >
         </div>
         <div>
             <span asp-validation-for="UserName"></span>
-            <input type="text" asp-for="UserName" placeholder="Логин">
+            <input type="text" asp-for="UserName" placeholder="Логин" class="txt-input  .remember-txt-input">
         </div>
         <div>
             <span asp-validation-for="Password"></span>
-            <input type="password" asp-for="Password" placeholder="Пароль">
+            <input type="password" asp-for="Password" placeholder="Пароль" class="txt-input  .remember-txt-input">
         </div>
         <div>
             <span asp-validation-for="PasswordConfirm"></span>
-            <input type="password" asp-for="PasswordConfirm" placeholder="Повторите пароль">
+            <input type="password" asp-for="PasswordConfirm" placeholder="Повторите пароль" class="txt-input  .remember-txt-input">
         </div>
         <div>
             <input type="button" value="Зарегистрироваться" class="reg-button">

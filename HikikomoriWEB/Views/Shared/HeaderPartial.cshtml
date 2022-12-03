@@ -1,19 +1,21 @@
 ﻿<div id="header-wrapper">
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <header id="header">
-                    <h1><a asp-controller="Home" asp-action="Index">@Config.ProjectName</a></h1>
-                    <nav id="nav">
-                        <a asp-controller="Home" asp-action="Index">Главная</a>
-                        <a asp-controller="Content" asp-action="ContentList" asp-route-type="films">Фильмы</a>
-                        <a asp-controller="Content" asp-action="ContentList" asp-route-type="books">Книги</a>
-                        <a asp-controller="Content" asp-action="ContentList" asp-route-type="serials">Сериалы</a>
-                        <a asp-controller="Content" asp-action="ContentList" asp-route-type="cartoons">Мультфильмы</a>
-                        <a asp-controller="Content" asp-action="ContentList" asp-route-type="games">Игры</a>
-                    </nav>
-                </header>
-            </div>
-        </div>
+        <header id="header">
+            <h1><a asp-controller="Home" asp-action="Index">@Config.ProjectName</a></h1>
+            <nav id="nav">
+                <a asp-controller="Home" asp-action="Index">Главная</a>
+                <a asp-controller="Content" asp-action="ContentList" asp-route-type="films">Фильмы</a>
+                <a asp-controller="Content" asp-action="ContentList" asp-route-type="books">Книги</a>
+                <a asp-controller="Content" asp-action="ContentList" asp-route-type="serials">Сериалы</a>
+                <a asp-controller="Content" asp-action="ContentList" asp-route-type="cartoons">Мультфильмы</a>
+                <a asp-controller="Content" asp-action="ContentList" asp-route-type="games">Игры</a>
+            </nav>
+        </header>
+    </div>
+    <div class="login-block">
+        @if(User.Identity.IsAuthenticated)
+        @await Html.PartialAsync("DropdownLogoutPartial")
+        else
+        @await Html.PartialAsync("DropdownLoginPartial")
     </div>
 </div>

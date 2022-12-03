@@ -82,12 +82,6 @@ img.top {
   margin: 0 auto;
   max-width: 100%;
   width: 1200px; }
-  @media screen and (max-width: 1680px) {
-    .container {
-      width: 1200px; } }
-  @media screen and (max-width: 1280px) {
-    .container {
-      width: calc(100% - 70px); } }
 
 .row {
   display: flex;
@@ -480,48 +474,100 @@ article.blog-post {
     width: 100%; }
 
 #header-wrapper {
-  background-image: url(../images/bg-1.jpg); }
-
-#header {
-  position: relative;
-  margin: 2.5% 0 2.5% 0;
-  padding: 0 40px 0 40px;
-  border-radius: 10px;
-  border: solid 1px #FECB20;
   background-image: url(../images/bg-1.jpg);
-  height: 86px; }
-  #header h1 {
-    position: absolute;
-    left: 40px;
-    top: 0;
-    color: #FECB20;
-    text-shadow: #FECB20 0 0 10px;
-    font-size: 2.4em;
-    letter-spacing: -2px;
-    line-height: 86px;
-    font-family: "Trebuchet MS", Helvetica, sans-serif; }
-    #header h1 a {
-      text-decoration: none;
-      color: #FECB20; }
-  #header nav {
-    position: absolute;
-    right: 40px;
-    top: 1px;
-    line-height: 84px;
-    text-transform: lowercase;
-    font-size: 1.3em;
-    letter-spacing: -1px; }
-    #header nav a {
-      display: inline-block;
-      text-decoration: none;
-      color: #fff;
-      padding: 0 25px 0 25px;
-      outline: 0;
+  display: flex;
+  flex-wrap: wrap; }
+  #header-wrapper #header {
+    position: relative;
+    margin: 2.5% 0 2.5% 0;
+    padding: 0 40px 0 40px;
+    border-radius: 10px;
+    border: solid 1px #FECB20;
+    background-image: url(../images/bg-1.jpg);
+    height: 86px; }
+    #header-wrapper #header h1 {
+      position: absolute;
+      left: 40px;
+      top: 0;
+      color: #FECB20;
+      text-shadow: #FECB20 0 0 10px;
+      font-size: 2.4em;
+      letter-spacing: -2px;
+      line-height: 86px;
       font-family: "Trebuchet MS", Helvetica, sans-serif; }
-      #header nav a:hover {
-        color: #FECB20;
-        text-shadow: #FECB20 0 0 9px;
-        box-shadow: inset 0px 1px 5px 1px rgba(0, 0, 0, 0.05), 0px 0px 5px 1px rgba(255, 255, 255, 0.05); }
+      #header-wrapper #header h1 a {
+        text-decoration: none;
+        color: #FECB20; }
+    #header-wrapper #header nav {
+      position: absolute;
+      right: 40px;
+      top: 1px;
+      line-height: 84px;
+      text-transform: lowercase;
+      font-size: 1.3em;
+      letter-spacing: -1px; }
+      #header-wrapper #header nav a {
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        padding: 0 25px 0 25px;
+        outline: 0;
+        font-family: "Trebuchet MS", Helvetica, sans-serif; }
+        #header-wrapper #header nav a:hover {
+          color: #FECB20;
+          text-shadow: #FECB20 0 0 9px;
+          box-shadow: inset 0px 1px 5px 1px rgba(0, 0, 0, 0.05), 0px 0px 5px 1px rgba(255, 255, 255, 0.05); }
+  #header-wrapper .login-block {
+    width: 100px;
+    text-align: center; }
+    #header-wrapper .login-block .signout-container {
+      position: center;
+      display: inline-block;
+      vertical-align: middle; }
+      #header-wrapper .login-block .signout-container img {
+        height: 50px;
+        width: 50px; }
+      #header-wrapper .login-block .signout-container .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1; }
+        #header-wrapper .login-block .signout-container .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block; }
+        #header-wrapper .login-block .signout-container .dropdown-content a:hover {
+          background-color: #f1f1f1; }
+    #header-wrapper .login-block .signout-container:hover .dropdown-content {
+      display: block; }
+    #header-wrapper .login-block .signin-container {
+      position: center;
+      display: inline-block;
+      vertical-align: middle; }
+      #header-wrapper .login-block .signin-container img {
+        height: 50px;
+        width: 50px; }
+      #header-wrapper .login-block .signin-container .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1; }
+        #header-wrapper .login-block .signin-container .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block; }
+        #header-wrapper .login-block .signin-container .dropdown-content a:hover {
+          background-color: #f1f1f1; }
+    #header-wrapper .login-block .signin-container:hover .dropdown-content {
+      display: block; }
 
 #main {
   background-color: #fff;

@@ -8,15 +8,18 @@ using HikikomoriWEB.DAL.Interfaces;
 using HikikomoriWEB.Services.Interfaces;
 using System.Threading.Tasks;
 using HikikomoriWEB.Domain.ViewModels;
+using Microsoft.AspNetCore.Identity;
 
 namespace HikikomoriWEB.Services.RepositoryServices
 {
     public class RememberContentService : IBaseContentServices<RememberContentViewModel>
     {
         private readonly IBaseContentRepository<RememberContent> _repository;
-        public RememberContentService(IBaseContentRepository<RememberContent> repository)
+        private readonly IAccountService _accountService;
+        public RememberContentService(IBaseContentRepository<RememberContent> repository, IAccountService accountService)
         {
             _repository = repository;
+            _accountService = accountService;
         } 
 
         public async Task<ServiceResponseEmpty> DeleteContent(int ContentId)
@@ -44,7 +47,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
             try
             {
                 var response = new ServiceResponseEmpty();
-
+                IdentityUser currentUser = await _accountService.GetCurrentUser();
                 RememberContent DBObj = new RememberContent()
                 {
                     Name = obj.Name,
@@ -52,7 +55,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
                     CategoryId = obj.CategoryId,
                     Genre = obj.Genre,
                     CreationYear = obj.CreationYear,
-                    
+                    UserId = currentUser.Id
                 };
 
                 await _repository.Save(DBObj);
@@ -101,7 +104,8 @@ namespace HikikomoriWEB.Services.RepositoryServices
             {
                 var response = new ServiceResponse<IEnumerable<RememberContentViewModel>>();
                 var ViewModelList = new List<RememberContentViewModel>();
-                var RepositoryContentList = await _repository.GetOnCategoryId(category);
+                IdentityUser currentUser = await _accountService.GetCurrentUser();
+                var RepositoryContentList = await _repository.GetOnCategoryId(category, currentUser.Id);
 
                 if (RepositoryContentList.Any() != true)
                 {

@@ -9,7 +9,7 @@ using HikikomoriWEB.Domain.Enum;
 
 namespace HikikomoriWEB.DAL.EFRepositories
 {
-    public class RememberContentRepository : IBaseContentRepository<RememberContent>
+    public class RememberContentRepository : IBaseContentRepository<RememberContent> //репозиторий отложенного контента
     {
         private readonly HikDbContext _context;
         public RememberContentRepository(HikDbContext context)
@@ -30,9 +30,9 @@ namespace HikikomoriWEB.DAL.EFRepositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<RememberContent>> GetOnCategoryId(Categories category)
+        public async Task<IEnumerable<RememberContent>> GetOnCategoryId(Categories category, string userId)
         {
-            return await _context.RememberContent.Where(i => i.CategoryId == category).ToListAsync();
+            return await _context.RememberContent.Where(i => i.CategoryId == category && i.UserId == userId).ToListAsync();
         }
 
         public async Task<RememberContent> GetOnId(int ContentId)

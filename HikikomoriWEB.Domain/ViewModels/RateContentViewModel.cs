@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace HikikomoriWEB.Domain.ViewModels
 {
-    public class RateContentViewModel : AbstractContentViewModel
+    public class RateContentViewModel : AbstractContentViewModel //оцененный
     {
         [Display(Name = "Флаг пересмотра")]
         public bool Replay { get; set; }

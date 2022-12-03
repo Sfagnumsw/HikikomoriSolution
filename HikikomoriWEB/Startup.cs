@@ -39,7 +39,7 @@ namespace HikikomoriWEB
                 opts.Password.RequireUppercase = true;
                 opts.Password.RequireLowercase = true;
             }).AddEntityFrameworkStores<HikDbContext>(); //подключение идендификации
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(opts => { opts.LoginPath = "Account/Login"; opts.Cookie.Name = "Authorization"; opts.Cookie.HttpOnly = true;}); //настройка структуры куки и выбор схемы аутентификации
+            services.ConfigureApplicationCookie(opts => { opts.LoginPath = "/Account/Login"; opts.Cookie.HttpOnly = false; opts.Cookie.Name = "HikSfag"; });
             services.AddAuthorization();
             services.AddControllersWithViews().SetCompatibilityVersion(CompatibilityVersion.Version_3_0).AddSessionStateTempDataProvider(); //подключение поддержки MVC и совместимость версий asp.net core 3(супер устарел) , а так же сервисы для контроллеров и предствалений
         }

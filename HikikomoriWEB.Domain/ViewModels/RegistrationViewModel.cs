@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HikikomoriWEB.Domain.ViewModels
 {
-    public class RegistrationViewModel
+    public class RegistrationViewModel //модель регистрации
     {
         [Required]
         [Display(Name = "Почта")]

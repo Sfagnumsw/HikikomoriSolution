@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 namespace HikikomoriWEB.Domain.Entity
 
 {
-    public abstract class AbstractContent
+    public abstract class AbstractContent //шаблон сущности контента
     {
         [Required]
         public int Id { get; set; }

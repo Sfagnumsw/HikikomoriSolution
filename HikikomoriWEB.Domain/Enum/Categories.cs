@@ -2,7 +2,7 @@
 
 namespace HikikomoriWEB.Domain.Enum
 {
-    public enum Categories
+    public enum Categories //категории контента(в БД такой таблици нет, перечисление служит для выборки из таблиц с контентом)
     {
         [Display(Name = "Фильмы")]
         Films = 10000,

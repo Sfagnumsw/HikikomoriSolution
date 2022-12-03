@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HikikomoriWEB.Domain.ViewModels
 {
-    public class ContentListViewModel //список всего контента для передачи в представление
+    public class ContentListViewModel //модель данных для передачи в представление с отображением контента
     {
         public IEnumerable<RateContentViewModel> RatedList { get; set; }
         public IEnumerable<RememberContentViewModel> RememberedList { get; set; }

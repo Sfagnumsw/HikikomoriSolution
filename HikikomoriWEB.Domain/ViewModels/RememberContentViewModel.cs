@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace HikikomoriWEB.Domain.ViewModels
 {
-    public class RememberContentViewModel : AbstractContentViewModel
+    public class RememberContentViewModel : AbstractContentViewModel //отложенный контент 
     {
 
     }

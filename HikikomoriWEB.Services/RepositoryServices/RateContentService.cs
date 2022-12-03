@@ -8,15 +8,19 @@ using HikikomoriWEB.Domain.ResponseEntity;
 using HikikomoriWEB.DAL.Interfaces;
 using HikikomoriWEB.Domain.Enum;
 using HikikomoriWEB.Domain.ViewModels;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Http;
 
 namespace HikikomoriWEB.Services.RepositoryServices
 {
     public class RateContentService : IBaseContentServices<RateContentViewModel>
     {
         private readonly IBaseContentRepository<RateContent> _repository;
-        public RateContentService(IBaseContentRepository<RateContent> repository)
+        private readonly IAccountService _accountService;
+        public RateContentService(IBaseContentRepository<RateContent> repository, IAccountService accountService)
         {
             _repository = repository;
+            _accountService = accountService;
         }
 
         public async Task<ServiceResponseEmpty> DeleteContent(int ContentId)
@@ -45,7 +49,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
             try
             {
                 var response = new ServiceResponseEmpty();
-
+                IdentityUser currentUser = await _accountService.GetCurrentUser();
                 RateContent DBObj = new RateContent()
                 {
                     Name = obj.Name,
@@ -55,7 +59,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
                     CategoryId = obj.CategoryId,
                     Rating = obj.Rating,
                     Replay = obj.Replay,
-                                                         //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    UserId = currentUser.Id
                 };
 
                 await _repository.Save(DBObj);
@@ -103,19 +107,20 @@ namespace HikikomoriWEB.Services.RepositoryServices
             try
             {
                 var response = new ServiceResponse<IEnumerable<RateContentViewModel>>();
-                var ViewModelList = new List<RateContentViewModel>();
-                var RepositoryContentList = await _repository.GetOnCategoryId(category);
+                var viewModelList = new List<RateContentViewModel>();
+                IdentityUser currentUser = await _accountService.GetCurrentUser();
+                var repositoryContentList = await _repository.GetOnCategoryId(category, currentUser.Id);
 
-                if (RepositoryContentList.Any() != true)
+                if (repositoryContentList.Any() != true)
                 {
                     response.Description = "Элементы таблицы этой категории не найдены";
                     response.StatusCode = StatusCode.NotFound;
                     return response;
                 }
 
-                foreach (var i in RepositoryContentList)
+                foreach (var i in repositoryContentList)
                 {
-                    ViewModelList.Add(new RateContentViewModel
+                    viewModelList.Add(new RateContentViewModel
                     {
                         Id = i.Id,
                         Name = i.Name,
@@ -128,7 +133,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
                     });
                 }
 
-                response.Data = ViewModelList;
+                response.Data = viewModelList;
                 response.StatusCode = StatusCode.OK;
                 return response;
             }

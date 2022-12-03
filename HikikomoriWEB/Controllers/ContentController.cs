@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace HikikomoriWEB.Controllers
 {
     [Authorize]
-    public class ContentController : Controller
+    public class ContentController : Controller //контроллер для отображения контента
     {
         private readonly IBaseContentServices<RateContentViewModel> _rateService;
         private readonly IBaseContentServices<RememberContentViewModel> _rememberService;
@@ -23,7 +23,7 @@ namespace HikikomoriWEB.Controllers
         }
 
         [Authorize]
-        public async Task<IActionResult> ContentList(string type) //таблицы с контентом
+        public async Task<IActionResult> ContentList(string type) //таблицы с контентом //ДОБАВИТЬ ПОИСК ПО АЙДИ ЮЗЕРА ИЗМЕНИТЬ РЕПЫ
         {
             ServiceResponse<IEnumerable<RateContentViewModel>> rateResponse;
             ServiceResponse<IEnumerable<RememberContentViewModel>> rememberResponse;

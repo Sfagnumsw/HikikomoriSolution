@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using HikikomoriWEB.Domain.ViewModels;
 using HikikomoriWEB.Services.Interfaces;
+using HikikomoriWEB.Domain.ResponseEntity;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ using Newtonsoft.Json;
 
 namespace HikikomoriWEB.Controllers
 {
-    public class AccountController : Controller
+    public class AccountController : Controller //контроллер управления пользователями
     {
         private readonly IAccountService _accountService;
         public AccountController(IAccountService service)
@@ -26,10 +27,11 @@ namespace HikikomoriWEB.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        public async Task<ContentResult> Login(SignInViewModel model)
+        public async Task<JsonResult> Login(SignInViewModel model)
         {
             var response = await _accountService.SignIn(model);
-            return Content(((int)response.StatusCode).ToString());
+            var jsonObj = JsonConvert.SerializeObject(response);
+            return Json(jsonObj);
         }
 
         [HttpGet]
@@ -42,13 +44,14 @@ namespace HikikomoriWEB.Controllers
         public async Task<JsonResult> Registration(RegistrationViewModel model)
         {
             var response = await _accountService.CreateUser(model);
-            var obj = new JsonDataAuthorizeViewModel()
-            {
-                Message = response.Description,
-                Status = ((int)response.StatusCode).ToString()
-            };
-            string json = JsonConvert.SerializeObject(obj);
-            return Json(json);
+            var jsonObj = JsonConvert.SerializeObject(response);
+            return Json(jsonObj);
+        }
+
+        public async Task<IActionResult> Logout()
+        {
+            var response = await _accountService.SignOut();
+            return RedirectToAction("Index", "Home");
         }
     }
 }
