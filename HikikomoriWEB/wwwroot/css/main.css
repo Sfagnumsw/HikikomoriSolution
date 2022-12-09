@@ -637,7 +637,8 @@ article.blog-post {
   .table-list-rate caption {
     font-style: "Trebuchet MS", Helvetica, sans-serif;
     color: dimgrey;
-    font-size: 18px; }
+    font-size: 18px;
+    padding-bottom: 5px; }
   .table-list-rate .ico {
     margin-left: 15px;
     width: 13px;
@@ -686,7 +687,8 @@ article.blog-post {
   .table-list-remember caption {
     font-style: "Trebuchet MS", Helvetica, sans-serif;
     color: dimgrey;
-    font-size: 18px; }
+    font-size: 18px;
+    padding-bottom: 5px; }
   .table-list-remember th {
     font-weight: bold;
     padding: 7px;
@@ -889,3 +891,91 @@ article.blog-post {
   border: solid 3px #FECB20;
   border-radius: 9px;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.5); }
+
+.account-form {
+  margin: auto !important;
+  max-width: 50%;
+  box-sizing: border-box;
+  padding: 40px;
+  border-radius: 5px;
+  background: RGBA(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.45);
+  text-align: center; }
+  .account-form .txt-input {
+    height: 50px;
+    width: 100%;
+    border-radius: 3px;
+    border: #000000 2px solid;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 15px;
+    color: #FECB20; }
+  .account-form .signin-button {
+    height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 20px 0px 0px 0px;
+    background: #ffffff;
+    color: #000;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-size: 16pt;
+    transition: background .4s;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 2px solid #000000; }
+  .account-form .reg-button {
+    height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 20px 0px 0px 0px;
+    background: #ffffff;
+    color: #000;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-size: 16pt;
+    transition: background .4s;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 2px solid #000000; }
+  .account-form .reg-button:hover {
+    text-decoration: none;
+    background: #F7A992; }
+  .account-form .signin-button:hover {
+    text-decoration: none;
+    background: #ffcbd9; }
+  .account-form form a {
+    padding-top: 5px; }
+
+.user-form {
+  margin: auto !important;
+  max-width: 50%;
+  box-sizing: border-box;
+  padding: 40px;
+  border-radius: 5px;
+  background: linear-gradient(#F7A992, #ffcbd9);
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.45);
+  text-align: center; }
+  .user-form p {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    color: #000000; }
+
+#load {
+  position: center; }
+
+.loading-img {
+  opacity: 1;
+  height: 80px;
+  width: 80px; }
+
+.loading-img-none {
+  display: none;
+  opacity: 0; }

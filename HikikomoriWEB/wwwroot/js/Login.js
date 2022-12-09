@@ -9,7 +9,13 @@ $('.signin-button').click(function(){
         url: "/Account/Login",
         type: "POST",
         data: SerilizaeForm,
+        beforeSend: function(){
+            $('#load').removeClass('loading-img-none');
+            $('#load').addClass('loading-img');
+        },
         success: function(data){
+            $('#load').removeClass('loading-img');
+            $('#load').addClass('loading-img-none');
             var SerilizaeData = JSON.parse(data);
             if(SerilizaeData.StatusCode == 200){
                 alert(SerilizaeData.Description);
@@ -33,7 +39,13 @@ $('.reg-button').click(function(){
         url: "/Account/Registration",
         type: "POST",
         data: SerilizaeForm,
+        beforeSend: function(){
+            $('#load').removeClass('loading-img-none');
+            $('#load').addClass('loading-img');
+        },
         success: function(data){
+            $('#load').removeClass('loading-img');
+            $('#load').addClass('loading-img-none');
             var SerilizaeData = JSON.parse(data);
             if(SerilizaeData.StatusCode == 200){
                 alert(SerilizaeData.Description);

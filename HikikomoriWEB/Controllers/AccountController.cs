@@ -53,5 +53,11 @@ namespace HikikomoriWEB.Controllers
             var response = await _accountService.SignOut();
             return RedirectToAction("Index", "Home");
         }
+
+        public async Task<IActionResult> GetUserData()
+        {
+            var response = await _accountService.GetUserData();
+            return View(response.Data);
+        }
     }
 }

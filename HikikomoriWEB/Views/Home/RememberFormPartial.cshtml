@@ -1,7 +1,7 @@
 ﻿@model RememberContentViewModel
 
 <div id="remember-form-container" class="form-container">
-    <form asp-controller="Home" asp-action="Index" method="post" id="remember-form" class="r-form">
+    <form method="post" id="remember-form" class="r-form">
         <div asp-validation-summary="All"></div>
         <div>
             <span asp-validation-for="Name"></span>
@@ -24,7 +24,6 @@
             <span asp-validation-for="CreationYear"></span>
             <input asp-for="CreationYear" placeholder="Год выпуска" class="txt-input remember-txt-input" />
         </div>
-        <input type="hidden" dataStatus="@ViewData["Status"]" class="status-store">
         <div>
             <input type="button" value="Сохранить" class="button-sub remember-button-sub" />
         </div>

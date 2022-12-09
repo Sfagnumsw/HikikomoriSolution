@@ -11,5 +11,6 @@ namespace HikikomoriWEB.Services.Interfaces
         Task<ServiceResponseEmpty> SignIn(SignInViewModel userData); //вход
         Task<ServiceResponseEmpty> SignOut(); //выход
         Task<IdentityUser> GetCurrentUser(); //получить текущего актвного юзера
+        Task<ServiceResponse<RegistrationViewModel>> GetUserData();
     }
 }

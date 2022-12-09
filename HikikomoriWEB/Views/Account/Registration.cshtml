@@ -1,11 +1,12 @@
 ﻿@model RegistrationViewModel
 
 <div class="account-form">
+    <img id="load" class="loading-img-none" src="~/images/loading.gif">
     <form id="reg-form">
         <div asp-validation-summary="All"></div>
         <div>
             <span asp-validation-for="Email"></span>
-            <input type="email" asp-for="Email" placeholder="Почта" class="txt-input  .remember-txt-input" >
+            <input type="email" asp-for="Email" placeholder="Почта" class="txt-input  .remember-txt-input">
         </div>
         <div>
             <span asp-validation-for="UserName"></span>

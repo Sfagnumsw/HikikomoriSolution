@@ -1,6 +1,7 @@
 ﻿@model SignInViewModel
 
 <div class="account-form">
+    <img id="load" class="loading-img-none" src="~/images/loading.gif">
     <form id="signin-form">
         <div asp-validation-summary="All"></div>
         <div>
@@ -17,3 +18,4 @@
         <a asp-action="Registration" asp-controller="Account">Регистрация</a>
     </form>
 </div>
+

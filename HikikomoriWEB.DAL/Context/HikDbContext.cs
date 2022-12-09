@@ -12,11 +12,6 @@ namespace HikikomoriWEB.DAL.Context
         public DbSet<RateContent> RateContent { get; set; } //таблицы
         public DbSet<RememberContent> RememberContent { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.EnableSensitiveDataLogging();
-        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

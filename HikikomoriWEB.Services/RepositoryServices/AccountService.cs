@@ -138,6 +138,34 @@ namespace HikikomoriWEB.Services.RepositoryServices
             }
         }
 
+        public async Task<ServiceResponse<RegistrationViewModel>> GetUserData()
+        {
+            try
+            {
+                var response = new ServiceResponse<RegistrationViewModel>();
+                var user = await GetCurrentUser();
+                response.Description = "Данные пользователя получены";
+                response.StatusCode = StatusCode.OK;
+                response.Data = new RegistrationViewModel
+                {
+                    Email = user.Email,
+                    UserName = user.UserName
+                };
+                return response;
+            }
+            catch(Exception ex)
+            {
+                _userManager.Logger.LogError(ex.Message);
+                return new ServiceResponse<RegistrationViewModel>
+                {
+                    Description = ex.Message,
+                    StatusCode = StatusCode.ServerError
+                };
+            }
+
+
+        }
+
         public async Task<IdentityUser> GetCurrentUser()
         {
             var claims = _signInManager.Context.User;

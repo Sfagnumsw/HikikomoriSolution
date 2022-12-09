@@ -121,7 +121,7 @@ namespace HikikomoriWEB.Services.RepositoryServices
                 foreach (var i in repositoryContentList)
                 {
                     viewModelList.Add(new RateContentViewModel
-                    {
+                    { 
                         Id = i.Id,
                         Name = i.Name,
                         Autor = i.Autor,
