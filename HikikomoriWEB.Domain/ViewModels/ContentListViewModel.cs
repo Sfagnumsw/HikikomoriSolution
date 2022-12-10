@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using HikikomoriWEB.Domain.Entity;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace HikikomoriWEB.Domain.ViewModels
 {

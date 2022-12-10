@@ -1,7 +1,6 @@
-﻿@model RegistrationViewModel
-<div>
+﻿<div>
     <form class="user-form">
-    <p>@Model.UserName</p>
-    <p>@Model.Email</p>
+        <p>@ViewData["UserName"]</p>
+        <p>@ViewData["Email"]</p>
     </form>
 </div>

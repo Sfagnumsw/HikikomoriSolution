@@ -30,8 +30,7 @@ namespace HikikomoriWEB.Controllers
         public async Task<JsonResult> Login(SignInViewModel model)
         {
             var response = await _accountService.SignIn(model);
-            var jsonObj = JsonConvert.SerializeObject(response);
-            return Json(jsonObj);
+            return Json(JsonConvert.SerializeObject(response));
         }
 
         [HttpGet]
@@ -44,20 +43,21 @@ namespace HikikomoriWEB.Controllers
         public async Task<JsonResult> Registration(RegistrationViewModel model)
         {
             var response = await _accountService.CreateUser(model);
-            var jsonObj = JsonConvert.SerializeObject(response);
-            return Json(jsonObj);
+            return Json(JsonConvert.SerializeObject(response));
         }
 
         public async Task<IActionResult> Logout()
         {
-            var response = await _accountService.SignOut();
+            await _accountService.SignOut();
             return RedirectToAction("Index", "Home");
         }
 
         public async Task<IActionResult> GetUserData()
         {
-            var response = await _accountService.GetUserData();
-            return View(response.Data);
+            var response = await _accountService.GetCurrentUser();
+            ViewData["UserName"] = response.Data.UserName;
+            ViewData["Email"] = response.Data.Email;
+            return View();
         }
     }
 }

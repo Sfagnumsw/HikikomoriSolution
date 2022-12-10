@@ -10,10 +10,10 @@ namespace HikikomoriWEB.Controllers
 {
     public class HomeController : Controller //контроллер главной страницы
     {
-        private readonly IBaseContentServices<RateContentViewModel> _rateService;
-        private readonly IBaseContentServices<RememberContentViewModel> _rememberService;
+        private readonly IContentServices<RateContentViewModel> _rateService;
+        private readonly IContentServices<RememberContentViewModel> _rememberService;
 
-        public HomeController(IBaseContentServices<RateContentViewModel> rate, IBaseContentServices<RememberContentViewModel> remember)
+        public HomeController(IContentServices<RateContentViewModel> rate, IContentServices<RememberContentViewModel> remember)
         {
             _rateService = rate;
             _rememberService = remember;

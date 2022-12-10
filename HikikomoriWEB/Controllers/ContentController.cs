@@ -13,10 +13,10 @@ namespace HikikomoriWEB.Controllers
     [Authorize]
     public class ContentController : Controller //контроллер для отображения контента
     {
-        private readonly IBaseContentServices<RateContentViewModel> _rateService;
-        private readonly IBaseContentServices<RememberContentViewModel> _rememberService;
+        private readonly IContentServices<RateContentViewModel> _rateService;
+        private readonly IContentServices<RememberContentViewModel> _rememberService;
 
-        public ContentController(IBaseContentServices<RateContentViewModel> rate, IBaseContentServices<RememberContentViewModel> remember)
+        public ContentController(IContentServices<RateContentViewModel> rate, IContentServices<RememberContentViewModel> remember)
         {
             _rateService = rate;
             _rememberService = remember;

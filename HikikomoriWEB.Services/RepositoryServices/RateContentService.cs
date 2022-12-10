@@ -9,11 +9,10 @@ using HikikomoriWEB.DAL.Interfaces;
 using HikikomoriWEB.Domain.Enum;
 using HikikomoriWEB.Domain.ViewModels;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Http;
 
 namespace HikikomoriWEB.Services.RepositoryServices
 {
-    public class RateContentService : IBaseContentServices<RateContentViewModel>
+    public class RateContentService : IContentServices<RateContentViewModel>
     {
         private readonly IBaseContentRepository<RateContent> _repository;
         private readonly IAccountService _accountService;
@@ -23,57 +22,42 @@ namespace HikikomoriWEB.Services.RepositoryServices
             _accountService = accountService;
         }
 
-        public async Task<ServiceResponseEmpty> DeleteContent(int ContentId)
+        public async Task<ServiceResponseBase> DeleteContent(int ContentId) //удалить
         {
             try
             {
-                var response = new ServiceResponseEmpty();
                 await _repository.Delete(ContentId);
-                response.Description = "Запись удалена";
-                response.StatusCode = StatusCode.OK;
-                return response;
+                return new ServiceResponseBase("Запись удалена", StatusCode.OK);
             }
             catch (Exception ex)
             {
-                return new ServiceResponseEmpty()
-                {
-                    Description = $"RateContentService.Method [DeleteContent] : {ex.Message}",
-                    StatusCode = StatusCode.ServerError
-                };
+                return new ServiceResponseBase(ex.Message, StatusCode.ServerError);
             }
-
         }
 
-        public async Task<ServiceResponseEmpty> SaveContent(RateContentViewModel obj)
+        public async Task<ServiceResponseBase> SaveContent(RateContentViewModel model)//сохранить
         {
             try
             {
-                var response = new ServiceResponseEmpty();
-                IdentityUser currentUser = await _accountService.GetCurrentUser();
-                RateContent DBObj = new RateContent()
+                var response = await _accountService.GetCurrentUser();
+                IdentityUser currentUser = response.Data;
+                RateContent DbModel = new RateContent()
                 {
-                    Name = obj.Name,
-                    Autor = obj.Autor,
-                    Genre = obj.Genre,
-                    CreationYear = obj.CreationYear,
-                    CategoryId = obj.CategoryId,
-                    Rating = obj.Rating,
-                    Replay = obj.Replay,
+                    Name = model.Name,
+                    Autor = model.Autor,
+                    Genre = model.Genre,
+                    CreationYear = model.CreationYear,
+                    CategoryId = model.CategoryId,
+                    Rating = model.Rating,
+                    Replay = model.Replay,
                     UserId = currentUser.Id
                 };
-
-                await _repository.Save(DBObj);
-                response.Description = "Запись сохранена";
-                response.StatusCode = StatusCode.OK;
-                return response;
+                await _repository.Save(DbModel);
+                return new ServiceResponseBase("Запись сохранена", StatusCode.OK);
             }
             catch (Exception ex)
             {
-                return new ServiceResponseEmpty()
-                {
-                    Description = $"Ошибка сохранения | RateContentService.Method [SaveContent] : {ex.Message}",
-                    StatusCode = StatusCode.ServerError
-                };
+                return new ServiceResponseBase(ex.Message, StatusCode.ServerError);
             }
         }
 
@@ -102,26 +86,19 @@ namespace HikikomoriWEB.Services.RepositoryServices
             return await GetContent(Categories.Cartoons);
         }
 
-        private async Task<ServiceResponse<IEnumerable<RateContentViewModel>>> GetContent(Categories category)
+        private async Task<ServiceResponse<IEnumerable<RateContentViewModel>>> GetContent(Categories category) //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         {
             try
             {
-                var response = new ServiceResponse<IEnumerable<RateContentViewModel>>();
-                var viewModelList = new List<RateContentViewModel>();
-                IdentityUser currentUser = await _accountService.GetCurrentUser();
+                var response = await _accountService.GetCurrentUser();
+                IdentityUser currentUser = response.Data;
                 var repositoryContentList = await _repository.GetOnCategoryId(category, currentUser.Id);
-
-                if (repositoryContentList.Any() != true)
-                {
-                    response.Description = "Элементы таблицы этой категории не найдены";
-                    response.StatusCode = StatusCode.NotFound;
-                    return response;
-                }
-
+                if (repositoryContentList.Any() != true) return new ServiceResponse<IEnumerable<RateContentViewModel>>(StatusCode.NotFound);
+                var viewModelList = new List<RateContentViewModel>();
                 foreach (var i in repositoryContentList)
                 {
                     viewModelList.Add(new RateContentViewModel
-                    { 
+                    {
                         Id = i.Id,
                         Name = i.Name,
                         Autor = i.Autor,
@@ -132,18 +109,11 @@ namespace HikikomoriWEB.Services.RepositoryServices
                         Replay = i.Replay
                     });
                 }
-
-                response.Data = viewModelList;
-                response.StatusCode = StatusCode.OK;
-                return response;
+                return new ServiceResponse<IEnumerable<RateContentViewModel>>(StatusCode.OK, viewModelList);
             }
             catch (Exception ex)
             {
-                return new ServiceResponse<IEnumerable<RateContentViewModel>>()
-                {
-                    Description = $"RateContentService.Method [GetFilms] : {ex.Message}",
-                    StatusCode = StatusCode.ServerError
-                };
+                return new ServiceResponse<IEnumerable<RateContentViewModel>>(ex.Message, StatusCode.ServerError);
             }
         }
     }

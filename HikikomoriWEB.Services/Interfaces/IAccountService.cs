@@ -7,10 +7,9 @@ namespace HikikomoriWEB.Services.Interfaces
 {
     public interface IAccountService //сервис управления пользователями                             
     {
-        Task<ServiceResponseEmpty> CreateUser(RegistrationViewModel userData); //создание пользователя
-        Task<ServiceResponseEmpty> SignIn(SignInViewModel userData); //вход
-        Task<ServiceResponseEmpty> SignOut(); //выход
-        Task<IdentityUser> GetCurrentUser(); //получить текущего актвного юзера
-        Task<ServiceResponse<RegistrationViewModel>> GetUserData();
+        Task<ServiceResponseBase> CreateUser(RegistrationViewModel userData); //создание пользователя
+        Task<ServiceResponseBase> SignIn(SignInViewModel userData); //вход
+        Task<ServiceResponseBase> SignOut(); //выход
+        Task<ServiceResponse<IdentityUser>> GetCurrentUser(); //получить текущего актвного юзера
     }
 }

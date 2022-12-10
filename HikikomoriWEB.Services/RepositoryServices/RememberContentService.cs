@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace HikikomoriWEB.Services.RepositoryServices
 {
-    public class RememberContentService : IBaseContentServices<RememberContentViewModel>
+    public class RememberContentService : IContentServices<RememberContentViewModel>
     {
         private readonly IBaseContentRepository<RememberContent> _repository;
         private readonly IAccountService _accountService;
@@ -22,54 +22,40 @@ namespace HikikomoriWEB.Services.RepositoryServices
             _accountService = accountService;
         } 
 
-        public async Task<ServiceResponseEmpty> DeleteContent(int ContentId)
+        public async Task<ServiceResponseBase> DeleteContent(int ContentId)
         {
             try
             {
-                var response = new ServiceResponseEmpty();
                 await _repository.Delete(ContentId);
-                response.Description = "Запись удалена";
-                response.StatusCode = StatusCode.OK;
-                return response;
-            }
-            catch(Exception ex)
-            {
-                return new ServiceResponseEmpty()
-                {
-                    Description = $"RememberContentService.Method [DeleteContent] : {ex.Message}",
-                    StatusCode = StatusCode.ServerError
-                };
-            }
-        }
-
-        public async Task<ServiceResponseEmpty> SaveContent(RememberContentViewModel obj)
-        {
-            try
-            {
-                var response = new ServiceResponseEmpty();
-                IdentityUser currentUser = await _accountService.GetCurrentUser();
-                RememberContent DBObj = new RememberContent()
-                {
-                    Name = obj.Name,
-                    Autor = obj.Autor,
-                    CategoryId = obj.CategoryId,
-                    Genre = obj.Genre,
-                    CreationYear = obj.CreationYear,
-                    UserId = currentUser.Id
-                };
-
-                await _repository.Save(DBObj);
-                response.Description = "Запись сохранена";
-                response.StatusCode = StatusCode.OK;
-                return response;
+                return new ServiceResponseBase("Запись удалена", StatusCode.OK);
             }
             catch (Exception ex)
             {
-                return new ServiceResponseEmpty()
+                return new ServiceResponseBase(ex.Message, StatusCode.ServerError);
+            }
+        }
+
+        public async Task<ServiceResponseBase> SaveContent(RememberContentViewModel model)
+        {
+            try
+            {
+                var response = await _accountService.GetCurrentUser();
+                IdentityUser currentUser = response.Data;
+                RememberContent DbModel = new RememberContent()
                 {
-                    Description = $"Ошибка сохранения | RememberContentService.Method [SaveContent] : {ex.Message}",
-                    StatusCode = StatusCode.ServerError
+                    Name = model.Name,
+                    Autor = model.Autor,
+                    CategoryId = model.CategoryId,
+                    Genre = model.Genre,
+                    CreationYear = model.CreationYear,
+                    UserId = currentUser.Id
                 };
+                await _repository.Save(DbModel);
+                return new ServiceResponseBase("Запись сохранена", StatusCode.OK);
+            }
+            catch (Exception ex)
+            {
+                return new ServiceResponseBase(ex.Message, StatusCode.ServerError);
             }
         }
 
@@ -102,19 +88,12 @@ namespace HikikomoriWEB.Services.RepositoryServices
         {
             try
             {
-                var response = new ServiceResponse<IEnumerable<RememberContentViewModel>>();
+                var response = await _accountService.GetCurrentUser();
+                IdentityUser currentUser = response.Data;
+                var repositoryContentList = await _repository.GetOnCategoryId(category, currentUser.Id);
+                if (repositoryContentList.Any() != true) return new ServiceResponse<IEnumerable<RememberContentViewModel>>(StatusCode.NotFound);
                 var ViewModelList = new List<RememberContentViewModel>();
-                IdentityUser currentUser = await _accountService.GetCurrentUser();
-                var RepositoryContentList = await _repository.GetOnCategoryId(category, currentUser.Id);
-
-                if (RepositoryContentList.Any() != true)
-                {
-                    response.Description = "Элементы таблицы этой категории не найдены";
-                    response.StatusCode = StatusCode.NotFound;
-                    return response;
-                }
-
-                foreach (var i in RepositoryContentList)
+                foreach (var i in repositoryContentList)
                 {
                     ViewModelList.Add(new RememberContentViewModel
                     {
@@ -126,18 +105,11 @@ namespace HikikomoriWEB.Services.RepositoryServices
                         CreationYear = i.CreationYear
                     });
                 }
-
-                response.Data = ViewModelList;
-                response.StatusCode = StatusCode.OK;
-                return response;
+                return new ServiceResponse<IEnumerable<RememberContentViewModel>>(StatusCode.OK, ViewModelList);
             }
             catch (Exception ex)
             {
-                return new ServiceResponse<IEnumerable<RememberContentViewModel>>()
-                {
-                    Description = $"RememberContentService.Method [GetOnCategoryId] : {ex.Message}",
-                    StatusCode = StatusCode.ServerError
-                };
+                return new ServiceResponse<IEnumerable<RememberContentViewModel>>(ex.Message, StatusCode.ServerError);
             }
         }
     }

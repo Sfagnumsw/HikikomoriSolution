@@ -1,13 +1,22 @@
 ﻿@model ContentListViewModel
 
 <input type="button" class="delete-button">
-@if (Model.RatedList != null && Model.RatedList.Any())
+@{ if (Model.RatedList != null && Model.RatedList.Any())
     {
         @await Html.PartialAsync("RatedListPartial", Model.RatedList)
     }
-
+    else
+    {
+        <p>Вы еще не добавили оценённый контент</p>
+    }
+}
 <br>
-@if (Model.RememberedList != null && Model.RememberedList.Any())
-{
-    @await Html.PartialAsync("RememberedListPartial", Model.RememberedList)
+@{ if (Model.RememberedList != null && Model.RememberedList.Any())
+    {
+        @await Html.PartialAsync("RememberedListPartial", Model.RememberedList)
+    }
+    else
+    {
+        <p>Вы пока не отложили контент на будущее</p>
+    }
 }

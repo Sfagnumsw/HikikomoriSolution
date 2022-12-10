@@ -2,6 +2,7 @@ C:\Users\Sfagnum\Documents\обучение\Программирование\C#\
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Domain\bin\Debug\net5.0\HikikomoriWEB.Domain.dll
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Domain\bin\Debug\net5.0\ref\HikikomoriWEB.Domain.dll
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Domain\bin\Debug\net5.0\HikikomoriWEB.Domain.pdb
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Domain\obj\Debug\net5.0\HikikomoriWEB.Domain.csproj.AssemblyReference.cache
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Domain\obj\Debug\net5.0\HikikomoriWEB.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Domain\obj\Debug\net5.0\HikikomoriWEB.Domain.AssemblyInfoInputs.cache
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Domain\obj\Debug\net5.0\HikikomoriWEB.Domain.AssemblyInfo.cs
@@ -9,4 +10,3 @@ C:\Users\Sfagnum\Documents\обучение\Программирование\C#\
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Domain\obj\Debug\net5.0\HikikomoriWEB.Domain.dll
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Domain\obj\Debug\net5.0\ref\HikikomoriWEB.Domain.dll
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Domain\obj\Debug\net5.0\HikikomoriWEB.Domain.pdb
-C:\Users\Sfagnum\Documents\обучение\Программирование\C#\ASP.NET Core\eaxDeskTop\HikomoriASP\HikikomoriWEB.Domain\obj\Debug\net5.0\HikikomoriWEB.Domain.csproj.AssemblyReference.cache
