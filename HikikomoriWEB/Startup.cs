@@ -50,6 +50,10 @@ namespace HikikomoriWEB
             {
                 app.UseDeveloperExceptionPage(); //если в окружении разработки то выводит подробную инфу об ошибках
             }
+            else
+            {
+                app.UseExceptionHandler();
+            }
             app.UseStaticFiles(); //поддержка статичных файлов (css,js...)
             app.UseRouting(); //система маршрутизации (если используем AddMvc, то устанавливаем дефол–оут и отключаем эндпоинт–оут в сервисе)
             app.UseAuthentication(); // аутентификаци€

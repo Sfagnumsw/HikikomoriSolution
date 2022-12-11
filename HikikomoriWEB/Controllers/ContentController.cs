@@ -23,35 +23,43 @@ namespace HikikomoriWEB.Controllers
         }
 
         [Authorize]
-        public async Task<IActionResult> ContentList(string type) //таблицы с контентом //ДОБАВИТЬ ПОИСК ПО АЙДИ ЮЗЕРА ИЗМЕНИТЬ РЕПЫ
+        public async Task<IActionResult> GetFilms()
         {
-            ServiceResponse<IEnumerable<RateContentViewModel>> rateResponse;
-            ServiceResponse<IEnumerable<RememberContentViewModel>> rememberResponse;
-            switch (type)
-            {
-                case "films":
-                    rateResponse = await _rateService.GetFilms();
-                    rememberResponse = await _rememberService.GetFilms();
-                    return View(new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
-                case "books":
-                    rateResponse = await _rateService.GetBooks();
-                    rememberResponse = await _rememberService.GetBooks();
-                    return View(new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
-                case "games":
-                    rateResponse = await _rateService.GetGames();
-                    rememberResponse = await _rememberService.GetGames();
-                    return View(new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
-                case "serials":
-                    rateResponse = await _rateService.GetSerials();
-                    rememberResponse = await _rememberService.GetSerials();
-                    return View(new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
-                case "cartoons":
-                    rateResponse = await _rateService.GetCartoons();
-                    rememberResponse = await _rememberService.GetCartoons();
-                    return View(new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
-                default:
-                    return RedirectToAction("Error");
-            }
+            var rateResponse = await _rateService.GetFilms();
+            var rememberResponse = await _rememberService.GetFilms();
+            return View("ContentList", new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
+        }
+
+        [Authorize]
+        public async Task<IActionResult> GetBooks()
+        {
+            var rateResponse = await _rateService.GetBooks();
+            var rememberResponse = await _rememberService.GetBooks();
+            return View("ContentList",  new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
+        }
+
+        [Authorize]
+        public async Task<IActionResult> GetSerials()
+        {
+            var rateResponse = await _rateService.GetSerials();
+            var rememberResponse = await _rememberService.GetSerials();
+            return View("ContentList", new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
+        }
+
+        [Authorize]
+        public async Task<IActionResult> GetCartoons()
+        {
+            var rateResponse = await _rateService.GetCartoons();
+            var rememberResponse = await _rememberService.GetCartoons();
+            return View("ContentList", new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
+        }
+
+        [Authorize]
+        public async Task<IActionResult> GetGames()
+        {
+            var rateResponse = await _rateService.GetGames();
+            var rememberResponse = await _rememberService.GetGames();
+            return View("ContentList", new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
         }
 
         [Authorize]

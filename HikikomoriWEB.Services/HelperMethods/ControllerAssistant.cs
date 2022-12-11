@@ -3,6 +3,7 @@ using HikikomoriWEB.Domain.Enum;
 using HikikomoriWEB.Domain.ViewModels;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel.DataAnnotations;
+using HikikomoriWEB.Domain.ResponseEntity;
 
 namespace HikikomoriWEB.Services.HelperMethods
 {
@@ -22,6 +23,11 @@ namespace HikikomoriWEB.Services.HelperMethods
                 });
             }
             return new SelectList(categoryList, "Value", "Name");
+        }
+
+        public static bool CheckServerError(this ServiceResponseBase response)
+        {
+            return response.StatusCode == StatusCode.ServerError ? false : true;
         }
     }
 }

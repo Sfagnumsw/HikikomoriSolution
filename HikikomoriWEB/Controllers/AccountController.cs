@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using HikikomoriWEB.Domain.ViewModels;
 using HikikomoriWEB.Services.Interfaces;
-using HikikomoriWEB.Domain.ResponseEntity;
-using System;
-using System.Linq;
+using HikikomoriWEB.Services.HelperMethods;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Newtonsoft.Json;

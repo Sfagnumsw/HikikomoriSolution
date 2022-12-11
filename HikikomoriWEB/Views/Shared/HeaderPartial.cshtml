@@ -4,11 +4,11 @@
             <h1><a asp-controller="Home" asp-action="Index">@Config.ProjectName</a></h1>
             <nav id="nav">
                 <a asp-controller="Home" asp-action="Index">Главная</a>
-                <a asp-controller="Content" asp-action="ContentList" asp-route-type="films">Фильмы</a>
-                <a asp-controller="Content" asp-action="ContentList" asp-route-type="books">Книги</a>
-                <a asp-controller="Content" asp-action="ContentList" asp-route-type="serials">Сериалы</a>
-                <a asp-controller="Content" asp-action="ContentList" asp-route-type="cartoons">Мультфильмы</a>
-                <a asp-controller="Content" asp-action="ContentList" asp-route-type="games">Игры</a>
+                <a asp-controller="Content" asp-action="GetFilms">Фильмы</a>
+                <a asp-controller="Content" asp-action="GetBooks">Книги</a>
+                <a asp-controller="Content" asp-action="GetSerials">Сериалы</a>
+                <a asp-controller="Content" asp-action="GetCartoons">Мультфильмы</a>
+                <a asp-controller="Content" asp-action="GetGames">Игры</a>
             </nav>
         </header>
     </div>
