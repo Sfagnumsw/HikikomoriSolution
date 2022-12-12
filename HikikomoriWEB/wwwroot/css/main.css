@@ -979,3 +979,16 @@ article.blog-post {
 .loading-img-none {
   display: none;
   opacity: 0; }
+
+.error-block {
+  display: flex;
+  flex-direction: column;
+  position: page;
+  text-align: center; }
+  .error-block img {
+    margin: auto; }
+  .error-block p {
+    margin-top: 60px;
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    font-size: 25px; }

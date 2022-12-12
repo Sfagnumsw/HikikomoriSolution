@@ -7,6 +7,7 @@ using HikikomoriWEB.Services.HelperMethods;
 using System.Collections.Generic;
 using HikikomoriWEB.Domain.ResponseEntity;
 using Microsoft.AspNetCore.Authorization;
+using Newtonsoft.Json;
 
 namespace HikikomoriWEB.Controllers
 {
@@ -27,6 +28,7 @@ namespace HikikomoriWEB.Controllers
         {
             var rateResponse = await _rateService.GetFilms();
             var rememberResponse = await _rememberService.GetFilms();
+            if (!rateResponse.CheckServerError() || !rememberResponse.CheckServerError()) return RedirectToAction("Error", "Home");
             return View("ContentList", new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
         }
 
@@ -35,7 +37,8 @@ namespace HikikomoriWEB.Controllers
         {
             var rateResponse = await _rateService.GetBooks();
             var rememberResponse = await _rememberService.GetBooks();
-            return View("ContentList",  new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
+            if (!rateResponse.CheckServerError() || !rememberResponse.CheckServerError()) return RedirectToAction("Error", "Home");
+            return View("ContentList", new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
         }
 
         [Authorize]
@@ -43,6 +46,7 @@ namespace HikikomoriWEB.Controllers
         {
             var rateResponse = await _rateService.GetSerials();
             var rememberResponse = await _rememberService.GetSerials();
+            if (!rateResponse.CheckServerError() || !rememberResponse.CheckServerError()) return RedirectToAction("Error", "Home");
             return View("ContentList", new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
         }
 
@@ -51,6 +55,7 @@ namespace HikikomoriWEB.Controllers
         {
             var rateResponse = await _rateService.GetCartoons();
             var rememberResponse = await _rememberService.GetCartoons();
+            if (!rateResponse.CheckServerError() || !rememberResponse.CheckServerError()) return RedirectToAction("Error", "Home");
             return View("ContentList", new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
         }
 
@@ -59,25 +64,24 @@ namespace HikikomoriWEB.Controllers
         {
             var rateResponse = await _rateService.GetGames();
             var rememberResponse = await _rememberService.GetGames();
+            if (!rateResponse.CheckServerError() || !rememberResponse.CheckServerError()) return RedirectToAction("Error", "Home");
             return View("ContentList", new ContentListViewModel(rateResponse.Data, rememberResponse.Data));
         }
 
         [Authorize]
-        public async Task<IActionResult> RemoveAction(int Id, string tableClass) //удаление строки таблицы(удаление контента из БД)
+        public async Task<JsonResult> RemoveAction(int Id, string tableClass) //удаление строки таблицы(удаление контента из БД)
         {
-            if (Id != 0 && tableClass != null)
+            if (tableClass.Equals("table-list-rate"))
             {
-                switch (tableClass)
-                {
-                    case "table-list-rate":
-                        await _rateService.DeleteContent(Id);
-                        break;
-                    case "table-list-remember":
-                        await _rememberService.DeleteContent(Id);
-                        break;
-                }
+                var response = await _rateService.DeleteContent(Id);
+                return Json(JsonConvert.SerializeObject(response));
             }
-            return NoContent();
+            else if (tableClass.Equals("table-list-remember"))
+            {
+                var response = await _rememberService.DeleteContent(Id);
+                return Json(JsonConvert.SerializeObject(response));
+            }
+            else return Json(JsonConvert.SerializeObject(new ServiceResponseBase("Выберите строку для удаления", Domain.Enum.StatusCode.OK)));
         }
     }
 }

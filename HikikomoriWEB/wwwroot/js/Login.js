@@ -17,7 +17,10 @@ $('.signin-button').click(function(){
             $('#load').removeClass('loading-img');
             $('#load').addClass('loading-img-none');
             var SerilizaeData = JSON.parse(data);
-            if(SerilizaeData.StatusCode == 200){
+            if(SerilizaeData.StatusCode == 500){
+                window.location.replace("/Home/Error");
+            }
+            else if(SerilizaeData.StatusCode == 200){
                 alert(SerilizaeData.Description);
                 window.location.replace("/Home/Index");
             }
@@ -47,7 +50,10 @@ $('.reg-button').click(function(){
             $('#load').removeClass('loading-img');
             $('#load').addClass('loading-img-none');
             var SerilizaeData = JSON.parse(data);
-            if(SerilizaeData.StatusCode == 200){
+            if(SerilizaeData.StatusCode == 500){
+                window.location.replace("/Home/Error");
+            }
+            else if(SerilizaeData.StatusCode == 200){
                 alert(SerilizaeData.Description);
                 window.location.replace("/Account/Login");
             }

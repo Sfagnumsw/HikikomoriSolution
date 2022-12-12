@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using HikikomoriWEB.Services.HelperMethods;
 using HikikomoriWEB.Domain.ViewModels;
 using Microsoft.AspNetCore.Authorization;
-
+using Newtonsoft.Json;
 
 namespace HikikomoriWEB.Controllers
 {
@@ -27,18 +27,23 @@ namespace HikikomoriWEB.Controllers
 
         [Authorize]
         [HttpPost]
-        public async Task<ContentResult> RateFormPost(RateContentViewModel obj)
+        public async Task<JsonResult> RateFormPost(RateContentViewModel obj)
         {
             var response = await _rateService.SaveContent(obj);
-            return Content(response.Description);
+            return Json(JsonConvert.SerializeObject(response));
         }
 
         [Authorize]
         [HttpPost]
-        public async Task<ContentResult> RememberFormPost(RememberContentViewModel obj)
+        public async Task<JsonResult> RememberFormPost(RememberContentViewModel obj)
         {
             var response = await _rememberService.SaveContent(obj);
-            return Content(response.Description);
+            return Json(JsonConvert.SerializeObject(response));
+        }
+
+        public IActionResult Error()
+        {
+            return View();
         }
     }
 }

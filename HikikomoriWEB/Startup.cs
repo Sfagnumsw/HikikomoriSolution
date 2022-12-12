@@ -13,7 +13,6 @@ using HikikomoriWEB.Domain.Entity;
 using HikikomoriWEB.Services.RepositoryServices;
 using HikikomoriWEB.Domain.ViewModels;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace HikikomoriWEB
 {
@@ -52,7 +51,7 @@ namespace HikikomoriWEB
             }
             else
             {
-                app.UseExceptionHandler();
+                app.UseExceptionHandler("/Home/Error");
             }
             app.UseStaticFiles(); //поддержка статичных файлов (css,js...)
             app.UseRouting(); //система маршрутизации (если используем AddMvc, то устанавливаем дефол–оут и отключаем эндпоинт–оут в сервисе)

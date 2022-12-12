@@ -11,14 +11,16 @@ $('.rate-button-sub').click(function(){
             url: "/Home/RateFormPost",
             type: "POST",
             data: SerilizaeForm,
-            success: function (response) {
-                alert(response);
-                CleanForm(form);
+            success: function (data) {
+                var SerilizaeData = JSON.parse(data);
+                if(SerilizaeData.StatusCode == 500){
+                    window.location.replace("/Home/Error");
+                }
+                else{
+                    alert(SerilizaeData.Description);
+                    CleanForm(form);
+                }
             },
-            error: function(){
-                alert("Ошибка запроса");
-                CleanForm(form);
-            } 
         });
     }
 });
@@ -31,14 +33,16 @@ $('.remember-button-sub').click(function(){
             url: "/Home/RememberFormPost",
             type: "POST",
             data: SerilizaeForm,
-            success: function (response) {
-                alert(response);
-                CleanForm(form);
+            success: function (data) {
+                var SerilizaeData = JSON.parse(data);
+                if(SerilizaeData.StatusCode == 500){
+                    window.location.replace("/Home/Error");
+                }
+                else{
+                    alert(SerilizaeData.Description);
+                    CleanForm(form);
+                }
             },
-            error: function(){
-                alert("Ошибка запроса");
-                CleanForm(form);
-            } 
         });
     }   
 });

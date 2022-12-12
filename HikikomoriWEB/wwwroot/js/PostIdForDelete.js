@@ -5,11 +5,14 @@ $('.delete-button').click(function() {
         url: "/Content/RemoveAction",
         type: "POST",
         data: { Id: Id, tableClass: tableClass },
-        success: function() {
-            $('.active-row').css('visibility', 'collapse');
+        success: function(data) {
+            var SerilizaeData = JSON.parse(data);
+            if(SerilizaeData.StatusCode == 500){
+                window.location.replace("/Home/Error");
+            }
+            else{
+                $('.active-row').css('visibility', 'collapse');
+            }
         },
-        error: function() {
-            alert("Ошибка удаления");
-        }
     });
 });
